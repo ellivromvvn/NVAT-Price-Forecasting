@@ -1,0 +1,84 @@
+---
+title: "Forecasting Weekly Vegetable Prices"
+author:
+  - Jaime Neil P. Alap   
+  - Glomie G. Gonzales
+  - Eloisa J. Jimenez
+  - Carlo D. Pastores, Jr.
+format:
+  docx:
+    reference-doc: student-research-template.docx
+editor: visual
+---
+
+# Chapter I
+
+## INTRODUCTION
+
+### Background of the Study
+
+The fluctuation of vegetable prices is a global concern in both developed and emerging economies. The need for vegetables as a primary source of essential nutrients and dietary variety has grown as urbanization and global population growth simultaneously. Consequently, the dynamics of vegetable pricing have grown more intricate and significant, having an effect on not just consumer choices but also food security, economic stability, and agricultural practices. Understanding the factors driving these price fluctuations is paramount for policymakers, farmers, consumers, and the broader food industry.
+
+Vegetables are a major life necessity for urban and rural residents, and the vegetable market massively supports rural economic development. Fluctuations in vegetable prices affect farmers' income, quality of life, and decision-making regarding vegetable planting. Therefore, issues regarding maintaining price stability have long been focused on government policies. In recent years, the price of vegetables has exhibited dramatic and frequent volatility, which caused a series of negative effects on stakeholders in the supply-chain, e.g., farmers, logistics, wholesale, retail, and consumers. In view of the above adverse effects on stakeholders, it is of crucial importance to filter out key factors that relate to price fluctuations, targeting effective monitoring of real-time abnormal fluctuations. (Chen et al., 2018)
+
+Price fluctuation is a complex issue with far-reaching consequences, especially for vulnerable populations. While higher prices may appear beneficial for farmers, the inherent volatility poses significant risks, potentially leading to substantial losses for agricultural stakeholders. Often attributed to imbalances in market fundamentals, where demand surpasses supply, this phenomenon has a profound impact on small-scale farmers. (Huka, Ruoja, Mchopa, 2014)
+
+According to Statistics Food and Agricultural Organization (FAO) (2018), agricultural products account for a large proportion of the market as a necessity for daily consumption, and their prices play a critical part in consumer spending and agricultural household income. The supply and demand in a given year determine the prices of agricultural products. While an undersupply of agricultural items raises prices and burdens consumers, an oversupply of agricultural products causes vegetable prices to increase and causes financial losses to farming households.
+
+In the Philippines, vegetables price height has been a major problem for past years. Consumers were complaining of higher food prices, reflected not only in vegetables but in poultry and pork meat as well, and selected fish variants. Some prices have gone up by as much as 66 percent from last month alone. The Department of Agriculture officials have blamed the higher prices on numerous factors such as the ongoing pandemic, the devastating typhoons that destroyed crops, and the unwillingness of poultry and hog raisers to farm a new following the glut and the spread of the African swine fever, respectively. (Ocampo, 2021)
+
+As stated by Vibas and Raqueño (2019), Agricultural commodities significantly impact a country's export earnings and economic performance. Price fluctuations affect farmers, consumers, and public agencies. The Department of Agriculture in the Philippines recognizes that local market-driven commodity pricing, notably for fruits and vegetables, have prompted government action.
+
+Nueva Vizcaya Agricultural terminal Inc. general manager Gilbert Cumila said, Vegetable prices in the Philippines continue to rise as demand exceeds supply. Wholesale prices of vegetables increases due to the demand of people. This significantly affect the way consumers purchase vegetables to sustain their necessities.
+
+Vegetable prices in Nueva Vizcaya is rapidly increasing week by week. Consumers are having hard time to provide necessities due to this reason. This study will forecast the changes of vegetable prices in Nueva Vizcaya to serve as guide to the consumers directly affected by the problem.
+
+This research aims to describe the weekly vegetable prices in Nueva Vizcaya and identify the models that will forecast weekly vegetables. The research oath to determine the best model that can be used to forecast weekly vegetable prices in Nueva Vizcaya.
+
+### Objectives of the Study
+
+The researchers will forecast weekly vegetable prices in Nueva Vizcaya by accomplishing the following:
+
+1.  Describe the weekly vegetable prices in Nueva Vizcaya.
+
+2.  Identify models that will forecast weekly vegetable prices in Nueva Vizcaya.
+
+3.  Determine the best model that will forecast weekly vegetable prices in Nueva Vizcaya.
+
+4.  Forecast the best model for weekly vegetable prices in Nueva Vizcaya.
+
+### Significance of the Study
+
+This study focused on determining the best model that will forecast weekly vegetable prices in Nueva Vizcaya on the viability of NVAT, Bambang, Nueva Vizcaya.
+
+**Farmers**. This research is beneficial to farmers as it holds immense significance for farmers in Nueva Vizcaya and provides them with valuable insights into future vegetable price trends. Accurate price forecasts enable farmers to plan their planting and harvesting schedules efficiently, reduce wastage, and optimize their crop yields, ultimately leading to improved income stability and sustainable agricultural practices.
+
+**Vendors**. This research would be beneficial to vendors in Nueva Vizcaya's vegetable markets by obtaining reliable price forecasts. With this information, they can make informed purchasing decisions, maintain competitive prices, and increase profit margins. This, in turn, fosters a more stable and profitable business environment for vendors.
+
+**Consumers**. This research would be beneficial to consumers as it helps maintain price stability and affordability. When vendors can make better decisions based on accurate forecasts, consumers are less likely to experience price shocks or sudden increases in vegetable prices, ensuring accessibility to essential food items.
+
+**Future Entrepreneurs**. This research would be beneficial to future entrepreneurs as they want to enter the vegetable market in Nueva Vizcaya, and they can use the results of this study to make informed business decisions. This information helps develop market entry strategies, inventory management strategies, and pricing strategies to reduce the risks associated with launching a new business. Business Owners. This research would be beneficial to business owners in Nueva Vizcaya, whether they are in the agricultural sector or the retail and distribution sector, and they can leverage predictive insights to optimize their supply chain operations. Improved supply chain efficiency can lead to cost savings and increased profitability.
+
+**Department of Agriculture**. This research would be beneficial to the Department of Agriculture by incorporating its findings into policy formulation and resource allocation. Accurate price forecasts can inform agricultural development programs, subsidies, and interventions, ultimately supporting the growth and sustainability of the agricultural sector in Nueva Vizcaya.
+
+**Future Researchers**. This research serves as a valuable foundation for future researchers interested in agricultural economics, market dynamics, and forecasting methodologies. It provides a benchmark dataset and insights that can be expanded upon and refined in subsequent research efforts, contributing to the continuous advancement of agricultural forecasting and market analysis.
+
+### Scope and Delimitation of the Study
+	
+The study focuses on forecasting the weekly prices of vegetables in the NVAT, Bambang, Nueva Vizcaya, for the years 2013 to 2023. The researchers decided that the Box and Jenkins models were the best strategy for forecasting weekly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. However, it is vital to highlight that the study's findings and conclusions are limited to this specific locale, the vegetables, and the timeframe mentioned. Alternative forecasting methodologies and external variables impacting vegetable prices are not investigated in this study. As a result, the findings should be regarded with caution and applied exclusively within the defined boundaries of NVAT, Bambang, Nueva Vizcaya, and the chosen vegetables during the specified study period.
+
+### Conceptual Framework
+
+The figure...
+
+### Definition of Terms
+
+**Time Series**. A time series is a sequence of data points collected or recorded at specific time intervals. It is used to analyze and predict trends, patterns, and behavior over time.
+
+**Best Fit Model**. The best fit model is the statistical or mathematical model that most accurately describes and predicts the patterns and trends within a given time series. It is selected based on criteria like RMSE, AIC, BIC, or other statistical measures.
+
+**Vegetable Price**. Vegetable price refers to the cost or price at which vegetables are bought or sold in a market or region. It is a key indicator in economics and agriculture, reflecting supply and demand dynamics.
+
+**Forecasting**. Is the process of making predictions or estimates about future values or events based on historical data and patterns. It is widely used in various fields, including economics, finance, and weather prediction.
+
+**The Nueva Vizcaya Agricultural Terminal (NVAT), Philippines**. NVAT is a mixed capital public-private joint venture established in Nueva Vizcaya in 2004 to address problems such as lack of markets and keen market competition.
