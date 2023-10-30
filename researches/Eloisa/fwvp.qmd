@@ -5,7 +5,7 @@ author:
   - Glomie G. Gonzales
   - Eloisa J. Jimenez
   - Carlo D. Pastores, Jr.
-format: 
+format:
   docx:
     reference-doc: student-research-template.docx
 editor: visual
