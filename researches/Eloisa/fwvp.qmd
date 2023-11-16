@@ -66,13 +66,8 @@ This study focused on determining the best model that will forecast monthly vege
 **Future Researchers**. This research serves as a valuable foundation for future researchers interested in agricultural economics, market dynamics, and forecasting methodologies. It provides a benchmark dataset and insights that can be expanded upon and refined in subsequent research efforts, contributing to the continuous advancement of agricultural forecasting and market analysis.
 
 ### Scope and Delimitation of the Study
-<<<<<<< HEAD
 
-The study focuses on forecasting the weekly prices of vegetables in the NVAT, Bambang, Nueva Vizcaya, for the years 2013 to 2023. The researchers decided that the Box and Jenkins models were the best strategy for forecasting weekly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. However, it is vital to highlight that the study's findings and conclusions are limited to this specific locale, the vegetables, and the timeframe mentioned. Alternative forecasting methodologies and external variables impacting vegetable prices are not investigated in this study. As a result, the findings should be regarded with caution and applied exclusively within the defined boundaries of NVAT, Bambang, Nueva Vizcaya, and the chosen vegetables during the specified study period.
-=======
-	
 The study focuses on forecasting the monthly prices of vegetables in the NVAT, Bambang, Nueva Vizcaya, for the years 2013 to 2023. The researchers decided that the Box and Jenkins models were the best strategy for forecasting monthly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. However, it is vital to highlight that the study's findings and conclusions are limited to this specific locale, the vegetables, and the timeframe mentioned. Alternative forecasting methodologies and external variables impacting vegetable prices are not investigated in this study. As a result, the findings should be regarded with caution and applied exclusively within the defined boundaries of NVAT, Bambang, Nueva Vizcaya, and the chosen vegetables during the specified study period.
->>>>>>> cc1a01f11754d82f880af315eb7fc1b18b76d58d
 
 ### Conceptual Framework
 
