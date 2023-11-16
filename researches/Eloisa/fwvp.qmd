@@ -1,5 +1,5 @@
 ---
-title: "Forecasting Weekly Vegetable Prices"
+title: "Forecasting Monthly Vegetable Prices"
 author:
   - Jaime Neil P. Alap   
   - Glomie G. Gonzales
@@ -9,6 +9,8 @@ format:
   docx:
     reference-doc: student-research-template.docx
 editor: visual
+bibliography: references.bib
+csl: apa.csl
 ---
 
 # Chapter I
@@ -17,9 +19,9 @@ editor: visual
 
 ### Background of the Study
 
-The fluctuation of vegetable prices is a global concern in both developed and emerging economies. The need for vegetables as a primary source of essential nutrients and dietary variety has grown as urbanization and global population growth simultaneously. Consequently, the dynamics of vegetable pricing have grown more intricate and significant, having an effect on not just consumer choices but also food security, economic stability, and agricultural practices. Understanding the factors driving these price fluctuations is paramount for policymakers, farmers, consumers, and the broader food industry.
+The fluctuation of vegetable prices is a global concern in both developed and emerging economies. The need for vegetables as a primary source of essential nutrients and dietary variety has grown as urbanization and global population growth simultaneously. Consequently, the dynamics of vegetable pricing have grown more intricate and significant, having an effect on not just consumer choices but also food security, economic stability, and agricultural practices. Understanding the factors driving these price fluctuations is paramount for policymakers, farmers, consumers, and the broader food industry [@chen2018].
 
-Vegetables are a major life necessity for urban and rural residents, and the vegetable market massively supports rural economic development. Fluctuations in vegetable prices affect farmers' income, quality of life, and decision-making regarding vegetable planting. Therefore, issues regarding maintaining price stability have long been focused on government policies. In recent years, the price of vegetables has exhibited dramatic and frequent volatility, which caused a series of negative effects on stakeholders in the supply-chain, e.g., farmers, logistics, wholesale, retail, and consumers. In view of the above adverse effects on stakeholders, it is of crucial importance to filter out key factors that relate to price fluctuations, targeting effective monitoring of real-time abnormal fluctuations. (Chen et al., 2018)
+Vegetables are a major life necessity for urban and rural residents, and the vegetable market massively supports rural economic development. Fluctuations in vegetable prices affect farmers' income, quality of life, and decision-making regarding vegetable planting. Therefore, issues regarding maintaining price stability have long been focused on government policies. In recent years, the price of vegetables has exhibited dramatic and frequent volatility, which caused a series of negative effects on stakeholders in the supply-chain, e.g., farmers, logistics, wholesale, retail, and consumers. In view of the above adverse effects on stakeholders, it is of crucial importance to filter out key factors that relate to price fluctuations, targeting effective monitoring of real-time abnormal fluctuations.
 
 Price fluctuation is a complex issue with far-reaching consequences, especially for vulnerable populations. While higher prices may appear beneficial for farmers, the inherent volatility poses significant risks, potentially leading to substantial losses for agricultural stakeholders. Often attributed to imbalances in market fundamentals, where demand surpasses supply, this phenomenon has a profound impact on small-scale farmers. (Huka, Ruoja, Mchopa, 2014)
 
@@ -64,7 +66,7 @@ This study focused on determining the best model that will forecast weekly veget
 **Future Researchers**. This research serves as a valuable foundation for future researchers interested in agricultural economics, market dynamics, and forecasting methodologies. It provides a benchmark dataset and insights that can be expanded upon and refined in subsequent research efforts, contributing to the continuous advancement of agricultural forecasting and market analysis.
 
 ### Scope and Delimitation of the Study
-	
+
 The study focuses on forecasting the weekly prices of vegetables in the NVAT, Bambang, Nueva Vizcaya, for the years 2013 to 2023. The researchers decided that the Box and Jenkins models were the best strategy for forecasting weekly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. However, it is vital to highlight that the study's findings and conclusions are limited to this specific locale, the vegetables, and the timeframe mentioned. Alternative forecasting methodologies and external variables impacting vegetable prices are not investigated in this study. As a result, the findings should be regarded with caution and applied exclusively within the defined boundaries of NVAT, Bambang, Nueva Vizcaya, and the chosen vegetables during the specified study period.
 
 ### Conceptual Framework
@@ -82,3 +84,5 @@ The figure...
 **Forecasting**. Is the process of making predictions or estimates about future values or events based on historical data and patterns. It is widely used in various fields, including economics, finance, and weather prediction.
 
 **The Nueva Vizcaya Agricultural Terminal (NVAT), Philippines**. NVAT is a mixed capital public-private joint venture established in Nueva Vizcaya in 2004 to address problems such as lack of markets and keen market competition.
+
+# References
