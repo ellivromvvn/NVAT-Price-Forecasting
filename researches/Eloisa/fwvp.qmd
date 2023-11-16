@@ -37,6 +37,10 @@ Vegetable prices in Nueva Vizcaya is rapidly increasing month by month. Consumer
 
 This research aims to describe the monthly vegetable prices in Nueva Vizcaya and identify the models that will forecast monthly vegetables. The research oath to determine the best model that can be used to forecast monthly vegetable prices in Nueva Vizcaya.
 
+### Statement of the Problem
+
+The purpose of this study was to examine ten-year historical data on monthly vegetable prices in Nueva Vizcaya on the viability of NVAT, Bambang, Nueva Vizcaya. To achieve this, the researchers will first provide a comprehensive description of the historical trends and fluctuations in monthly vegetable prices in the region. Subsequently, it will explore various forecasting models to identify the most suitable ones for predicting these prices effectively. The primary objective is to determine the best-performing model among the options considered. Once the optimal model is identified, it will be used to generate forecasts for monthly vegetable prices in Nueva Vizcaya, thereby assisting local farmers, distributors, and consumers in making informed decisions related to agricultural production, distribution, and purchasing of vegetables in the region. This research addresses a critical issue of food security and economic stability in Nueva Vizcaya and can have broader implications for agricultural forecasting in similar regions.
+
 ### Objectives of the Study
 
 The researchers will forecast monthly vegetable prices in Nueva Vizcaya by accomplishing the following:
