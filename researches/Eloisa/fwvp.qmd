@@ -79,15 +79,29 @@ The figure...
 
 ### Definition of Terms
 
-**Time Series**. A time series is a sequence of data points collected or recorded at specific time intervals. It is used to analyze and predict trends, patterns, and behavior over time.
+**Akaike Information Criterion (AIC)**. AIC is a statistical measure used to compare the goodness of fit of different statistical models. It balances the complexity of a model with its ability to explain the data. Lower AIC values suggest better model fit.
+
+**ARIMA (AutoRegressive Integrated Moving Average)**. ARIMA is a popular time series forecasting model that combines autoregressive (AR) and moving average (MA) components with differencing to make a time series stationary. It is used for modeling and forecasting univariate time series data.
 
 **Best Fit Model**. The best fit model is the statistical or mathematical model that most accurately describes and predicts the patterns and trends within a given time series. It is selected based on criteria like RMSE, AIC, BIC, or other statistical measures.
 
-**Vegetable Price**. Vegetable price refers to the cost or price at which vegetables are bought or sold in a market or region. It is a key indicator in economics and agriculture, reflecting supply and demand dynamics.
+**Box-Jenkins Model**. The Box-Jenkins methodology, also known as the ARIMA modeling process, is a systematic approach for identifying, estimating, and forecasting time series data using autoregressive integrated moving average models. It involves model identification, estimation, diagnostic checking, and forecasting.
+
+**Exponential Smoothing**. Is a time series forecasting method for univariate data that can be extended to support data with a systematic trend or seasonal component. It is a powerful forecasting method that may be used as an alternative to the popular Box-Jenkins ARIMA family of methods.
 
 **Forecasting**. Is the process of making predictions or estimates about future values or events based on historical data and patterns. It is widely used in various fields, including economics, finance, and weather prediction.
 
+**Inflation**. It refers to a broad rise in the prices of goods and services across the economy over time, eroding purchasing power for both consumers and businesses.
+
 **The Nueva Vizcaya Agricultural Terminal (NVAT), Philippines**. NVAT is a mixed capital public-private joint venture established in Nueva Vizcaya in 2004 to address problems such as lack of markets and keen market competition.
+
+**Root Mean Squared Error (RMSE)**. RMSE is a measure of the average deviation between the values predicted by a model or forecast and the actual observed values in a time series. It quantifies the accuracy of a predictive model, with lower values indicating better predictive performance.
+
+**SARIMA (Seasonal AutoRegressive Integrated Moving Average)**. SARIMA is an extension of the ARIMA model that includes seasonal components to account for seasonality in time series data. It is particularly useful for data with recurring seasonal patterns.
+
+**Time Series**. A time series is a sequence of data points collected or recorded at specific time intervals. It is used to analyze and predict trends, patterns, and behavior over time.
+
+**Vegetable Price**. Vegetable price refers to the cost or price at which vegetables are bought or sold in a market or region. It is a key indicator in economics and agriculture, reflecting supply and demand dynamics.
 
 # Chapter II: Review of Related Literature
 
@@ -161,9 +175,15 @@ The researchers utilized a comparative time series analysis approach to predict 
 
 ### Locale of the Study
 
+The study was conducted at the Nueva Vizcaya Agricultural Terminal (NVAT), which is situated in Bambang, Nueva Vizcaya, Philippines. In the Cagayan Valley region, the province of Nueva Vizcaya is well-known for its agricultural industries. The NVAT contributes significantly to the local economy and acts as a vital hub for the trade of agricultural goods, specifically vegetables.
+
 ### Source and Subject of the Study
 
+The study focuses particularly on monthly vegetable prices at the Nueva Vizcaya Agricultural Terminal (NVAT) from 2013 to 2023. These data are gathered from the NVAT office in Bambang, Nueva Vizcaya.
+
 ### Data Gathering Procedure
+
+
 
 ### Data Analysis and Treatment of Data
 
