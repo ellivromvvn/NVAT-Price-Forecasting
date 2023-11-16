@@ -33,25 +33,25 @@ As stated by Vibas and Raqueño (2019), Agricultural commodities significantly i
 
 Nueva Vizcaya Agricultural terminal Inc. general manager Gilbert Cumila said, Vegetable prices in the Philippines continue to rise as demand exceeds supply. Wholesale prices of vegetables increases due to the demand of people. This significantly affect the way consumers purchase vegetables to sustain their necessities.
 
-Vegetable prices in Nueva Vizcaya is rapidly increasing week by week. Consumers are having hard time to provide necessities due to this reason. This study will forecast the changes of vegetable prices in Nueva Vizcaya to serve as guide to the consumers directly affected by the problem.
+Vegetable prices in Nueva Vizcaya is rapidly increasing month by month. Consumers are having hard time to provide necessities due to this reason. This study will forecast the changes of vegetable prices in Nueva Vizcaya to serve as guide to the consumers directly affected by the problem.
 
-This research aims to describe the weekly vegetable prices in Nueva Vizcaya and identify the models that will forecast weekly vegetables. The research oath to determine the best model that can be used to forecast weekly vegetable prices in Nueva Vizcaya.
+This research aims to describe the monthly vegetable prices in Nueva Vizcaya and identify the models that will forecast monthly vegetables. The research oath to determine the best model that can be used to forecast monthly vegetable prices in Nueva Vizcaya.
 
 ### Objectives of the Study
 
-The researchers will forecast weekly vegetable prices in Nueva Vizcaya by accomplishing the following:
+The researchers will forecast monthly vegetable prices in Nueva Vizcaya by accomplishing the following:
 
-1.  Describe the weekly vegetable prices in Nueva Vizcaya.
+1.  Describe the monthly vegetable prices in Nueva Vizcaya.
 
-2.  Identify models that will forecast weekly vegetable prices in Nueva Vizcaya.
+2.  Identify models that will forecast monthly vegetable prices in Nueva Vizcaya.
 
-3.  Determine the best model that will forecast weekly vegetable prices in Nueva Vizcaya.
+3.  Determine the best model that will forecast monthly vegetable prices in Nueva Vizcaya.
 
-4.  Forecast the best model for weekly vegetable prices in Nueva Vizcaya.
+4.  Forecast the best model for monthly vegetable prices in Nueva Vizcaya.
 
 ### Significance of the Study
 
-This study focused on determining the best model that will forecast weekly vegetable prices in Nueva Vizcaya on the viability of NVAT, Bambang, Nueva Vizcaya.
+This study focused on determining the best model that will forecast monthly vegetable prices in Nueva Vizcaya on the viability of NVAT, Bambang, Nueva Vizcaya.
 
 **Farmers**. This research is beneficial to farmers as it holds immense significance for farmers in Nueva Vizcaya and provides them with valuable insights into future vegetable price trends. Accurate price forecasts enable farmers to plan their planting and harvesting schedules efficiently, reduce wastage, and optimize their crop yields, ultimately leading to improved income stability and sustainable agricultural practices.
 
@@ -66,8 +66,13 @@ This study focused on determining the best model that will forecast weekly veget
 **Future Researchers**. This research serves as a valuable foundation for future researchers interested in agricultural economics, market dynamics, and forecasting methodologies. It provides a benchmark dataset and insights that can be expanded upon and refined in subsequent research efforts, contributing to the continuous advancement of agricultural forecasting and market analysis.
 
 ### Scope and Delimitation of the Study
+<<<<<<< HEAD
 
 The study focuses on forecasting the weekly prices of vegetables in the NVAT, Bambang, Nueva Vizcaya, for the years 2013 to 2023. The researchers decided that the Box and Jenkins models were the best strategy for forecasting weekly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. However, it is vital to highlight that the study's findings and conclusions are limited to this specific locale, the vegetables, and the timeframe mentioned. Alternative forecasting methodologies and external variables impacting vegetable prices are not investigated in this study. As a result, the findings should be regarded with caution and applied exclusively within the defined boundaries of NVAT, Bambang, Nueva Vizcaya, and the chosen vegetables during the specified study period.
+=======
+	
+The study focuses on forecasting the monthly prices of vegetables in the NVAT, Bambang, Nueva Vizcaya, for the years 2013 to 2023. The researchers decided that the Box and Jenkins models were the best strategy for forecasting monthly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. However, it is vital to highlight that the study's findings and conclusions are limited to this specific locale, the vegetables, and the timeframe mentioned. Alternative forecasting methodologies and external variables impacting vegetable prices are not investigated in this study. As a result, the findings should be regarded with caution and applied exclusively within the defined boundaries of NVAT, Bambang, Nueva Vizcaya, and the chosen vegetables during the specified study period.
+>>>>>>> cc1a01f11754d82f880af315eb7fc1b18b76d58d
 
 ### Conceptual Framework
 
