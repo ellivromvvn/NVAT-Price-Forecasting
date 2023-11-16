@@ -171,7 +171,7 @@ Crop climate calendars enhance traditional crop calendars by providing phenologi
 
 ### Research Design
 
-The researchers utilized a comparative time series analysis approach to predict and study the variation of vegetable prices over time. The study will collect weekly price data for various vegetables and use statistical approaches such as Autoregressive Integrated Moving Average (ARIMA), Seasonal AutoRegressive Integrated Moving Average (SARIMA), and exponential smoothing. Different kinds of vegetables will be compared using different statistical approaches to identify patterns, trends, and variations in vegetable prices. The goal is to create realistic forecasting models that will allow price fluctuations among different groupings to be compared. The research design will address ethical considerations such as data protection and the proper use of market information. The study's findings will provide important insights for comprehending and forecasting weekly events.
+The researchers utilized a comparative time series analysis approach to predict and study the variation of vegetable prices over time. The study will collect monthly price data for various vegetables and use statistical approaches such as Autoregressive Integrated Moving Average (ARIMA), Seasonal AutoRegressive Integrated Moving Average (SARIMA), and Exponential Smoothing. Different kinds of vegetables will be compared using different statistical approaches to identify patterns, trends, and variations in vegetable prices. The goal is to create realistic forecasting models that will allow price fluctuations among different groupings to be compared. The research design will address ethical considerations such as data protection and the proper use of market information. The study's findings will provide important insights for comprehending and forecasting monthly events.
 
 ### Locale of the Study
 
@@ -183,7 +183,7 @@ The study focuses particularly on monthly vegetable prices at the Nueva Vizcaya 
 
 ### Data Gathering Procedure
 
-
+The data for this study was gathered by collecting monthly data for different kinds of vegetable prices from the Nueva Vizcaya Agricultural Terminal (NVAT) in Bambang, Nueva Vizcaya, from 2013 to 2023. The researchers will collaborate with NVAT authorities to collect historical price data for various vegetables. The information will include the different kinds of vegetables, their corresponding prices, and the month of observation. The collection will involve systematically recording prices for a diverse range of vegetables to ensure representation across different categories. The collected data will then be categorized chronologically, allowing for a comprehensive analysis of historical patterns. Throughout the data collection procedure, ethical considerations such as data confidentiality and approval from appropriate authorities will be strictly followed.
 
 ### Data Analysis and Treatment of Data
 
