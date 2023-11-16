@@ -103,7 +103,7 @@ The figure...
 
 **Vegetable Price**. Vegetable price refers to the cost or price at which vegetables are bought or sold in a market or region. It is a key indicator in economics and agriculture, reflecting supply and demand dynamics.
 
-# Chapter II: Review of Related Literature
+# Chapter II
 
 ## REVIEW OF RELATED LITERATURE
 
@@ -183,7 +183,7 @@ The study focuses particularly on monthly vegetable prices at the Nueva Vizcaya 
 
 ### Data Gathering Procedure
 
-The data for this study was gathered by collecting monthly data for different kinds of vegetable prices from the Nueva Vizcaya Agricultural Terminal (NVAT) in Bambang, Nueva Vizcaya, from 2013 to 2023. The researchers will collaborate with NVAT authorities to collect historical price data for various vegetables. The information will include the different kinds of vegetables, their corresponding prices, and the month of observation. The collection will involve systematically recording prices for a diverse range of vegetables to ensure representation across different categories. The collected data will then be categorized chronologically, allowing for a comprehensive analysis of historical patterns. Throughout the data collection procedure, ethical considerations such as data confidentiality and approval from appropriate authorities will be strictly followed.
+The data for this study was gathered by collecting monthly data for different kinds of vegetable prices from the Nueva Vizcaya Agricultural Terminal (NVAT) office in Bambang, Nueva Vizcaya, from 2013 to 2023. The researchers will collaborate with NVAT authorities to collect historical price data for various vegetables. The information will include the different kinds of vegetables, their corresponding prices, and the month of observation. The collection will involve systematically recording prices for a diverse range of vegetables to ensure representation across different categories. The collected data will then be categorized chronologically, allowing for a comprehensive analysis of historical patterns. Throughout the data collection procedure, ethical considerations such as data confidentiality and approval from appropriate authorities will be strictly followed.
 
 ### Data Analysis and Treatment of Data
 
