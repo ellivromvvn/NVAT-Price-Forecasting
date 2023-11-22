@@ -75,7 +75,7 @@ The study focuses on forecasting the monthly prices of vegetables in the NVAT, B
 
 ### Conceptual Framework
 
-The figure...
+The figure....
 
 ### Definition of Terms
 
@@ -171,7 +171,9 @@ Crop climate calendars enhance traditional crop calendars by providing phenologi
 
 ### Research Design
 
-The researchers utilized a comparative time series analysis approach to predict and study the variation of vegetable prices over time. The study will collect monthly price data for various vegetables and use statistical approaches such as Autoregressive Integrated Moving Average (ARIMA), Seasonal AutoRegressive Integrated Moving Average (SARIMA), and Exponential Smoothing. Different kinds of vegetables will be compared using different statistical approaches to identify patterns, trends, and variations in vegetable prices. The goal is to create realistic forecasting models that will allow price fluctuations among different groupings to be compared. The research design will address ethical considerations such as data protection and the proper use of market information. The study's findings will provide important insights for comprehending and forecasting monthly events.
+The research will be purely quantitative in nature. Specifically, it will employ comparative time series forecasting [@hyndman21]. The researchers will compare two algorithms for automatic forecasting.
+
+utilized a comparative time series analysis approach to predict and study the variation of vegetable prices over time. The study will collect monthly price data for various vegetables and use statistical approaches such as Autoregressive Integrated Moving Average (ARIMA), Seasonal AutoRegressive Integrated Moving Average (SARIMA), and Exponential Smoothing. Different kinds of vegetables will be compared using different statistical approaches to identify patterns, trends, and variations in vegetable prices. The goal is to create realistic forecasting models that will allow price fluctuations among different groupings to be compared. The research design will address ethical considerations such as data protection and the proper use of market information. The study's findings will provide important insights for comprehending and forecasting monthly events.
 
 ### Locale of the Study
 
