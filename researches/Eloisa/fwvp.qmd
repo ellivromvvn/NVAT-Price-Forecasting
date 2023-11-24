@@ -15,7 +15,7 @@ csl: apa.csl
 
 # Chapter I
 
-## [@chen2018a]INTRODUCTION
+## INTRODUCTION
 
 ### Background of the Study
 
@@ -171,24 +171,61 @@ Crop climate calendars enhance traditional crop calendars by providing phenologi
 
 ### Research Design
 
-The research will be purely quantitative in nature. Specifically, it will employ comparative time series forecasting [@hyndman21]. The researchers will compare two algorithms for automatic forecasting.
-
-utilized a comparative time series analysis approach to predict and study the variation of vegetable prices over time. The study will collect monthly price data for various vegetables and use statistical approaches such as Autoregressive Integrated Moving Average (ARIMA), Seasonal AutoRegressive Integrated Moving Average (SARIMA), and Exponential Smoothing. Different kinds of vegetables will be compared using different statistical approaches to identify patterns, trends, and variations in vegetable prices. The goal is to create realistic forecasting models that will allow price fluctuations among different groupings to be compared. The research design will address ethical considerations such as data protection and the proper use of market information. The study's findings will provide important insights for comprehending and forecasting monthly events.
+The research will be purely quantitative in nature. Specifically, the researchers will employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models will be estimated using monthly vegetable prices from NVAT. The researchers will then compare the estimated models and choose the one with higher accuracy for forecasting monthly vegetable prices.
 
 ### Locale of the Study
 
-The study was conducted at the Nueva Vizcaya Agricultural Terminal (NVAT), which is situated in Bambang, Nueva Vizcaya, Philippines. In the Cagayan Valley region, the province of Nueva Vizcaya is well-known for its agricultural industries. The NVAT contributes significantly to the local economy and acts as a vital hub for the trade of agricultural goods, specifically vegetables.
+The study will be conducted in Bambang, Nueva Vizcaya, particularly at NVAT. The province of Nueva Vizcaya is strategically situated at the center of northern luzon. Please see @fig-nv for the map of Nueva Vizcaya. The NVAT and its location in the province is shown in @fig-nvat. In the Cagayan Valley region, the province of Nueva Vizcaya is well-known for the NVAT. It contributes significantly to the local economy and acts as a vital hub for the trade of agricultural goods, specifically vegetables.
+
+![Map of Nueva Vizcaya (https://www.openstreetmap.org)](pictures/nueva-vizcaya.png){#fig-nv fig-align="center"}
+
+![Map of NVAT, Bambang, Nueva Vizcaya (https://www.google.com/maps)](pictures/nvat.png){#fig-nvat fig-align="center"}
 
 ### Source and Subject of the Study
 
-The study focuses particularly on monthly vegetable prices at the Nueva Vizcaya Agricultural Terminal (NVAT) from 2013 to 2023. These data are gathered from the NVAT office in Bambang, Nueva Vizcaya.
+The study will particularly focus on the available time series data for vegetable prices at NVAT.
 
 ### Data Gathering Procedure
 
-The data for this study was gathered by collecting monthly data for different kinds of vegetable prices from the Nueva Vizcaya Agricultural Terminal (NVAT) office in Bambang, Nueva Vizcaya, from 2013 to 2023. The researchers will collaborate with NVAT authorities to collect historical price data for various vegetables. The information will include the different kinds of vegetables, their corresponding prices, and the month of observation. The collection will involve systematically recording prices for a diverse range of vegetables to ensure representation across different categories. The collected data will then be categorized chronologically, allowing for a comprehensive analysis of historical patterns. Throughout the data collection procedure, ethical considerations such as data confidentiality and approval from appropriate authorities will be strictly followed.
+The researchers will inquire about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research will be written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively). Subsequently, the researchers will collect available time series data for vegetable prices. Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, will be maintained.
 
 ### Data Analysis and Treatment of Data
 
-### Forecast Performance Evaluation
+The process of forecasting monthly vegetable prices is illustrated in @fig-workflow. The illustration is a modified version of the workflow introduced by @hyndman21.
+
+```{r}
+#| label: diagram-workflow
+#| echo: false
+
+workflow <- DiagrammeR::grViz("digraph {
+
+graph [layout = dot, rankdir = LR]
+
+# define the global styles of the nodes. We can override these in box if we wish
+node [shape = rectangle, style = filled, fillcolor = Linen]
+
+B [label = 'Tidy']
+C [label = 'Visualize']
+D [label = 'Estimate']
+E [label = 'Evaluate']
+F [label = 'Forecast']
+
+# edge definitions with the node IDs
+B -> C -> D -> E -> F;
+E -> C
+}")
+
+vtree::grVizToPNG(workflow, filename = "pictures/workflow.png")
+```
+
+![Data Treatment and Analysis Workflow](pictures/workflow.png){#fig-workflow width="600" fig-align="center"}
+
+The first step is to tidy or prepare the data in the correct format. This process involves loading the data into R, identifying missing values, and resolving missing values to come up with tidy time series of monthly vegetable prices. The researchers are going to use the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
+
+The next step is to visualize the monthly time series of vegetable prices. Tidying and visualizing the data will allow the researchers to describe the data. The researchers will compute the maximum and minimum values and the time series of vegetable prices will be decomposed into their trend and seasonal components using the Seasonal and Trend decomposition using Loess (STL) method developed by @cleveland90.
+
+After this, the researchers will then fit compare the ARIMA and The next step fit the data to come up with ARIMA and
+
+Data will be tidied into monthly time series of vegetable prices in R using the `tidyverse` package [@wickham19]. Tidied time series data will allow the data to be analyzed in R. The Researchers will split the data into training and testing data sets. The models will be specified using the the Using the `fable` package in R, ARIMA and ETC models will be fitted to the data. The `ARIMA()` and `ETS()` functions of the `fable` package have algorithms automatically choose the best ARIMA and ETS models
 
 # References
