@@ -15,7 +15,7 @@ csl: apa.csl
 
 # Chapter I
 
-## INTRODUCTION
+## [@chen2018a]INTRODUCTION
 
 ### Background of the Study
 
@@ -23,9 +23,7 @@ The fluctuation of vegetable prices is a global concern in both developed and em
 
 Vegetables are a major life necessity for urban and rural residents, and the vegetable market massively supports rural economic development. Fluctuations in vegetable prices affect farmers' income, quality of life, and decision-making regarding vegetable planting. Therefore, issues regarding maintaining price stability have long been focused on government policies. In recent years, the price of vegetables has exhibited dramatic and frequent volatility, which caused a series of negative effects on stakeholders in the supply-chain, e.g., farmers, logistics, wholesale, retail, and consumers. In view of the above adverse effects on stakeholders, it is of crucial importance to filter out key factors that relate to price fluctuations, targeting effective monitoring of real-time abnormal fluctuations.
 
-
 Price fluctuation is a complex issue with far-reaching consequences, especially for vulnerable populations. While higher prices may appear beneficial for farmers, the inherent volatility poses significant risks, potentially leading to substantial losses for agricultural stakeholders. Often attributed to imbalances in market fundamentals, where demand surpasses supply, this phenomenon has a profound impact on small-scale farmers [@mchopa14].
-
 
 According to @fao, agricultural products account for a large proportion of the market as a necessity for daily consumption, and their prices play a critical part in consumer spending and agricultural household income. The supply and demand in a given year determine the prices of agricultural products. While an undersupply of agricultural items raises prices and burdens consumers, an oversupply of agricultural products causes vegetable prices to increase and causes financial losses to farming households.
 
