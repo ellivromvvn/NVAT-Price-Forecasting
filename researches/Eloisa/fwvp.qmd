@@ -171,7 +171,7 @@ Crop climate calendars enhance traditional crop calendars by providing phenologi
 
 ### Research Design
 
-The research will be purely quantitative in nature. Specifically, the researchers will employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models will be estimated using monthly vegetable prices from NVAT. The researchers will then compare the estimated models and choose the one with higher accuracy for forecasting monthly vegetable prices.
+The research will be purely quantitative in nature. Specifically, the researchers will employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models will be estimated using the monthly vegetable prices from NVAT. The researchers will then compare the estimated models and choose the one with higher accuracy for forecasting monthly vegetable prices.
 
 ### Locale of the Study
 
@@ -187,11 +187,11 @@ The study will particularly focus on the available time series data for vegetabl
 
 ### Data Gathering Procedure
 
-The researchers will inquire about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research will be written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively). Subsequently, the researchers will collect available time series data for vegetable prices. Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, will be maintained.
+The researchers will inquire about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research will be written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively). Subsequently, the researchers will collect available time series of vegetable prices. Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, will be maintained.
 
 ### Data Analysis and Treatment of Data
 
-The process of forecasting monthly vegetable prices is illustrated in @fig-workflow. The illustration is a modified version of the workflow introduced by @hyndman21.
+In forecasting monthly vegetable prices, the researchers will follow the process illustrated in @fig-workflow. It is an adapted representation of the workflow introduced by @hyndman21.
 
 ```{r}
 #| label: diagram-workflow
@@ -220,12 +220,14 @@ vtree::grVizToPNG(workflow, filename = "pictures/workflow.png")
 
 ![Data Treatment and Analysis Workflow](pictures/workflow.png){#fig-workflow width="600" fig-align="center"}
 
-The first step is to tidy or prepare the data in the correct format. This process involves loading the data into R, identifying missing values, and resolving missing values to come up with tidy time series of monthly vegetable prices. The researchers are going to use the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
+The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values in order to create a tidy time series data for monthly vegetable prices. The researchers will utilize the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
 
-The next step is to visualize the monthly time series of vegetable prices. Tidying and visualizing the data will allow the researchers to describe the data. The researchers will compute the maximum and minimum values and the time series of vegetable prices will be decomposed into their trend and seasonal components using the Seasonal and Trend decomposition using Loess (STL) method developed by @cleveland90.
+Subsequently, the researchers will visualize the monthly vegetable prices. The trend and seasonal components of the data will also be visualized using the Seasonal and Trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations are integral in describing the data.
 
-After this, the researchers will then fit compare the ARIMA and The next step fit the data to come up with ARIMA and
+Next, automatic algorithms introduced by @hyndman21 will be used to estimate or fit the best ARIMA and ETS models to the data. The researchers will implement these algorithms in R using the `fable` package[@fable]. 
 
-Data will be tidied into monthly time series of vegetable prices in R using the `tidyverse` package [@wickham19]. Tidied time series data will allow the data to be analyzed in R. The Researchers will split the data into training and testing data sets. The models will be specified using the the Using the `fable` package in R, ARIMA and ETC models will be fitted to the data. The `ARIMA()` and `ETS()` functions of the `fable` package have algorithms automatically choose the best ARIMA and ETS models
+Moreover, time series cross-validation will be used to evaluate forecast accuracy of the ARIMA and ETS models [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) will be computed and compared to determine the better model for each vegetable.
+
+Finally, the better model will be used to forecast monthly vegetable prices.
 
 # References
