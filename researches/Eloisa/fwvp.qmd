@@ -29,7 +29,7 @@ According to @fao, agricultural products account for a large proportion of the m
 
 In the Philippines, vegetables price height has been a major problem for past years. Consumers were complaining of higher food prices, reflected not only in vegetables but in poultry and pork meat as well, and selected fish variants. Some prices have gone up by as much as 66 percent from last month alone. The Department of Agriculture officials have blamed the higher prices on numerous factors such as the ongoing pandemic, the devastating typhoons that destroyed crops, and the unwillingness of poultry and hog raisers to farm a new following the glut and the spread of the African swine fever, respectively. (Ocampo, 2021)
 
-As stated by @villaren19, Agricultural commodities significantly impact a country's export earnings and economic performance. Price fluctuations affect farmers, consumers, and public agencies. The Department of Agriculture in the Philippines recognizes that local market-driven commodity pricing, notably for fruits and vegetables, have prompted government action.
+As stated by @vibas19, Agricultural commodities significantly impact a country's export earnings and economic performance. Price fluctuations affect farmers, consumers, and public agencies. The Department of Agriculture in the Philippines recognizes that local market-driven commodity pricing, notably for fruits and vegetables, have prompted government action.
 
 Nueva Vizcaya Agricultural terminal Inc. general manager Gilbert Cumila said, Vegetable prices in the Philippines continue to rise as demand exceeds supply. Wholesale prices of vegetables increases due to the demand of people. This significantly affect the way consumers purchase vegetables to sustain their necessities.
 
@@ -109,7 +109,7 @@ The figure....
 
 **Vegetable**
 
-The term "vegetable" typically refers to the living, edible components of some herbaceous plants, such as their roots, stems, leaves, flowers, fruit, or seeds. These plant components are eaten raw or cooked in a number of ways, primarily as a savory dish rather than a dessert. Vegetables are low in calories, include more than 70% water, only have a little amount of protein (about 3.5%), and less than 1% fat. These are a good source of minerals like calcium and iron as well as vitamins like A and C. Almost all vegetables are rich in dietary fiber and antioxidants (Vegetable \| Description, Types, Farming, & Examples, 2023).
+The term "vegetable" typically refers to the living, edible components of some herbaceous plants, such as their roots, stems, leaves, flowers, fruit, or seeds. These plant components are eaten raw or cooked in a number of ways, primarily as a savory dish rather than a dessert. Vegetables are low in calories, include more than 70% water, only have a little amount of protein (about 3.5%), and less than 1% fat. These are a good source of minerals like calcium and iron as well as vitamins like A and C. Almost all vegetables are rich in dietary fiber and antioxidants [@petruzzello23].
 
 Vegetables have various types, and these include cabbage, stalk vegetables, leafy vegetables, salad greens, vegetable fruits, bulbs, mushrooms, tubers, and specialty vegetables. Stalk vegetables are made from cellulose-rich plant stalks, whereas cabbage vegetables are those grown for their heads, leaves, or flowers. Among the salad greens grown for their edible leaves are endives, lettuce stems, edible pods, and immature shoots. Additionally, specialty vegetables, tubers, and fungi are included in this categorization (Rajak, 2023).
 
@@ -171,7 +171,7 @@ Crop climate calendars enhance traditional crop calendars by providing phenologi
 
 ### Research Design
 
-The research will be purely quantitative in nature. Specifically, the researchers will employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models will be estimated using the monthly vegetable prices from NVAT. The researchers will then compare the estimated models and choose the one with higher accuracy for forecasting monthly vegetable prices.
+The research will be purely quantitative in nature. Specifically, the researchers will employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models will be estimated using the monthly vegetable prices from NVAT. The researchers will then compare the estimated models and choose the one with higher accuracy to forecast monthly vegetable prices.
 
 ### Locale of the Study
 
@@ -224,7 +224,7 @@ The tidy part involves preparing the raw data in the correct format. This includ
 
 Subsequently, the researchers will visualize the monthly vegetable prices. The trend and seasonal components of the data will also be visualized using the Seasonal and Trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations are integral in describing the data.
 
-Next, automatic algorithms introduced by @hyndman21 will be used to estimate or fit the best ARIMA and ETS models to the data. The researchers will implement these algorithms in R using the `fable` package[@fable]. 
+Next, automatic algorithms introduced by @hyndman21 will be used to estimate or fit the best ARIMA and ETS models to the data. The researchers will implement these algorithms in R using the `fable` package[@fable].
 
 Moreover, time series cross-validation will be used to evaluate forecast accuracy of the ARIMA and ETS models [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) will be computed and compared to determine the better model for each vegetable.
 
