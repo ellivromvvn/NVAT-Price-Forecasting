@@ -1,5 +1,5 @@
 ---
-title: "Forecasting Monthly Vegetable Prices"
+title: "Forecasting Monthly Vegetable Prices in the Province of Nueva Vizcaya"
 author:
   - Jaime Neil P. Alap   
   - Glomie G. Gonzales
@@ -31,7 +31,7 @@ In the Philippines, vegetables price height has been a major problem for past ye
 
 As stated by @vibas19, Agricultural commodities significantly impact a country's export earnings and economic performance. Price fluctuations affect farmers, consumers, and public agencies. The Department of Agriculture in the Philippines recognizes that local market-driven commodity pricing, notably for fruits and vegetables, have prompted government action.
 
-Nueva Vizcaya Agricultural Terminal Inc. (NVAT) General Manager Gilbert Cumila said, vegetable prices in the Philippines continue to rise as demand exceeds supply. Wholesale prices of vegetables increases due to the demand of people. This significantly affect the way consumers purchase vegetables to sustain their necessities.
+Nueva Vizcaya Agricultural Terminal (NVAT) General Manager Gilbert Cumila said, vegetable prices in the Philippines continue to rise as demand exceeds supply. Wholesale prices of vegetables increases due to the demand of people. This significantly affect the way consumers purchase vegetables to sustain their necessities.
 
 Vegetable prices in Nueva Vizcaya is volatile. Consumers are having hard time to provide necessities due to this reason. This study will forecast monthly vegetable prices in Nueva Vizcaya to serve as guide to consumers directly affected by the problem.
 
@@ -39,7 +39,7 @@ Vegetable prices in Nueva Vizcaya is volatile. Consumers are having hard time to
 
 In response to the problem of volatile vegetable prices faced by local farmers, distributors, and consumers, the researchers will provide forecasts of monthly vegetable prices in Nueva Vizcaya. This will assist them in making informed decisions regarding agricultural production, distribution, and vegetable purchases.
 
-To do this, the researchers will use available time series of vegetable prices from NVAT to come up with models that will forecast monthly vegetable prices in Nueva Vizcaya. First, the researchers will define and describe the monthly vegetable prices in Nueva Vizcaya. Next, the researchers will fit models to the data. The researchers will then determine which model has the the best forecast performance for each vegetable and then them to forecast monthly vegetable prices in Nueva Vizcaya.
+To do this, the researchers will use available time series of vegetable prices from the Nueva Vizcaya Agricultural Terminal (NVAT) to come up with models that will forecast monthly vegetable prices in Nueva Vizcaya. First, the researchers will define and describe the monthly vegetable prices in Nueva Vizcaya. Next, the researchers will fit models to the data. The researchers will then determine which model has the the best forecast performance for each vegetable and then them to forecast monthly vegetable prices in Nueva Vizcaya.
 
 ### Objectives of the Study
 
@@ -73,21 +73,21 @@ This study is focused on forecasting monthly vegetable prices in Nueva Vizcaya. 
 
 ### Scope and Delimitation of the Study
 
-The study focuses on forecasting the monthly prices of vegetables in the NVAT, Bambang, Nueva Vizcaya, for the years 2013 to 2023. The researchers decided that the Box and Jenkins models were the best strategy for forecasting monthly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. However, it is vital to highlight that the study's findings and conclusions are limited to this specific locale, the vegetables, and the timeframe mentioned. Alternative forecasting methodologies and external variables impacting vegetable prices are not investigated in this study. As a result, the findings should be regarded with caution and applied exclusively within the defined boundaries of NVAT, Bambang, Nueva Vizcaya, and the chosen vegetables during the specified study period.
+
+
+The study will focus forecasting the monthly prices of vegetables in the NVAT, Bambang, Nueva Vizcaya, for the years 2013 to 2023. The researchers decided that the Box and Jenkins models were the best strategy for forecasting monthly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. However, it is vital to highlight that the study's findings and conclusions are limited to this specific locale, the vegetables, and the timeframe mentioned. Alternative forecasting methodologies and external variables impacting vegetable prices are not investigated in this study. As a result, the findings should be regarded with caution and applied exclusively within the defined boundaries of NVAT, Bambang, Nueva Vizcaya, and the chosen vegetables during the specified study period.
 
 ### Conceptual Framework
 
-The figure....
+The research paradigm as shown in @fig-rp will guide the researchers in conducting the study. It consists of input, process, and output. The input will be the available time series of vegetable prices from NVAT. The output will be ARIMA and/or  ETS models and their corresponding monthly forecasts. Under process, automatic algorithms will determine the best ARIMA and ETS models. From this, the better model will be determined using time series cross-validation; comparing their point forecast accuracy measures.  
+
+![Research Paradigm](pictures/rp.png){#fig-rp fig-align="center" width="600"}
 
 ### Definition of Terms
-
-**Akaike Information Criterion (AIC)**. AIC is a statistical measure used to compare the goodness of fit of different statistical models. It balances the complexity of a model with its ability to explain the data. Lower AIC values suggest better model fit.
 
 **ARIMA (AutoRegressive Integrated Moving Average)**. ARIMA is a popular time series forecasting model that combines autoregressive (AR) and moving average (MA) components with differencing to make a time series stationary. It is used for modeling and forecasting univariate time series data.
 
 **Best Fit Model**. The best fit model is the statistical or mathematical model that most accurately describes and predicts the patterns and trends within a given time series. It is selected based on criteria like RMSE, AIC, BIC, or other statistical measures.
-
-**Box-Jenkins Model**. The Box-Jenkins methodology, also known as the ARIMA modeling process, is a systematic approach for identifying, estimating, and forecasting time series data using autoregressive integrated moving average models. It involves model identification, estimation, diagnostic checking, and forecasting.
 
 **Exponential Smoothing**. Is a time series forecasting method for univariate data that can be extended to support data with a systematic trend or seasonal component. It is a powerful forecasting method that may be used as an alternative to the popular Box-Jenkins ARIMA family of methods.
 
@@ -196,6 +196,7 @@ In forecasting monthly vegetable prices in Nueva Vizcaya, the researchers will f
 ```{r}
 #| label: diagram-workflow
 #| echo: false
+#| fig-width: 6
 
 workflow <- DiagrammeR::grViz("digraph {
 
@@ -214,7 +215,7 @@ F [label = 'Forecast']
 B -> C -> D -> E -> F;
 }")
 
-vtree::grVizToPNG(workflow, filename = "pictures/workflow.png")
+vtree::grVizToPNG(workflow, filename = "pictures/workflow.png", width = 600)
 ```
 
 ![Data Treatment and Analysis Workflow](pictures/workflow.png){#fig-workflow width="600" fig-align="center"}
