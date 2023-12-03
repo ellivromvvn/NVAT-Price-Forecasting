@@ -19,7 +19,7 @@ csl: apa.csl
 
 ### Background of the Study
 
-The fluctuation of vegetable prices is a global concern in both developed and emerging economies. The need for vegetables as a primary source of essential nutrients and dietary variety has grown as urbanization and global population growth simultaneously. Consequently, the dynamics of vegetable pricing have grown more intricate and significant, having an effect on not just consumer choices but also food security, economic stability, and agricultural practices. Understanding the factors driving these price fluctuations is paramount for policymakers, farmers, consumers, and the broader food industry [@chen18].
+The fluctuation of vegetable prices is a global concern in both developed and emerging economies. The demand for vegetables as a primary source of essential nutrients and dietary variety has increased concomitantly with urbanization and global population growth. Consequently, the dynamics of vegetable pricing have grown more intricate and significant, having an effect not just on consumer choices but also on food security, economic stability, and agricultural practices. Understanding the factors driving these price fluctuations is paramount for policymakers, farmers, consumers, and the broader food industry [@chen18].
 
 Vegetables are a major life necessity for urban and rural residents, and the vegetable market massively supports rural economic development. Fluctuations in vegetable prices affect farmers' income, quality of life, and decision-making regarding vegetable planting. Therefore, issues regarding maintaining price stability have long been focused on government policies. In recent years, the price of vegetables has exhibited dramatic and frequent volatility, which caused a series of negative effects on stakeholders in the supply-chain, e.g., farmers, logistics, wholesale, retail, and consumers. In view of the above adverse effects on stakeholders, it is of crucial importance to filter out key factors that relate to price fluctuations, targeting effective monitoring of real-time abnormal fluctuations [@chen18].
 
@@ -171,19 +171,17 @@ Crop climate calendars enhance traditional crop calendars by providing phenologi
 
 ### Research Design
 
-The research will be purely quantitative in nature. Specifically, the researchers will employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models will be estimated using the monthly vegetable prices from NVAT. The researchers will then compare the estimated models and choose the one with higher accuracy to forecast monthly vegetable prices.
+The research will purely be quantitative in nature. Specifically, the researchers will employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models will be estimated using the monthly vegetable prices from NVAT. The researchers will then compare the estimated models and choose the one with higher accuracy to forecast monthly vegetable prices.
 
 ### Locale of the Study
 
-The study will be conducted in Bambang, Nueva Vizcaya, particularly at NVAT. The province of Nueva Vizcaya is strategically situated at the center of northern luzon. Please see @fig-nv for the map of Nueva Vizcaya. The NVAT and its location in the province is shown in @fig-nvat. In the Cagayan Valley region, the province of Nueva Vizcaya is well-known for the NVAT. It contributes significantly to the local economy and acts as a vital hub for the trade of agricultural goods, specifically vegetables.
+The study will be conducted in Bambang, Nueva Vizcaya. Specifically, the data for this study will be collected from NVAT, which is located in Bambang. Bambang is the next town south of Bayombong --- the capital town of the province of Nueva Vizcaya. Please see @fig-bambang below.
 
-![Map of Nueva Vizcaya (https://www.openstreetmap.org)](pictures/nueva-vizcaya.png){#fig-nv fig-align="center"}
-
-![Map of NVAT, Bambang, Nueva Vizcaya (https://www.google.com/maps)](pictures/nvat.png){#fig-nvat fig-align="center"}
+![Map of Bambang, Nueva Vizcaya (https://en.wikipedia.org/wiki/Bambang,_Nueva_Vizcaya#/media/File:Ph_locator_nueva_vizcaya_bambang.png)](pictures/bambang.png){#fig-bambang fig-align="center"}
 
 ### Source and Subject of the Study
 
-The study will particularly focus on the available time series data for vegetable prices at NVAT.
+The primary source of data for the research is the NVAT. Available time series of vegetable prices from the NVAT will be used to come up with ARIMA or ETS models to forecast monthly vegetable prices.
 
 ### Data Gathering Procedure
 
@@ -212,7 +210,6 @@ F [label = 'Forecast']
 
 # edge definitions with the node IDs
 B -> C -> D -> E -> F;
-E -> C
 }")
 
 vtree::grVizToPNG(workflow, filename = "pictures/workflow.png")
