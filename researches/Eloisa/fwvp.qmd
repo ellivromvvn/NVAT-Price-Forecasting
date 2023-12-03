@@ -55,19 +55,21 @@ The researchers will forecast monthly vegetable prices in Nueva Vizcaya by accom
 
 ### Significance of the Study
 
-This study focused on determining the best model that will forecast monthly vegetable prices in Nueva Vizcaya on the viability of NVAT, Bambang, Nueva Vizcaya.
+This study is focused on forecasting monthly vegetable prices in Nueva Vizcaya. The results of the study will be beneficial to the following:
 
-**Department of Agriculture**. This research would be beneficial to the Department of Agriculture by incorporating its findings into policy formulation and resource allocation. Accurate price forecasts can inform agricultural development programs, subsidies, and interventions, ultimately supporting the growth and sustainability of the agricultural sector in Nueva Vizcaya.
+**Department of Agriculture.** This research would be beneficial to the Department of Agriculture by incorporating its findings into policy formulation and resource allocation. Accurate price forecasts can inform agricultural development programs, subsidies, and interventions, ultimately supporting the growth and sustainability of the agricultural sector in Nueva Vizcaya.
 
-**Farmers**. This research is beneficial to farmers as it holds immense significance for farmers in Nueva Vizcaya and provides them with valuable insights into future vegetable price trends. Accurate price forecasts enable farmers to plan their planting and harvesting schedules efficiently, reduce wastage, and optimize their crop yields, ultimately leading to improved income stability and sustainable agricultural practices.
+**Local Farmers.** This research would be beneficial to the local farmers. It will provide them with valuable insights into future vegetable price trends. Accurate price forecasts will enable farmers to plan their planting and harvesting schedules efficiently, reduce wastage, and optimize their crop yields, ultimately leading to improved income stability and sustainable agricultural practices.
 
-**Vendors**. This research would be beneficial to vendors in Nueva Vizcaya's vegetable markets by obtaining reliable price forecasts. With this information, they can make informed purchasing decisions, maintain competitive prices, and increase profit margins. This, in turn, fosters a more stable and profitable business environment for vendors.
+**Vendors.** This research would be beneficial to vendors in Nueva Vizcaya's vegetable markets. With reliable vegetable price forecasts, they can make informed purchasing decisions, maintain competitive prices, and increase profit margins. This, in turn, fosters a more stable and profitable business environment for vendors.
 
-**Consumers**. This research would be beneficial to consumers as it helps maintain price stability and affordability. When vendors can make better decisions based on accurate forecasts, consumers are less likely to experience price shocks or sudden increases in vegetable prices, ensuring accessibility to essential food items.
+**Consumers.** This research would be beneficial to consumers as it helps maintain price stability and affordability. When vendors can make better decisions based on accurate forecasts, consumers are less likely to experience price shocks or sudden increases in vegetable prices, ensuring accessibility to essential food items.
 
-**Future Entrepreneurs**. This research would be beneficial to future entrepreneurs as they want to enter the vegetable market in Nueva Vizcaya, and they can use the results of this study to make informed business decisions. This information helps develop market entry strategies, inventory management strategies, and pricing strategies to reduce the risks associated with launching a new business. Business Owners. This research would be beneficial to business owners in Nueva Vizcaya, whether they are in the agricultural sector or the retail and distribution sector, and they can leverage predictive insights to optimize their supply chain operations. Improved supply chain efficiency can lead to cost savings and increased profitability.
+**Future Entrepreneurs.** This research would be beneficial to future entrepreneurs as they want to enter the vegetable market in Nueva Vizcaya. They can use the results of this study to make informed business decisions. This information helps develop market entry strategies, inventory management strategies, and pricing strategies to reduce the risks associated with launching a new business.
 
-**Future Researchers**. This research serves as a valuable foundation for future researchers interested in agricultural economics, market dynamics, and forecasting methodologies. It provides a benchmark dataset and insights that can be expanded upon and refined in subsequent research efforts, contributing to the continuous advancement of agricultural forecasting and market analysis.
+**Business Owners.** This research would be beneficial to business owners in Nueva Vizcaya, whether they are in the agricultural sector or the retail and distribution sector. They can leverage predictive insights to optimize their supply chain operations. Improved supply chain efficiency can lead to cost savings and increased profitability.
+
+**Future Researchers.** This research serves as a valuable foundation for future researchers interested in agricultural economics, market dynamics, and forecasting methodologies. It provides a benchmark data set and insights that can be expanded upon and refined in subsequent research efforts, contributing to the continuous advancement of agricultural forecasting and market analysis.
 
 ### Scope and Delimitation of the Study
 
