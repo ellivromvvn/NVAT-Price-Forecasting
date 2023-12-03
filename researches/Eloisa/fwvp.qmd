@@ -25,33 +25,33 @@ Vegetables are a major life necessity for urban and rural residents, and the veg
 
 Price fluctuation is a complex issue with far-reaching consequences, especially for vulnerable populations. While higher prices may appear beneficial for farmers, the inherent volatility poses significant risks, potentially leading to substantial losses for agricultural stakeholders. Often attributed to imbalances in market fundamentals, where demand surpasses supply, this phenomenon has a profound impact on small-scale farmers [@mchopa14].
 
-According to @fao, agricultural products account for a large proportion of the market as a necessity for daily consumption, and their prices play a critical part in consumer spending and agricultural household income. The supply and demand in a given year determine the prices of agricultural products. While an undersupply of agricultural items raises prices and burdens consumers, an oversupply of agricultural products causes vegetable prices to increase and causes financial losses to farming households.
+According to @fao, agricultural products account for a large proportion of the market as a necessity for daily consumption, and their prices play a critical part in consumer spending and agricultural household income. The supply and demand in a given year determine the prices of agricultural products. While an under supply of agricultural items raises prices and burdens consumers, an oversupply of agricultural products causes vegetable prices to increase and causes financial losses to farming households.
 
 In the Philippines, vegetables price height has been a major problem for past years. Consumers were complaining of higher food prices, reflected not only in vegetables but in poultry and pork meat as well, and selected fish variants. Some prices have gone up by as much as 66 percent from last month alone. The Department of Agriculture officials have blamed the higher prices on numerous factors such as the ongoing pandemic, the devastating typhoons that destroyed crops, and the unwillingness of poultry and hog raisers to farm a new following the glut and the spread of the African swine fever, respectively. (Ocampo, 2021)
 
 As stated by @vibas19, Agricultural commodities significantly impact a country's export earnings and economic performance. Price fluctuations affect farmers, consumers, and public agencies. The Department of Agriculture in the Philippines recognizes that local market-driven commodity pricing, notably for fruits and vegetables, have prompted government action.
 
-Nueva Vizcaya Agricultural terminal Inc. general manager Gilbert Cumila said, Vegetable prices in the Philippines continue to rise as demand exceeds supply. Wholesale prices of vegetables increases due to the demand of people. This significantly affect the way consumers purchase vegetables to sustain their necessities.
+Nueva Vizcaya Agricultural Terminal Inc. (NVAT) General Manager Gilbert Cumila said, vegetable prices in the Philippines continue to rise as demand exceeds supply. Wholesale prices of vegetables increases due to the demand of people. This significantly affect the way consumers purchase vegetables to sustain their necessities.
 
-Vegetable prices in Nueva Vizcaya is rapidly increasing month by month. Consumers are having hard time to provide necessities due to this reason. This study will forecast the changes of vegetable prices in Nueva Vizcaya to serve as guide to the consumers directly affected by the problem.
-
-This research aims to describe the monthly vegetable prices in Nueva Vizcaya and identify the models that will forecast monthly vegetables. The research oath to determine the best model that can be used to forecast monthly vegetable prices in Nueva Vizcaya.
+Vegetable prices in Nueva Vizcaya is volatile. Consumers are having hard time to provide necessities due to this reason. This study will forecast monthly vegetable prices in Nueva Vizcaya to serve as guide to consumers directly affected by the problem.
 
 ### Statement of the Problem
 
-The purpose of this study was to examine ten-year historical data on monthly vegetable prices in Nueva Vizcaya on the viability of NVAT, Bambang, Nueva Vizcaya. To achieve this, the researchers will first provide a comprehensive description of the historical trends and fluctuations in monthly vegetable prices in the region. Subsequently, it will explore various forecasting models to identify the most suitable ones for predicting these prices effectively. The primary objective is to determine the best-performing model among the options considered. Once the optimal model is identified, it will be used to generate forecasts for monthly vegetable prices in Nueva Vizcaya, thereby assisting local farmers, distributors, and consumers in making informed decisions related to agricultural production, distribution, and purchasing of vegetables in the region. This research addresses a critical issue of food security and economic stability in Nueva Vizcaya and can have broader implications for agricultural forecasting in similar regions.
+In response to the problem of volatile vegetable prices faced by local farmers, distributors, and consumers, the researchers will provide forecasts of monthly vegetable prices in Nueva Vizcaya. This will assist them in making informed decisions regarding agricultural production, distribution, and vegetable purchases.
+
+To do this, the researchers will use available time series of vegetable prices from NVAT to come up with models that will forecast monthly vegetable prices in Nueva Vizcaya. First, the researchers will define and describe the monthly vegetable prices in Nueva Vizcaya. Next, the researchers will fit models to the data. The researchers will then determine which model has the the best forecast performance for each vegetable and then them to forecast monthly vegetable prices in Nueva Vizcaya.
 
 ### Objectives of the Study
 
 The researchers will forecast monthly vegetable prices in Nueva Vizcaya by accomplishing the following:
 
-1.  Describe the monthly vegetable prices in Nueva Vizcaya.
+1.  Define and describe the monthly prices for each vegetable in Nueva Vizcaya.
 
-2.  Identify models that will forecast monthly vegetable prices in Nueva Vizcaya.
+2.  Identify the best AutoRegressive Integrated Moving Average (ARIMA) model and Exponential Smoothing (ETS) model for forecasting monthly prices for each vegetable in Nueva Vizcaya.
 
-3.  Determine the best model that will forecast monthly vegetable prices in Nueva Vizcaya.
+3.  Determine the better model between ARIMA and ETS for forecasting monthly prices for each vegetable in Nueva Vizcaya.
 
-4.  Forecast the best model for monthly vegetable prices in Nueva Vizcaya.
+4.  Forecast monthly prices for each vegetable in Nueva Vizcaya using the better model ARIMA and ETS.
 
 ### Significance of the Study
 
@@ -171,7 +171,7 @@ Crop climate calendars enhance traditional crop calendars by providing phenologi
 
 ### Research Design
 
-The research will purely be quantitative in nature. Specifically, the researchers will employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models will be estimated using the monthly vegetable prices from NVAT. The researchers will then compare the estimated models and choose the one with higher accuracy to forecast monthly vegetable prices.
+The research will purely be quantitative in nature. Specifically, the researchers will employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models will be estimated using the monthly vegetable prices from NVAT. The researchers will then compare the estimated models and choose the one with higher accuracy to forecast monthly vegetable prices in Nueva Vizcaya.
 
 ### Locale of the Study
 
@@ -181,7 +181,7 @@ The study will be conducted in Bambang, Nueva Vizcaya. Specifically, the data fo
 
 ### Source and Subject of the Study
 
-The primary source of data for the research is the NVAT. Available time series of vegetable prices from the NVAT will be used to come up with ARIMA or ETS models to forecast monthly vegetable prices.
+The primary source of data for the research is the NVAT. Available time series of vegetable prices from the NVAT will be used to come up with forecasts of monthly vegetable prices in Nueva Vizcaya.
 
 ### Data Gathering Procedure
 
@@ -189,7 +189,7 @@ The researchers will inquire about the background and data policy of NVAT by vis
 
 ### Data Analysis and Treatment of Data
 
-In forecasting monthly vegetable prices, the researchers will follow the process illustrated in @fig-workflow. It is an adapted representation of the workflow introduced by @hyndman21.
+In forecasting monthly vegetable prices in Nueva Vizcaya, the researchers will follow the process illustrated in @fig-workflow. It is an adapted representation of the workflow introduced by @hyndman21.
 
 ```{r}
 #| label: diagram-workflow
@@ -219,12 +219,12 @@ vtree::grVizToPNG(workflow, filename = "pictures/workflow.png")
 
 The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values in order to create a tidy time series data for monthly vegetable prices. The researchers will utilize the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
 
-Subsequently, the researchers will visualize the monthly vegetable prices. The trend and seasonal components of the data will also be visualized using the Seasonal and Trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations are integral in describing the data.
+Subsequently, the researchers will visualize the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data will also be visualized using the Seasonal and Trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations are integral in describing the data.
 
 Next, automatic algorithms introduced by @hyndman21 will be used to estimate or fit the best ARIMA and ETS models to the data. The researchers will implement these algorithms in R using the `fable` package[@fable].
 
 Moreover, time series cross-validation will be used to evaluate forecast accuracy of the ARIMA and ETS models [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) will be computed and compared to determine the better model for each vegetable.
 
-Finally, the better model will be used to forecast monthly vegetable prices.
+Finally, the better model will be used to forecast monthly vegetable prices in Nueva Vizcaya.
 
 # References
