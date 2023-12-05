@@ -37,9 +37,9 @@ Vegetable prices in Nueva Vizcaya is volatile. Consumers are having hard time to
 
 ### Statement of the Problem
 
-In response to the problem of volatile vegetable prices faced by local farmers, distributors, and consumers, the researchers will provide forecasts of monthly vegetable prices in Nueva Vizcaya. This will assist them in making informed decisions regarding agricultural production, distribution, and vegetable purchases.
+In response to the challenge of volatile vegetable prices faced by local farmers, distributors, and consumers, the researchers will provide forecasts of monthly vegetable prices in Nueva Vizcaya. This effort aims to assist them in making informed decisions regarding agricultural production, distribution, and vegetable purchases.
 
-To do this, the researchers will use available time series of vegetable prices from the Nueva Vizcaya Agricultural Terminal (NVAT) to come up with models that will forecast monthly vegetable prices in Nueva Vizcaya. First, the researchers will define and describe the monthly vegetable prices in Nueva Vizcaya. Next, the researchers will fit models to the data. The researchers will then determine which model has the the best forecast performance for each vegetable and then them to forecast monthly vegetable prices in Nueva Vizcaya.
+To achieve this, the researchers will use available time series data on vegetable prices from the Nueva Vizcaya Agricultural Terminal (NVAT) to develop models for forecasting monthly vegetable prices in Nueva Vizcaya. Initially, the researchers will define and describe the monthly vegetable prices in Nueva Vizcaya. Subsequently, they will fit models to the data, determining which model exhibits the best forecast performance for each vegetable. Finally, these models will be used to forecast monthly vegetable prices in Nueva Vizcaya.
 
 ### Objectives of the Study
 
@@ -47,11 +47,11 @@ The researchers will forecast monthly vegetable prices in Nueva Vizcaya by accom
 
 1.  Define and describe the monthly prices for each vegetable in Nueva Vizcaya.
 
-2.  Identify the best AutoRegressive Integrated Moving Average (ARIMA) model and Exponential Smoothing (ETS) model for forecasting monthly prices for each vegetable in Nueva Vizcaya.
+2.  Determine the optimal AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models for forecasting monthly prices for each vegetable in Nueva Vizcaya.
 
-3.  Determine the better model between ARIMA and ETS for forecasting monthly prices for each vegetable in Nueva Vizcaya.
+3.  Determine the optimal model --- whether ARIMA or ETS --- for forecasting monthly prices for each vegetable in Nueva Vizcaya.
 
-4.  Forecast monthly prices for each vegetable in Nueva Vizcaya using the better model ARIMA and ETS.
+4.  Utilize the optimal ARIMA or ETS model to generate forecasts for monthly prices for each vegetable in Nueva Vizcaya.
 
 ### Significance of the Study
 
@@ -65,27 +65,29 @@ This study is focused on forecasting monthly vegetable prices in Nueva Vizcaya. 
 
 **Consumers.** This research would be beneficial to consumers as it helps maintain price stability and affordability. When vendors can make better decisions based on accurate forecasts, consumers are less likely to experience price shocks or sudden increases in vegetable prices, ensuring accessibility to essential food items.
 
-**Future Entrepreneurs.** This research would be beneficial to future entrepreneurs as they want to enter the vegetable market in Nueva Vizcaya. They can use the results of this study to make informed business decisions. This information helps develop market entry strategies, inventory management strategies, and pricing strategies to reduce the risks associated with launching a new business.
+**Future Entrepreneurs.** This research will be beneficial for future entrepreneurs looking to venture into the vegetable market in Nueva Vizcaya. The study's results can be utilized to make informed business decisions, aiding in the development of market entry strategies, inventory management strategies, and pricing strategies. This information is valuable for mitigating the risks associated with launching a new business.
 
 **Business Owners.** This research would be beneficial to business owners in Nueva Vizcaya, whether they are in the agricultural sector or the retail and distribution sector. They can leverage predictive insights to optimize their supply chain operations. Improved supply chain efficiency can lead to cost savings and increased profitability.
 
-**Future Researchers.** This research serves as a valuable foundation for future researchers interested in agricultural economics, market dynamics, and forecasting methodologies. It provides a benchmark data set and insights that can be expanded upon and refined in subsequent research efforts, contributing to the continuous advancement of agricultural forecasting and market analysis.
+**Future Researchers.** This research will serve as a valuable foundation for future researchers interested in agricultural economics, market dynamics, and forecasting methodologies. It will provide a benchmark dataset and insights that can be expanded upon and refined in subsequent research efforts, contributing to the continuous advancement of agricultural forecasting and market analysis.
 
 ### Scope and Delimitation of the Study
 
+The study will focus on forecasting the monthly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. The researchers will use available time series of vegetable prices from NVAT. From this data, monthly time series of prices for each vegetable will be defined and described. ARIMA and ETS models will then be fitted to the data using automatic algorithms to determine optimal models for each vegetable. Time series cross-validation and a comparison of computed point forecast measures will help identify the model that will be used in forecasting monthly prices for each vegetable.
 
-
-The study will focus forecasting the monthly prices of vegetables in the NVAT, Bambang, Nueva Vizcaya, for the years 2013 to 2023. The researchers decided that the Box and Jenkins models were the best strategy for forecasting monthly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. However, it is vital to highlight that the study's findings and conclusions are limited to this specific locale, the vegetables, and the timeframe mentioned. Alternative forecasting methodologies and external variables impacting vegetable prices are not investigated in this study. As a result, the findings should be regarded with caution and applied exclusively within the defined boundaries of NVAT, Bambang, Nueva Vizcaya, and the chosen vegetables during the specified study period.
+The researchers will not make adjustments and transformations to the data. Model specifications will not be set either, as this process will be performed automatically using default settings. All computations and visualizations will be performed in the R programming language [@r]. Moreover, external variables impacting vegetable prices will not be investigated nor will be incorporated in the modeling process.
 
 ### Conceptual Framework
 
-The research paradigm as shown in @fig-rp will guide the researchers in conducting the study. It consists of input, process, and output. The input will be the available time series of vegetable prices from NVAT. The output will be ARIMA and/or  ETS models and their corresponding monthly forecasts. Under process, automatic algorithms will determine the best ARIMA and ETS models. From this, the better model will be determined using time series cross-validation; comparing their point forecast accuracy measures.  
+The research paradigm depicted in @fig-rp will serve as a guide for the researchers throughout the study. It comprises input, process, and output phases. The input involves utilizing available time series data on vegetable prices from NVAT. The output will include ARIMA and/or ETS models along with their corresponding monthly forecasts.
 
 ![Research Paradigm](pictures/rp.png){#fig-rp fig-align="center" width="600"}
 
+During the process phase, automated algorithms will be employed for time series analysis to identify the optimal ARIMA and ETS models for each vegetable. Subsequently, the optimal ARIMA or ETS model for forecasting the prices of each vegetable will be determined using time series cross-validation, enabling a comparison of their point forecast accuracy measures.
+
 ### Definition of Terms
 
-**ARIMA (AutoRegressive Integrated Moving Average)**. ARIMA is a popular time series forecasting model that combines autoregressive (AR) and moving average (MA) components with differencing to make a time series stationary. It is used for modeling and forecasting univariate time series data.
+**ARIMA (AutoRegressive Integrated Moving Average).** ARIMA is a popular time series forecasting model that combines autoregressive (AR) and moving average (MA) components with differencing to make a time series stationary. It is used for modeling and forecasting univariate time series data.
 
 **Best Fit Model**. The best fit model is the statistical or mathematical model that most accurately describes and predicts the patterns and trends within a given time series. It is selected based on criteria like RMSE, AIC, BIC, or other statistical measures.
 
@@ -93,13 +95,11 @@ The research paradigm as shown in @fig-rp will guide the researchers in conducti
 
 **Forecasting**. Is the process of making predictions or estimates about future values or events based on historical data and patterns. It is widely used in various fields, including economics, finance, and weather prediction.
 
-**Inflation**. It refers to a broad rise in the prices of goods and services across the economy over time, eroding purchasing power for both consumers and businesses.
-
-**The Nueva Vizcaya Agricultural Terminal (NVAT), Philippines**. NVAT is a mixed capital public-private joint venture established in Nueva Vizcaya in 2004 to address problems such as lack of markets and keen market competition.
+**The Nueva Vizcaya Agricultural Terminal (NVAT).** NVAT is a mixed capital public-private joint venture established in Nueva Vizcaya in 2004 to address problems such as lack of markets and keen market competition.
 
 **Root Mean Squared Error (RMSE)**. RMSE is a measure of the average deviation between the values predicted by a model or forecast and the actual observed values in a time series. It quantifies the accuracy of a predictive model, with lower values indicating better predictive performance.
 
-**SARIMA (Seasonal AutoRegressive Integrated Moving Average)**. SARIMA is an extension of the ARIMA model that includes seasonal components to account for seasonality in time series data. It is particularly useful for data with recurring seasonal patterns.
+**Seasonal AutoRegressive Integrated Moving Average (SARIMA).** SARIMA is an extension of the ARIMA model that includes seasonal components to account for seasonality in time series data. It is particularly useful for data with recurring seasonal patterns.
 
 **Time Series**. A time series is a sequence of data points collected or recorded at specific time intervals. It is used to analyze and predict trends, patterns, and behavior over time.
 
@@ -222,9 +222,9 @@ vtree::grVizToPNG(workflow, filename = "pictures/workflow.png", width = 600)
 
 The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values in order to create a tidy time series data for monthly vegetable prices. The researchers will utilize the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
 
-Subsequently, the researchers will visualize the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data will also be visualized using the Seasonal and Trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations are integral in describing the data.
+Subsequently, the researchers will visualize the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data will also be visualized using the seasonal and trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations are integral in describing the data.
 
-Next, automatic algorithms introduced by @hyndman21 will be used to estimate or fit the best ARIMA and ETS models to the data. The researchers will implement these algorithms in R using the `fable` package[@fable].
+Next, automatic algorithms introduced by @hyndman21 will be used to estimate or fit the optimal ARIMA and ETS models to the data. The researchers will implement these algorithms in R using the `fable` package[@fable].
 
 Moreover, time series cross-validation will be used to evaluate forecast accuracy of the ARIMA and ETS models [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) will be computed and compared to determine the better model for each vegetable.
 
