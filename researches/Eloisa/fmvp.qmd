@@ -49,9 +49,9 @@ The researchers will forecast monthly vegetable prices in Nueva Vizcaya by accom
 
 2.  Determine the optimal AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models for forecasting monthly prices for each vegetable in Nueva Vizcaya.
 
-3.  Determine the optimal model --- whether ARIMA or ETS --- for forecasting monthly prices for each vegetable in Nueva Vizcaya.
+3.  Determine and describe the performance of the optimal model --- whether ARIMA or ETS --- for forecasting monthly prices for each vegetable in Nueva Vizcaya.
 
-4.  Utilize the optimal ARIMA or ETS model to generate forecasts for monthly prices for each vegetable in Nueva Vizcaya.
+4.  Use the optimal ARIMA or ETS model to generate forecasts for monthly prices for each vegetable in Nueva Vizcaya.
 
 ### Significance of the Study
 
@@ -73,7 +73,7 @@ This study is focused on forecasting monthly vegetable prices in Nueva Vizcaya. 
 
 ### Scope and Delimitation of the Study
 
-The study will focus on forecasting the monthly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. The researchers will use available time series of vegetable prices from NVAT. From this data, monthly time series of prices for each vegetable will be defined and described. ARIMA and ETS models will then be fitted to the data using automatic algorithms to determine optimal models for each vegetable. Time series cross-validation and a comparison of computed point forecast measures will help identify the model that will be used in forecasting monthly prices for each vegetable.
+The study will focus on forecasting the monthly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. The researchers will use available time series of vegetable prices from NVAT. From this data, monthly time series of prices for each vegetable will be defined and described. ARIMA and ETS models will then be fitted to the data using automatic algorithms to determine optimal models for each vegetable. Time series cross-validation and a comparison of computed point forecast measures will help identify the optimal model that will be used in forecasting monthly prices for each vegetable. A portmanteau test of residuals will also be used to describe the performance of each optimal model chosen to forecast monthly vegetable prices for each vegetable.
 
 The researchers will not make adjustments and transformations to the data. Model specifications will not be set either, as this process will be performed automatically using default settings. All computations and visualizations will be performed in the R programming language [@r]. Moreover, external variables impacting vegetable prices will not be investigated nor will be incorporated in the modeling process.
 
@@ -83,7 +83,7 @@ The research paradigm depicted in @fig-rp will serve as a guide for the research
 
 ![Research Paradigm](pictures/rp.png){#fig-rp fig-align="center" width="600"}
 
-During the process phase, automated algorithms will be employed for time series analysis to identify the optimal ARIMA and ETS models for each vegetable. Subsequently, the optimal ARIMA or ETS model for forecasting the prices of each vegetable will be determined using time series cross-validation, enabling a comparison of their point forecast accuracy measures.
+During the process phase, automated algorithms will be employed for time series analysis to identify the optimal ARIMA and ETS models for each vegetable. Subsequently, the optimal ARIMA or ETS model for forecasting the prices of each vegetable will be determined using time series cross-validation, enabling a comparison of their point forecast accuracy measures.Also, a portmanteau test of residuals will be performed to describe the performance of the optimal model for each vegetable.
 
 ### Definition of Terms
 
@@ -226,8 +226,10 @@ Subsequently, the researchers will visualize the monthly vegetable prices in Nue
 
 Next, automatic algorithms introduced by @hyndman21 will be used to estimate or fit the optimal ARIMA and ETS models to the data. The researchers will implement these algorithms in R using the `fable` package[@fable].
 
-Moreover, time series cross-validation will be used to evaluate forecast accuracy of the ARIMA and ETS models [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) will be computed and compared to determine the better model for each vegetable.
+Moreover, time series cross-validation will be used to evaluate forecast accuracy of the ARIMA and ETS models [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) will be computed and compared to determine the better model for each vegetable. The model with lower point forecast accuracy measures will be selected. 
 
-Finally, the better model will be used to forecast monthly vegetable prices in Nueva Vizcaya.
+Furthermore, a portmanteau test in the form of the Ljung-Box test will be computed. This will allow the researchers to describe the performance of the selected model for each vegetable. Computed p-values greater than 0.05 confirms that the residuals are similar to white noise. Otherwise, the residuals have still some remaining autocorrelation that is not accounted for in the model.
+
+Finally, the selected models will be used to forecast monthly vegetable prices in Nueva Vizcaya.
 
 # References
