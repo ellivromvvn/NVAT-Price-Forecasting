@@ -21,7 +21,7 @@ library(zoo)
 
 ```{r}
 # read the csv file
-tomato_diamante <- read_csv("/cloud/project/CSV/tomato-diamante.csv", col_types = cols(Week = col_date(format = "%Y-%m-%d")))
+tomato_diamante <- read_csv("~/R/NVAT-Price-Forecasting-Fork/CSV/tomato-diamante.csv", col_types = cols(Week = col_date(format = "%Y-%m-%d")))
 # create a time series object from the data
 tomato_diamante_ts <- ts(tomato_diamante[,2], freq=365.25/7, start=2017+302/365.25)
 # plot the time series
@@ -36,11 +36,11 @@ autoplot(td_decomp)
 ```
 
 ```{r}
-training_td <- subset(tomato_diamante_ts, end=length(tomato_diamante_ts)-16)
-test_td <- subset(tomato_diamante_ts, start=length(tomato_diamante_ts)-16)
+training_td <- subset(tomato_diamante_ts, end=length(tomato_diamante_ts)-10)
+test_td <- subset(tomato_diamante_ts, start=length(tomato_diamante_ts)-10)
 fc_training_td <- forecast(training_td)
 fc_training_td %>%
-  forecast(h=20) %>%
+  forecast(h=52) %>%
   autoplot() +autolayer(test_td)
 ```
 
@@ -51,7 +51,7 @@ fc_training_td
 ```{r}
 fc_td<-forecast(tomato_diamante_ts)
 fc_td %>%
-  forecast(h=20) %>%
+  forecast(h=52) %>%
   autoplot()
 ```
 
@@ -111,7 +111,7 @@ plot(aics)
 ```
 
 ```{r}
-fc_arima_man_td <- forecast(fit_td1, xreg=fourier(tomato_diamante_ts, K=1, h=26))
+fc_arima_man_td <- forecast(fit_td1, xreg=fourier(tomato_diamante_ts, K=1, h=55))
 plot(fc_arima_man_td)
 ```
 
