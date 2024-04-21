@@ -208,7 +208,7 @@ B -> C -> D -> E -> F;
 vtree::grVizToPNG(workflow, filename = "pictures/workflow.png", width = 600)
 ```
 
-![Data Treatment and Analysis Workflow](pictures/workflow.png){#fig-workflow width="600" fig-align="center"}
+![Data Treatment and Analysis Workflow](pictures/workflow.png){#fig-workflow fig-align="center" width="600"}
 
 The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values in order to create a tidy time series data for monthly vegetable prices. The researchers will utilize the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
 
@@ -221,5 +221,212 @@ Moreover, time series cross-validation will be used to evaluate forecast accurac
 Furthermore, a portmanteau test in the form of the Ljung-Box test will be computed. This will allow the researchers to describe the performance of the selected model for each vegetable. Computed p-values greater than 0.05 confirms that the residuals are similar to white noise. Otherwise, the residuals still have some remaining autocorrelation that is not accounted for in the model.
 
 Finally, the selected models will be used to forecast monthly vegetable prices in Nueva Vizcaya.
+
+# CHAPTER IV
+
+## RESULTS AND DISCUSSION
+
+### Monthly Prices of Vegetables in NVAT
+
+```{r}
+#| label: load-packages
+#| include: false
+
+library(tidyverse)
+library(clock)
+library(fpp3)
+library(modelsummary)
+library(flextable)
+library(officer)
+```
+
+```{r}
+#| label: load-data
+#| include: false
+
+nvat <- read.csv("data/nvat.csv")
+```
+
+```{r}
+#| label: daily-to-monthly
+#| include: false
+
+nvat <- nvat |>
+  mutate(date = dmy(date))
+
+nvat_monthly <- nvat |>
+  mutate(date = date_group(date, "month")) |>
+  group_by(date) |>
+  summarise(
+    across(
+      everything(), ~ mean(.[. != 0], na.rm = TRUE)
+    )
+  )
+```
+
+```{r}
+#| label: wide-to-long
+#| include: false
+
+nvat_monthly_long <- gather(
+  nvat_monthly,
+  vegetable,
+  price,
+  broccoli:wombok,
+  factor_key=TRUE
+)
+```
+
+```{r}
+#| label: tibble-to-tsibble
+#| include: false
+
+nvat_monthly_long <- nvat_monthly_long |>
+  mutate(date = yearmonth(date)) |>
+  as_tsibble(key = vegetable, index = date)
+```
+
+```{r}
+#| label: veg_labels
+#| include: false
+
+veg_labels <- c('broccoli', 'cabbage', 'carrots', 'cauliflower', 'celery', 'chayote (bunga)', 'cucumber', 'gabi (galyang)', 'pepper (sultan)', 'pepper (taiwan)', 'potato', 'wombok')
+```
+
+```{r}
+#| label: fig-plot_all
+#| fig-cap: "Time Series of Monthly Vegetable Prices"
+#| echo: false
+
+autoplot(nvat_monthly_long, price) +
+  theme_minimal() +
+  labs(y = "Price", x = "Date") +
+  guides(color = guide_legend(title = "Vegetable")) +
+  scale_color_discrete(labels = veg_labels)
+```
+
+```{r}
+#| label: tbl-all
+#| tbl-cap-location: top
+#| tbl-cap: "Summary of Monthly Vegetable Prices"
+#| echo: false
+
+set_flextable_defaults(
+  font.size = 12
+)
+
+nvat_monthly_long |>
+  as.data.frame() |>
+  group_by(vegetable) |>
+  summarise(
+    Min = round(min(price), 2),
+    Max = round(max(price), 2),
+    Mean = round(mean(price), 2),
+    SD = round(sd(price), 2)
+  ) |>
+  mutate(vegetable = veg_labels) |>
+  flextable() |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_header_labels(vegetable = "Vegetable") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman")
+```
+
+```{r}
+#| label: tbl-stl
+#| tbl-cap-location: top
+#| tbl-cap: "STL Features of Monthly Vegetable Prices"
+#| echo: false
+
+nvat_monthly_long |>
+  index_by(date) |>
+  features(price, feat_stl) |>
+  select(
+    vegetable:seasonal_trough_year
+  ) |>
+  mutate_at(
+    vars(seasonal_peak_year, seasonal_trough_year), ~
+      recode(
+        ., 
+        '1' = 'October',
+        '2' = "November",
+        '3 '= "December",
+        '4' = "January",
+        '5' = "February",
+        '6' = "March",
+        '7' = "April",
+        '8' = "May",
+        '9' = 'June',
+        '10' = 'July',
+        '11' = 'August',
+        '0' = 'September'
+      )
+  ) |>
+  mutate(vegetable = veg_labels) |>
+  rename(
+    Vegetable = vegetable,
+    'Trend Strength' = trend_strength,
+    'Seasonal Strength' = seasonal_strength_year,
+    'Seasonal Peak' = seasonal_peak_year,
+    'Seasonal Trough' = seasonal_trough_year
+  ) |>
+  mutate_if(is.numeric, round, 2) |>
+  flextable() |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  align(align = "center", part = "header") |>
+  align(j = -1, align = "center", part = "body")
+```
+
+```{r}
+#| include: false
+
+nvat_monthly_long |>
+  filter(vegetable == "gabi_galyang") |>
+  gg_subseries(price)
+```
+
+```{r}
+#| label: fig-stl
+#| fig-cap: "Seasonal Strength vs Trend Strength of the Monthly Vegetable Prices"
+#| echo: false
+
+nvat_monthly_long |>
+  features(price, feat_stl) |>
+  ggplot(aes(x = trend_strength, y = seasonal_strength_year,
+             col = vegetable)) +
+  geom_point(size = 3) +
+  labs(
+    x = "Trend Strength",
+    y = "Seasonal Strength"
+  ) +
+  guides(color = guide_legend(title = "Vegetable")) +
+  theme_minimal() +
+  scale_color_discrete(labels = veg_labels)
+```
+
+```{r}
+#| include: false
+
+nvat_monthly_long |>
+  filter(vegetable == "cauliflower" | vegetable == "gabi_galyang") |>
+  gg_season(price)
+```
+
+```{r}
+#| include: false
+
+nvat_monthly_long |>
+  filter(vegetable == "pepper_taiwan") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 8)
+    )
+```
 
 # References
