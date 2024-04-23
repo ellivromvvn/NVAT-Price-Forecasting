@@ -429,4 +429,27 @@ nvat_monthly_long |>
     )
 ```
 
+### ARIMA and ETS Models for Monthly Vegetable Prices
+
+```{r}
+fit <- nvat_monthly_long |>
+  stretch_tsibble(.init = 15, .step = 4) |>
+  filter(.id != max(.id)) |>
+  model(
+    ARIMA = ARIMA(price),
+    ETS = ETS(price)
+  )
+```
+
+```{r}
+fit |>
+  forecast(h = 4) |>
+  accuracy(nvat_monthly_long) |>
+  select(.model, RMSE, MAE, MAPE, MASE) |>
+  mutate(Vegetable = rep(veg_labels, 2), .before = .model) |>
+  arrange(Vegetable) |>
+  mutate_if(is.numeric, round, 2) |>
+  rename(Model = .model)
+```
+
 # References
