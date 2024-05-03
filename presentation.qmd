@@ -1,16 +1,8 @@
 ---
-title: "Forecasting Monthly Vegetable Prices in the Province of Nueva Vizcaya"
-author:
-  - Jaime Niel P. Alap   
-  - Glomie G. Gonzales
-  - Eloisa J. Jimenez
-  - Carlo D. Pastores, Jr.
-format:
-  docx:
-    reference-doc: student-research-template.docx
+title: "Untitled"
+author: "fmvp"
+format: pptx
 editor: visual
-bibliography: references.bib
-csl: apa.csl
 ---
 
 # Chapter I
@@ -183,30 +175,7 @@ The researchers will inquire about the background and data policy of NVAT by vis
 
 In forecasting monthly vegetable prices in Nueva Vizcaya, the researchers will follow the process illustrated in @fig-workflow. It is an adapted representation of the workflow introduced by @hyndman21.
 
-```{r}
-#| label: diagram-workflow
-#| echo: false
-#| fig-width: 6
-
-workflow <- DiagrammeR::grViz("digraph {
-
-graph [layout = dot, rankdir = LR]
-
-# define the global styles of the nodes. We can override these in box if we wish
-node [shape = rectangle, style = filled, fillcolor = Linen]
-
-B [label = 'Tidy']
-C [label = 'Visualize']
-D [label = 'Estimate']
-E [label = 'Evaluate']
-F [label = 'Forecast']
-
-# edge definitions with the node IDs
-B -> C -> D -> E -> F;
-}")
-
-vtree::grVizToPNG(workflow, filename = "pictures/workflow.png", width = 600)
-```
+`{r} #| label: diagram-workflow #| echo: false #| fig-width: 6  workflow <- DiagrammeR::grViz("digraph {  graph [layout = dot, rankdir = LR]  # define the global styles of the nodes. We can override these in box if we wish node [shape = rectangle, style = filled, fillcolor = Linen]  B [label = 'Tidy'] C [label = 'Visualize'] D [label = 'Estimate'] E [label = 'Evaluate'] F [label = 'Forecast']  # edge definitions with the node IDs B -> C -> D -> E -> F; }")  vtree::grVizToPNG(workflow, filename = "pictures/workflow.png", width = 600)}`
 
 ![Data Treatment and Analysis Workflow](pictures/workflow.png){#fig-workflow width="600" fig-align="center"}
 
