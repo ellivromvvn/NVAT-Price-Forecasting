@@ -1,0 +1,50 @@
+seasonal ARIMA and ETS models applied to the quarterly cement production data (from aus_production). Because the series is relatively long, we can afford to use a training and a test set rather than time series cross-validation. The advantage is that this is much faster. We create a training set from the beginning of 1988 to the end of 2007 and select an ARIMA and an ETS model using the ARIMA() and ETS() functions.
+
+
+
+
+The R programming language will be used to compare the time series forecasts of `ARIMA()` and `ETS()` in the `fable` package. for n the This will be computed in the R programming language. The book of @hyndman21 discussed the two automatic algorithms in forecasting using the R programming language;  Arima lgorithm There are two popular packe The researchers will compare two algorithms in the R package forecasting.
+
+utilized a comparative time series analysis approach to predict and study the variation of vegetable prices over time. The study will collect monthly price data for various vegetables and use statistical approaches such as Autoregressive Integrated Moving Average (ARIMA), Seasonal AutoRegressive Integrated Moving Average (SARIMA), and Exponential Smoothing. Different kinds of vegetables will be compared using different statistical approaches to identify patterns, trends, and variations in vegetable prices. The goal is to create realistic forecasting models that will allow price fluctuations among different groupings to be compared. The research design will address ethical considerations such as data protection and the proper use of market information. The study's findings will provide important insights for comprehending and forecasting monthly events.
+
+
+
+format:
+  docx:
+    reference-doc: student-research-template.docx
+csl: apa.csl
+
+evaluate The researchers will use the `fable` package in the R programming language applied to the monthly vegetable price data of the NVAT [@fable]. The researchers will
+
+
+
+```{r}
+#| label: diagram-workflow
+#| echo: false
+#| fig-width: 2
+
+workflow <- DiagrammeR::grViz("digraph {
+
+graph [layout = dot, rankdir = LR]
+
+# define the global styles of the nodes. We can override these in box if we wish
+node [shape = rectangle, style = filled, fillcolor = Linen]
+
+B [label = 'Tidy']
+C [label = 'Visualize']
+D [label = 'Estimate']
+E [label = 'Evaluate']
+F [label = 'Forecast']
+
+# edge definitions with the node IDs
+B -> C -> D -> E -> F;
+}")
+
+vtree::grVizToPNG(workflow, filename = "pictures/workflow.png")
+```
+
+![Data Treatment and Analysis Workflow](pictures/workflow.png){#fig-workflow fig-align="center"}
+
+Ocampo is deleted in line 36.
+
+It attempts to achieve tight nutrient cycling with synchrony between nutrient demand by the crop and nutrient release in the soil, while minimizing losses through leaching, runoff, volatilization and immobilization [@luebbers98]. (line 128)
