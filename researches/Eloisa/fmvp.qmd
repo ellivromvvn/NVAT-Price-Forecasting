@@ -228,6 +228,8 @@ Finally, the selected models would be used to forecast monthly vegetable prices 
 
 ### Monthly Prices of Vegetables in NVAT
 
+After encoding the available vegetable prices from the NVAT Facebook page, only 12 vegetables were chosen for the study. These vegetables are; broccoli, cabbage, carrots, cauliflower, celery, chayote (bunga) cucumber, gabi, pepper (sultan and Taiwan), potato, and wombok. The graph of the monthly time series of these vegetables are shown in figure 4.
+
 ```{r}
 #| label: load-packages
 #| include: false
@@ -305,6 +307,8 @@ autoplot(nvat_monthly_long, price) +
   scale_color_discrete(labels = veg_labels)
 ```
 
+The vegetable with the most variability is pepper (Taiwan) with a standard deviation of 106.29. Its minimum price is 11.50 and its maximum price is 424.38, the highest price recorded among the vegetables. It also has the highest average price of 112.32. On the other hand, the vegetable that has the least variability is chayote (bunga) with a standard deviation of 7.81. Its minimum price is 4.17 and its maximum price is 45.25. It has the lowest average price of 12.99. The vegetable that has the lowest price is wombok with a minimum price of 4.14. The summary of monthly vegetable prices is shown in table 1.
+
 ```{r}
 #| label: tbl-all
 #| tbl-cap-location: top
@@ -380,6 +384,8 @@ nvat_monthly_long |>
   align(align = "center", part = "header") |>
   align(j = -1, align = "center", part = "body")
 ```
+
+Table 2 shows the STL features of monthly vegetable prices. The vegetable that has the strongest trend is gabi (galyang) with 0.91, showing that 91% of the time series is accounted by trend not considering seasonality. It is on upward trend. Meanwhile, the vegetable that has the weakest trend is wombok with 0.14, showing that 14% of the time series is accounted by trend not considering seasonality. The vegetable that has the strongest seasonality is cauliflower with 0.72, showing that 72% of the time series is accounted by seasonality not considering trend. Its peak is in August and its trough is March. The vegetable that has the weakest seasonality is cabbage with 0.18, showing that 18% of the time series is accounted by seasonality not considering trend.
 
 ```{r}
 #| include: false
