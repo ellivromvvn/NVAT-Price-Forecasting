@@ -48,3 +48,30 @@ vtree::grVizToPNG(workflow, filename = "pictures/workflow.png")
 Ocampo is deleted in line 36.
 
 It attempts to achieve tight nutrient cycling with synchrony between nutrient demand by the crop and nutrient release in the soil, while minimizing losses through leaching, runoff, volatilization and immobilization [@luebbers98]. (line 128)
+
+
+
+tbl-all
+ 
+ |>
+flextable() |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_header_labels(vegetable = "Vegetable") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all")
+  
+
+tbl-stl
+
+ |>
+  flextable() |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  align(align = "center", part = "header") |>
+  align(j = -1, align = "center", part = "body") |>
+  fontsize(size = 12, part = "all")
+   

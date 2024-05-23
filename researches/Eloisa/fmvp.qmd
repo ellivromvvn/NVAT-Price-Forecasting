@@ -11,6 +11,8 @@ format:
 editor: visual
 bibliography: references.bib
 csl: apa.csl
+execute: 
+  cache: true
 ---
 
 # Chapter I
@@ -237,7 +239,6 @@ library(clock)
 library(fpp3)
 library(modelsummary)
 library(flextable)
-library(officer)
 ```
 
 ```{r}
@@ -311,10 +312,6 @@ autoplot(nvat_monthly_long, price) +
 #| tbl-cap: "Summary of Monthly Vegetable Prices"
 #| echo: false
 
-set_flextable_defaults(
-  font.size = 12
-)
-
 nvat_monthly_long |>
   as.data.frame() |>
   group_by(vegetable) |>
@@ -325,12 +322,13 @@ nvat_monthly_long |>
     SD = round(sd(price), 2)
   ) |>
   mutate(vegetable = veg_labels) |>
+  rename(Vegetable = vegetable) |>
   flextable() |>
   bold(part = "header") |>
   line_spacing(space = .5, part = "body") |>
-  set_header_labels(vegetable = "Vegetable") |>
   set_table_properties(layout = "autofit", width = 1) |>
-  font(part = "all", fontname = "Times New Roman")
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all")
 ```
 
 ```{r}
@@ -378,7 +376,8 @@ nvat_monthly_long |>
   set_table_properties(layout = "autofit", width = 1) |>
   font(part = "all", fontname = "Times New Roman") |>
   align(align = "center", part = "header") |>
-  align(j = -1, align = "center", part = "body")
+  align(j = -1, align = "center", part = "body") |>
+  fontsize(size = 12, part = "all")
 ```
 
 ```{r}
@@ -392,7 +391,7 @@ nvat_monthly_long |>
 ```{r}
 #| label: fig-stl
 #| fig-cap: "Seasonal Strength vs Trend Strength of the Monthly Vegetable Prices"
-#| echo: false
+#| include: false
 
 nvat_monthly_long |>
   features(price, feat_stl) |>
@@ -432,6 +431,8 @@ nvat_monthly_long |>
 ### ARIMA and ETS Models for Monthly Vegetable Prices
 
 ```{r}
+#| include: false
+
 fit <- nvat_monthly_long |>
   stretch_tsibble(.init = 15, .step = 4) |>
   filter(.id != max(.id)) |>
@@ -442,6 +443,8 @@ fit <- nvat_monthly_long |>
 ```
 
 ```{r}
+#| echo: false
+
 fit |>
   forecast(h = 4) |>
   accuracy(nvat_monthly_long) |>
