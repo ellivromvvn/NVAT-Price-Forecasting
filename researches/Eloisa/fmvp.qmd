@@ -31,7 +31,7 @@ Prices for vegetables fluctuate frequently, harming the financial interests of f
 
 According to @fao, agricultural products account for a large proportion of the market as a necessity for daily consumption, and their prices play a critical part in consumer spending and agricultural household income. The supply and demand in a given year determine the prices of agricultural products. While an under supply of agricultural items raises prices and burdens consumers, an oversupply of agricultural products causes vegetable prices to increase and causes financial losses to farming households.
 
-Moreover, vegetable prices have an impact on farmers' income, standard of living, and vegetable producing choices. This is due to the cyclical and seasonal swings that affect vegetable prices; the price trend will alter based on the season, demand, and other factors. Therefore, concerns about price stability have typically focused on government initiatives. Vegetable prices have varied sharply and frequently recently, having a variety of negative effects on supply-chain participants like farmers, transportation, wholesale, retail, and customers [@chen18].
+Moreover, vegetable prices have an impact on farmers' income, standard of living, and vegetable producing choices. This is due to the cyclical and seasonal swings that affect vegetable prices; the price trend would alter based on the season, demand, and other factors. Therefore, concerns about price stability have typically focused on government initiatives. Vegetable prices have varied sharply and frequently recently, having a variety of negative effects on supply-chain participants like farmers, transportation, wholesale, retail, and customers [@chen18].
 
 Policy uncertainty may rise as a result of fluctuating commodity prices [@qiao23]. Distributors may find it challenging to plan purchases, inventory control, and pricing strategies due to this unpredictability. Distributors who are unable to anticipate price fluctuations may face financial losses if they buy vegetables at a high price and then the price drops before they can sell them. According to Yiyang et al., smallholder farmers are more vulnerable to risk when prices fluctuate. This is due to the fact that smallholder farmers frequently have little resources and are unable to absorb the potential financial losses caused by changes in prices. These price-induced risks could have an impact on distributors who depend on smallholder farmers for their supplies because they can result in supply disruptions and higher sourcing expenses.
 
@@ -45,71 +45,71 @@ The purpose of the study is to fully comprehend the factors affecting changes in
 
 ### Statement of the Problem
 
-In response to the challenge of volatile vegetable prices faced by local farmers, distributors, and consumers, the researchers will provide forecasts of monthly vegetable prices in Nueva Vizcaya. This effort aims to assist them in making informed decisions regarding agricultural production, distribution, and vegetable purchases.
+In response to the challenge of volatile vegetable prices faced by local farmers, distributors, and consumers, the researchers would provide forecasts of monthly vegetable prices in Nueva Vizcaya. This effort aims to assist them in making informed decisions regarding agricultural production, distribution, and vegetable purchases.
 
-To do this, the researchers will use available time series of vegetable prices from the Nueva Vizcaya Agricultural Terminal (NVAT) to come up with models that will forecast monthly vegetable prices in Nueva Vizcaya. First, the researchers will define and describe the monthly vegetable prices in Nueva Vizcaya. Next, the researchers will fit models to the data. The researchers will then determine which model has the best forecast performance for each vegetable and then use them to forecast monthly vegetable prices in Nueva Vizcaya.
+To do this, the researchers would use five (5) years available time series of vegetable prices from the Nueva Vizcaya Agricultural Terminal (NVAT) to come up with models that would forecast monthly vegetable prices in Nueva Vizcaya. First, the researchers would describe the monthly vegetable prices in Nueva Vizcaya. Next, the researchers would fit models to the data. The researchers would then determine which model has the best forecast performance for each vegetable and then use them to forecast monthly vegetable prices in Nueva Vizcaya.
 
 ### Objectives of the Study
 
-The researchers will forecast monthly vegetable prices in Nueva Vizcaya by accomplishing the following:
+The researchers would forecast monthly vegetable prices in Nueva Vizcaya by accomplishing the following:
 
-1.  Define and describe the monthly prices for each vegetable in Nueva Vizcaya.
+1.  Describe the monthly prices for each vegetable in Nueva Vizcaya from 2017-2023.
 
-2.  Determine the optimal AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models for forecasting monthly prices for each vegetable in Nueva Vizcaya.
+2.  Determine the optimal AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models for forecasting monthly prices for each vegetable in Nueva Vizcaya from 2017-2023.
 
-3.  Determine and describe the performance of the optimal model --- whether ARIMA or ETS --- for forecasting monthly prices for each vegetable in Nueva Vizcaya.
+3.  Determine the performance of the optimal model — whether ARIMA or ETS — for forecasting monthly prices for each vegetable data available within five (5) to six (6) months in a year in Nueva Vizcaya from 2017-2023.
 
-4.  Use the optimal ARIMA or ETS model to generate forecasts for monthly prices for each vegetable in Nueva Vizcaya.
+4.  Use the optimal AutoRegressive Integrated Moving Average (ARIMA) or Exponential Smoothing (ETS) model to generate forecasts for monthly prices for each vegetable in Nueva Vizcaya.
 
 ### Significance of the Study
 
-This study is focused on forecasting monthly vegetable prices in Nueva Vizcaya. The results of the study will be beneficial to the following:
+This study is focused on forecasting monthly vegetable prices in Nueva Vizcaya. The results of the study would be beneficial to the following:
 
 **Department of Agriculture.** This research would be beneficial to the Department of Agriculture by incorporating its findings into policy formulation and resource allocation. Accurate price forecasts can inform agricultural development programs, subsidies, and interventions, ultimately supporting the growth and sustainability of the agricultural sector in Nueva Vizcaya.
 
-**Local Farmers.** This research would be beneficial to the local farmers. It will provide them with valuable insights into future vegetable price trends. Accurate price forecasts will enable farmers to plan their planting and harvesting schedules efficiently, reduce wastage, and optimize their crop yields, ultimately leading to improved income stability and sustainable agricultural practices.
+**Local Farmers.** This research would be beneficial to the local farmers. It would provide them with valuable insights into future vegetable price trends. Accurate price forecasts would enable farmers to plan their planting and harvesting schedules efficiently, reduce wastage, and optimize their crop yields, ultimately leading to improved income stability and sustainable agricultural practices.
 
 **Vendors.** This research would be beneficial to vendors in Nueva Vizcaya's vegetable markets. With reliable vegetable price forecasts, they can make informed purchasing decisions, maintain competitive prices, and increase profit margins. This, in turn, fosters a more stable and profitable business environment for vendors.
 
 **Consumers.** This research would be beneficial to consumers as it helps maintain price stability and affordability. When vendors can make better decisions based on accurate forecasts, consumers are less likely to experience price shocks or sudden increases in vegetable prices, ensuring accessibility to essential food items.
 
-**Future Entrepreneurs.** This research will be beneficial for future entrepreneurs looking to venture into the vegetable market in Nueva Vizcaya. The study's results can be utilized to make informed business decisions, aiding in the development of market entry strategies, inventory management strategies, and pricing strategies. This information is valuable for mitigating the risks associated with launching a new business.
+**Future Entrepreneurs.** This research would be beneficial for future entrepreneurs looking to venture into the vegetable market in Nueva Vizcaya. The study's results can be utilized to make informed business decisions, aiding in the development of market entry strategies, inventory management strategies, and pricing strategies. This information is valuable for mitigating the risks associated with launching a new business.
 
 **Business Owners.** This research would be beneficial to business owners in Nueva Vizcaya, whether they are in the agricultural sector or the retail and distribution sector. They can leverage predictive insights to optimize their supply chain operations. Improved supply chain efficiency can lead to cost savings and increased profitability.
 
-**Future Researchers.** This research will serve as a valuable foundation for future researchers interested in agricultural economics, market dynamics, and forecasting methodologies. It will provide a benchmark dataset and insights that can be expanded upon and refined in subsequent research efforts, contributing to the continuous advancement of agricultural forecasting and market analysis.
+**Future Researchers.** This research would serve as a valuable foundation for future researchers interested in agricultural economics, market dynamics, and forecasting methodologies. It would provide a benchmark dataset and insights that can be expanded upon and refined in subsequent research efforts, contributing to the continuous advancement of agricultural forecasting and market analysis.
 
 ### Scope and Delimitation of the Study
 
-The study will focus on forecasting the monthly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. The researchers will use available time series of vegetable prices from NVAT. From this data, monthly time series of prices for each vegetable will be defined and described. ARIMA and ETS models will then be fitted to the data using automatic algorithms to determine optimal models for each vegetable. Time series cross-validation and a comparison of computed point forecast measures will help identify the optimal model that will be used in forecasting monthly prices for each vegetable. A portmanteau test of residuals will also be used to describe the performance of each optimal model chosen to forecast monthly vegetable prices for each vegetable.
+The study would focus on forecasting the monthly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. The researchers would use 5 years available time series of vegetable prices from NVAT. From this data, monthly time series of prices for each vegetable would be described. ARIMA and ETS models would then be fitted to the data using automatic algorithms to determine optimal models for each vegetable. Time series cross-validation and a comparison of computed point forecast measures would help identify the optimal model that would be used in forecasting monthly prices for each vegetable. A portmanteau test of residuals would also be used to describe the performance of each optimal model chosen to forecast monthly vegetable prices for each vegetable.
 
-The researchers will not make adjustments and transformations to the data. Model specifications will not be set either, as this process will be performed automatically using default settings. All computations and visualizations will be performed in the R programming language [@r]. Moreover, external variables impacting vegetable prices will not be investigated nor will be incorporated in the modeling process.
+The researchers would not make adjustments and transformations to the data. Model specifications would not be set either, as this process would be performed automatically using default settings. All computations and visualizations would be performed in the R programming language [@r]. Moreover, external variables impacting vegetable prices would not be investigated nor would be incorporated in the modeling process.
 
 ### Conceptual Framework
 
-The research paradigm as shown in @fig-rp will guide the researchers in conducting the study. It consists of input, process, and output. The input will be the available time series of vegetable prices from NVAT. The output will be ARIMA and/or ETS models and their corresponding monthly forecasts. Under process, automatic algorithms will determine the best ARIMA and ETS models. From this, the better model will be determined using time series cross-validation; comparing their point forecast accuracy measures.
+The research paradigm as shown in @fig-rp would guide the researchers in conducting the study. It consists of input, process, and output. The input would be the available time series of vegetable prices from NVAT. The output would be ARIMA and/or ETS models and their corresponding monthly forecasts. Under process, automatic algorithms would determine the best ARIMA and ETS models. From this, the better model would be determined using time series cross-validation; comparing their point forecast accuracy measures.
 
 ![Research Paradigm](pictures/rp.png){#fig-rp fig-align="center" width="600"}
 
-During the process phase, automated algorithms will be employed for time series analysis to identify the optimal ARIMA and ETS models for each vegetable. Subsequently, the optimal ARIMA or ETS model for forecasting the prices of each vegetable will be determined using time series cross-validation, enabling a comparison of their point forecast accuracy measures.Also, a portmanteau test of residuals will be performed to describe the performance of the optimal model for each vegetable.
+During the process phase, automated algorithms would be employed for time series analysis to identify the optimal ARIMA and ETS models for each vegetable. Subsequently, the optimal ARIMA or ETS model for forecasting the prices of each vegetable would be determined using time series cross-validation, enabling a comparison of their point forecast accuracy measures.Also, a portmanteau test of residuals would be performed to describe the performance of the optimal model for each vegetable.
 
 ### Definition of Terms
 
-**AutoRegressive Integrated Moving Average (ARIMA).** ARIMA is a popular time series forecasting model that combines autoregressive (AR) and moving average (MA) components with differencing to make a time series stationary. It is used for modeling and forecasting univariate time series data.
+**AutoRegressive Integrated Moving Average (ARIMA).** Utilize ARIMA to model and predict monthly vegetable prices by considering autoregressive and moving average components while addressing seasonality or trends through differencing, ensuring a more accurate representation of the variations over time.
 
-**Exponential Smoothing (ETS).** Is a time series forecasting method for univariate data that can be extended to support data with a systematic trend or seasonal component. It is a powerful forecasting method that may be used as an alternative to the popular Box-Jenkins ARIMA family of methods.
+**Exponential Smoothing (ETS).** Apply ETS as an alternative forecasting method to capture systematic trends or seasonal patterns in monthly vegetable prices, providing a robust approach beyond traditional ARIMA models for more comprehensive predictions.
 
-**Forecasting.** Is the process of making predictions or estimates about future values or events based on historical data and patterns. It is widely used in various fields, including economics, finance, and weather prediction.
+**Forecasting.** Apply ETS as an alternative forecasting method to capture systematic trends or seasonal patterns in monthly vegetable prices, providing a robust approach beyond traditional ARIMA models for more comprehensive predictions.
 
-**The Nueva Vizcaya Agricultural Terminal (NVAT).** NVAT is a mixed capital public-private joint venture established in Nueva Vizcaya in 2004 to address problems such as lack of markets and keen market competition.
+**The Nueva Vizcaya Agricultural Terminal (NVAT).** Place to gather data of monthly vegetable prices.
 
-**Root Mean Squared Error (RMSE).** RMSE is a measure of the average deviation between the values predicted by a model or forecast and the actual observed values in a time series. It quantifies the accuracy of a predictive model, with lower values indicating better predictive performance.
+**Root Mean Squared Error (RMSE).** Evaluate the accuracy of your forecasting models by calculating RMSE, which measures the average deviation between predicted and actual monthly vegetable prices. Lower RMSE values indicate better predictive performance, ensuring the reliability of your forecasting approach.
 
-**Seasonal AutoRegressive Integrated Moving Average (SARIMA).** SARIMA is an extension of the ARIMA model that includes seasonal components to account for seasonality in time series data. It is particularly useful for data with recurring seasonal patterns.
+**Seasonal AutoRegressive Integrated Moving Average (SARIMA).** Enhance forecasting accuracy by incorporating SARIMA, an extension of ARIMA, to account for seasonal components in monthly vegetable prices. This is particularly beneficial when dealing with recurring seasonal patterns in the market.
 
-**Time Series.** A time series is a sequence of data points collected or recorded at specific time intervals. It is used to analyze and predict trends, patterns, and behavior over time.
+**Time Series.** Analyze historical time series data of monthly vegetable prices to identify trends, patterns, and behavior over time. This helps in building models that can capture and predict future price movements accurately.
 
-**Vegetable Price.** Vegetable price refers to the cost or price at which vegetables are bought or sold in a market or region. It is a key indicator in economics and agriculture, reflecting supply and demand dynamics.
+**Vegetable Price.** Study and forecast monthly vegetable prices are a key economic and agricultural indicator. Understand the supply and demand dynamics, and use forecasting models to predict how these prices might evolve in the future, aiding in decision-making for farmers, traders, and policymakers.
 
 # Chapter II
 
@@ -165,25 +165,25 @@ In conclusion, vegetable prices are influenced by various factors internationall
 
 ### Research Design
 
-The research will purely be quantitative in nature. Specifically, the researchers will employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models will be estimated using the monthly vegetable prices from NVAT. The researchers will then compare the estimated models and choose the one with higher accuracy to forecast monthly vegetable prices in Nueva Vizcaya.
+The research would purely be quantitative in nature. Specifically, the researchers would employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models would be estimated using the monthly vegetable prices from NVAT. The researchers would then compare the estimated models and choose the one with higher accuracy to forecast monthly vegetable prices in Nueva Vizcaya.
 
 ### Locale of the Study
 
-The study will be conducted in Bambang, Nueva Vizcaya. Specifically, the data for this study will be collected from NVAT, which is located in Bambang. Bambang is the next town south of Bayombong --- the capital town of the province of Nueva Vizcaya. Please see @fig-bambang below.
+The study would be conducted in Bambang, Nueva Vizcaya. Specifically, the data for this study would be collected from NVAT, which is located in Bambang. Bambang is the next town south of Bayombong --- the capital town of the province of Nueva Vizcaya. Please see @fig-bambang below.
 
 ![Map of Bambang, Nueva Vizcaya (https://en.wikipedia.org/wiki/Bambang,\_Nueva_Vizcaya#/media/File:Ph_locator_nueva_vizcaya_bambang.png)](pictures/bambang.png){#fig-bambang fig-align="center"}
 
 ### Source and Subject of the Study
 
-The primary source of data for the research is the NVAT. Available time series of vegetable prices from the NVAT will be used to come up with forecasts of monthly vegetable prices in Nueva Vizcaya.
+The primary source of data for the research is the NVAT. Five (5) years available time series of vegetable prices from the NVAT would be used to come up with forecasts of monthly vegetable prices in Nueva Vizcaya.
 
 ### Data Gathering Procedure
 
-The researchers will inquire about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research will be written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively). Subsequently, the researchers will collect available time series of vegetable prices. Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, will be maintained.
+The researchers would inquire about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research would be written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively). Subsequently, the researchers would collect five (5) years available time series of vegetable prices. Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, would be maintained.
 
 ### Data Analysis and Treatment of Data
 
-In forecasting monthly vegetable prices in Nueva Vizcaya, the researchers will follow the process illustrated in @fig-workflow. It is an adapted representation of the workflow introduced by @hyndman21.
+In forecasting monthly vegetable prices in Nueva Vizcaya, the researchers would follow the process illustrated in @fig-workflow. It is an adapted representation of the workflow introduced by @hyndman21.
 
 ```{r}
 #| label: diagram-workflow
@@ -212,23 +212,25 @@ vtree::grVizToPNG(workflow, filename = "pictures/workflow.png", width = 600)
 
 ![Data Treatment and Analysis Workflow](pictures/workflow.png){#fig-workflow fig-align="center" width="600"}
 
-The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values in order to create a tidy time series data for monthly vegetable prices. The researchers will utilize the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
+The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values in order to create a tidy time series data for monthly vegetable prices. The researchers would utilize the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
 
-Subsequently, the researchers will visualize the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data will also be visualized using the seasonal and trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations are integral in describing the data.
+Subsequently, the researchers would visualize the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data would also be visualized using the seasonal and trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations are integral in describing the data.
 
-Next, automatic algorithms introduced by @hyndman21 will be used to estimate or fit the optimal ARIMA and ETS models to the data. The researchers will implement these algorithms in R using the `fable` package[@fable].
+Next, automatic algorithms introduced by @hyndman21 would be used to estimate or fit the optimal ARIMA and ETS models to the data. The researchers would implement these algorithms in R using the `fable` package[@fable].
 
-Moreover, time series cross-validation will be used to evaluate forecast accuracy of the ARIMA and ETS models [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) will be computed and compared to determine the better model for each vegetable. The model with lower point forecast accuracy measures will be selected.
+Moreover, time series cross-validation would be used to evaluate forecast accuracy of the ARIMA and ETS models [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) would be computed and compared to determine the better model for each vegetable. The model with lower point forecast accuracy measures would be selected.
 
-Furthermore, a portmanteau test in the form of the Ljung-Box test will be computed. This will allow the researchers to describe the performance of the selected model for each vegetable. Computed p-values greater than 0.05 confirms that the residuals are similar to white noise. Otherwise, the residuals still have some remaining autocorrelation that is not accounted for in the model.
+Furthermore, a portmanteau test in the form of the Ljung-Box test would be computed. This would allow the researchers to describe the performance of the selected model for each vegetable. Computed p-values greater than 0.05 confirms that the residuals are similar to white noise. Otherwise, the residuals still have some remaining autocorrelation that is not accounted for in the model.
 
-Finally, the selected models will be used to forecast monthly vegetable prices in Nueva Vizcaya.
+Finally, the selected models would be used to forecast monthly vegetable prices in Nueva Vizcaya.
 
 # CHAPTER IV
 
 ## RESULTS AND DISCUSSION
 
 ### Monthly Prices of Vegetables in NVAT
+
+After encoding the available vegetable prices from the NVAT Facebook page, only 12 vegetables were chosen for the study. These vegetables are; broccoli, cabbage, carrots, cauliflower, celery, chayote (bunga) cucumber, gabi, pepper (sultan and Taiwan), potato, and wombok. The graph of the monthly time series of these vegetables are shown in figure 4.
 
 ```{r}
 #| label: load-packages
@@ -306,6 +308,8 @@ autoplot(nvat_monthly_long, price) +
   scale_color_discrete(labels = veg_labels)
 ```
 
+The vegetable with the most variability is pepper (Taiwan) with a standard deviation of 106.29. Its minimum price is 11.50 and its maximum price is 424.38, the highest price recorded among the vegetables. It also has the highest average price of 112.32. On the other hand, the vegetable that has the least variability is chayote (bunga) with a standard deviation of 7.81. Its minimum price is 4.17 and its maximum price is 45.25. It has the lowest average price of 12.99. The vegetable that has the lowest price is wombok with a minimum price of 4.14. The summary of monthly vegetable prices is shown in table 1.
+
 ```{r}
 #| label: tbl-all
 #| tbl-cap-location: top
@@ -379,6 +383,8 @@ nvat_monthly_long |>
   align(j = -1, align = "center", part = "body") |>
   fontsize(size = 12, part = "all")
 ```
+
+Table 2 shows the STL features of monthly vegetable prices. The vegetable that has the strongest trend is gabi (galyang) with 0.91, showing that 91% of the time series is accounted by trend not considering seasonality. It is on upward trend. Meanwhile, the vegetable that has the weakest trend is wombok with 0.14, showing that 14% of the time series is accounted by trend not considering seasonality. The vegetable that has the strongest seasonality is cauliflower with 0.72, showing that 72% of the time series is accounted by seasonality not considering trend. Its peak is in August and its trough is March. The vegetable that has the weakest seasonality is cabbage with 0.18, showing that 18% of the time series is accounted by seasonality not considering trend.
 
 ```{r}
 #| include: false
