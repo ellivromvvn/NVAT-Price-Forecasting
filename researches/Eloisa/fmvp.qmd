@@ -11,6 +11,8 @@ format:
 editor: visual
 bibliography: references.bib
 csl: apa.csl
+execute: 
+  cache: true
 ---
 
 # Chapter I
@@ -239,7 +241,6 @@ library(clock)
 library(fpp3)
 library(modelsummary)
 library(flextable)
-library(officer)
 ```
 
 ```{r}
@@ -315,10 +316,6 @@ The vegetable with the most variability is pepper (Taiwan) with a standard devia
 #| tbl-cap: "Summary of Monthly Vegetable Prices"
 #| echo: false
 
-set_flextable_defaults(
-  font.size = 12
-)
-
 nvat_monthly_long |>
   as.data.frame() |>
   group_by(vegetable) |>
@@ -329,12 +326,13 @@ nvat_monthly_long |>
     SD = round(sd(price), 2)
   ) |>
   mutate(vegetable = veg_labels) |>
+  rename(Vegetable = vegetable) |>
   flextable() |>
   bold(part = "header") |>
   line_spacing(space = .5, part = "body") |>
-  set_header_labels(vegetable = "Vegetable") |>
   set_table_properties(layout = "autofit", width = 1) |>
-  font(part = "all", fontname = "Times New Roman")
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all")
 ```
 
 ```{r}
@@ -382,7 +380,8 @@ nvat_monthly_long |>
   set_table_properties(layout = "autofit", width = 1) |>
   font(part = "all", fontname = "Times New Roman") |>
   align(align = "center", part = "header") |>
-  align(j = -1, align = "center", part = "body")
+  align(j = -1, align = "center", part = "body") |>
+  fontsize(size = 12, part = "all")
 ```
 
 Table 2 shows the STL features of monthly vegetable prices. The vegetable that has the strongest trend is gabi (galyang) with 0.91, showing that 91% of the time series is accounted by trend not considering seasonality. It is on upward trend. Meanwhile, the vegetable that has the weakest trend is wombok with 0.14, showing that 14% of the time series is accounted by trend not considering seasonality. The vegetable that has the strongest seasonality is cauliflower with 0.72, showing that 72% of the time series is accounted by seasonality not considering trend. Its peak is in August and its trough is March. The vegetable that has the weakest seasonality is cabbage with 0.18, showing that 18% of the time series is accounted by seasonality not considering trend.
@@ -398,7 +397,7 @@ nvat_monthly_long |>
 ```{r}
 #| label: fig-stl
 #| fig-cap: "Seasonal Strength vs Trend Strength of the Monthly Vegetable Prices"
-#| echo: false
+#| include: false
 
 nvat_monthly_long |>
   features(price, feat_stl) |>
@@ -433,6 +432,33 @@ nvat_monthly_long |>
     theme(
       strip.text = element_text(size = 8)
     )
+```
+
+### ARIMA and ETS Models for Monthly Vegetable Prices
+
+```{r}
+#| include: false
+
+fit <- nvat_monthly_long |>
+  stretch_tsibble(.init = 15, .step = 4) |>
+  filter(.id != max(.id)) |>
+  model(
+    ARIMA = ARIMA(price),
+    ETS = ETS(price)
+  )
+```
+
+```{r}
+#| echo: false
+
+fit |>
+  forecast(h = 4) |>
+  accuracy(nvat_monthly_long) |>
+  select(.model, RMSE, MAE, MAPE, MASE) |>
+  mutate(Vegetable = rep(veg_labels, 2), .before = .model) |>
+  arrange(Vegetable) |>
+  mutate_if(is.numeric, round, 2) |>
+  rename(Model = .model)
 ```
 
 # References
