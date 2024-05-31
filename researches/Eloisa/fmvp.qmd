@@ -338,6 +338,28 @@ flextable(tbl_all) |>
 
 For the broccoli time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'broccoli']` in April 2018 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'broccoli']` in September 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'broccoli']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'broccoli'].`
 
+For the cabbage time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'cabbage']` in February 2020 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'cabbage']` in August 2021. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'cabbage']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'cabbage'].`
+
+For the carrots time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'carrots']` in May 2020 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'carrots']` in July 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'carrots']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'carrots'].`
+
+For the cauliflower time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'cauliflower']` in March 2020 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'cauliflower']` in August 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'cauliflower']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'cauliflower'].`
+
+For the celery time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'celery']` in February 2018 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'celery']` in September 2018. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'celery']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'celery'].`
+
+For the chayote (bunga) time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'chayote (bunga)']` in January 2020 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'chayote (bunga)']` in September 2018. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'chayote (bunga)']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'chayote (bunga)`
+
+For the cucumber time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'cucumber']` in July 2020 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'cucumber']` in January 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'cucumber']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'cucumber'].`
+
+For the gabi (galyang) time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'gabi (galyang)']` in January 2018 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'gabi (galyang)']` in December 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'gabi (galyang)']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'gabi (galyang)'].`
+
+For the pepper (sultan) time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'pepper (sultan)']` in May 2020 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'pepper (sultan)']` in September 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'pepper (sultan)']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'pepper (sultan)'].`
+
+For the pepper (taiwan) time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'pepper (taiwan)']` in June 2019 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'pepper (taiwan)']` in December 2020. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'pepper (taiwan)']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'pepper (taiwan)'].`
+
+For the potato time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'potato']` in June 2021 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'potato']` in October 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'potato']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'potato'].`
+
+For the wombok time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'wombok']` in December 2018 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'wombok']` in December 2020. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'wombok']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'wombok'].`
+
 The vegetable with the most variability is pepper (Taiwan) with a standard deviation of 106.29. Its minimum price is 11.50 and its maximum price is 424.38, the highest price recorded among the vegetables. It also has the highest average price of 112.32. On the other hand, the vegetable that has the least variability is chayote (bunga) with a standard deviation of 7.81. Its minimum price is 4.17 and its maximum price is 45.25. It has the lowest average price of 12.99. The vegetable that has the lowest price is wombok with a minimum price of 4.14.
 
 ```{r}
@@ -467,6 +489,6 @@ fit |>
   rename(Model = .model)
 ```
 
-The table shows the model performance for forecasting monthly vegetable prices. Broccoli for auto AutoRegressive Integrated Moving Average (ARIMA) is better in Mean Absolute Error (MAE), Mean Absolute Percetage Error (MAPE), and  Mean Absolute Scaled Error (MASE) but has a very low negligence in Root Mean Square Error (RMSE) in ARIMA. Additionally, the rest of the vegetables are best fitted in auto ARIMA for MAE, MAPE, and MASE model.
+The table shows the model performance for forecasting monthly vegetable prices. Broccoli for auto AutoRegressive Integrated Moving Average (ARIMA) is better in Mean Absolute Error (MAE), Mean Absolute Percetage Error (MAPE), and Mean Absolute Scaled Error (MASE) but has a very low negligence in Root Mean Square Error (RMSE) in ARIMA. Additionally, the rest of the vegetables are best fitted in auto ARIMA for MAE, MAPE, and MASE model.
 
 # References
