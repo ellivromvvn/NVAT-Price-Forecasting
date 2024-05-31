@@ -228,7 +228,7 @@ Finally, the selected models would be used to forecast monthly vegetable prices 
 
 ## RESULTS AND DISCUSSION
 
-### Time Series of the Monthly Prices of Vegetables in NVAT
+### Time Series of the Monthly Vegetable Prices in NVAT
 
 ```{r}
 #| label: load-packages
@@ -394,7 +394,7 @@ flextable(tbl_stl) |>
 
 The broccoli time series has a trend strength of `r tbl_stl$'Trend Strength'[tbl_stl$Vegetable == 'broccoli']`, showing that `r tbl_stl$'Trend Strength'[tbl_stl$Vegetable == 'broccoli']*100`% of the time series is accounted by trend not considering seasonality. It has an upward trend. On the other hand, it has a seasonal strength of `r tbl_stl$'Seasonal Strength'[tbl_stl$Vegetable == 'broccoli']`, showing that `r tbl_stl$'Seasonal Strength'[tbl_stl$Vegetable == 'broccoli']*100`% of the time series is accounted by seasonality not considering trend. Its peak is in `r tbl_stl$'Seasonal Peak'[tbl_stl$Vegetable == 'broccoli']` and its trough is in `r tbl_stl$'Seasonal Trough'[tbl_stl$Vegetable == 'broccoli']`.
 
-The vegetable that has the strongest trend is gabi (galyang) with 0.91, showing that 91% of the time series is accounted by trend not considering seasonality. It is on upward trend. Meanwhile, the vegetable that has the weakest trend is wombok with 0.14, showing that 14% of the time series is accounted by trend not considering seasonality. The vegetable that has the strongest seasonality is cauliflower with 0.72, showing that 72% of the time series is accounted by seasonality not considering trend. Its peak is in August and its trough is March. The vegetable that has the weakest seasonality is cabbage with 0.18, showing that 18% of the time series is accounted by seasonality not considering trend.
+The vegetable that has the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable that has the strongest seasonality is cauliflower. Meanwhile, the vegetable that has the weakest seasonality is cabbage.
 
 ```{r}
 #| include: false
@@ -432,7 +432,7 @@ nvat_monthly_long |>
 ```
 
 ```{r}
-#| include: true
+#| include: false
 
 nvat_monthly_long |>
   filter(vegetable == "broccoli") |>
