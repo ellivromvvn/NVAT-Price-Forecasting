@@ -461,6 +461,6 @@ fit |>
   rename(Model = .model)
 ```
 
-The table shows the model performance for forecasting montly vegetable prices. Brocolli for auto AutoRegressive Integrated Moving Average (ARIMA) is better in Mean Absolute Error (MAE), Mean Absolute Percetage Error (MAPE), and  Mean Absolute Scaled Error (MASE) but has a very low negligence in Root Mean Square Error (RMSE) in ARIMA. Additionally, the rest of the vegetables are best fitted in auto ARIMA for MAE, MAPE, and MASE model.
+The table shows the model performance for forecasting monthly vegetable prices. Broccoli for auto AutoRegressive Integrated Moving Average (ARIMA) is better in Mean Absolute Error (MAE), Mean Absolute Percetage Error (MAPE), and  Mean Absolute Scaled Error (MASE) but has a very low negligence in Root Mean Square Error (RMSE) in ARIMA. Additionally, the rest of the vegetables are best fitted in auto ARIMA for MAE, MAPE, and MASE model.
 
 # References
