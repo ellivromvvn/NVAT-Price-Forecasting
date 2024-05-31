@@ -336,9 +336,11 @@ flextable(tbl_all) |>
   fontsize(size = 12, part = "all")
 ```
 
-For the broccoli time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'broccoli']` in April 2018 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'broccoli']` in September 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'broccoli']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'broccoli'].`
+For the broccoli time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'broccoli']` in April 2018 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'broccoli']` in September 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'broccoli']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'broccoli']`.
 
-The vegetable with the most variability is pepper (Taiwan) with a standard deviation of 106.29. Its minimum price is 11.50 and its maximum price is 424.38, the highest price recorded among the vegetables. It also has the highest average price of 112.32. On the other hand, the vegetable that has the least variability is chayote (bunga) with a standard deviation of 7.81. Its minimum price is 4.17 and its maximum price is 45.25. It has the lowest average price of 12.99. The vegetable that has the lowest price is wombok with a minimum price of 4.14.
+The vegetable with the most variability is pepper (taiwan). It also has the highest maximum price and the highest average price among all the vegetables. On the other hand, the vegetable that has the least variability is chayote (bunga). It also has the lowest average price. The vegetable that has the lowest minimum price is wombok.
+
+@tbl-stl shows the STL features of the time series of monthly vegetable prices.
 
 ```{r}
 #| label: tbl-stl
@@ -390,13 +392,15 @@ flextable(tbl_stl) |>
   fontsize(size = 12, part = "all")
 ```
 
-Table 2 shows the STL features of the time series of monthly vegetable prices . The vegetable that has the strongest trend is gabi (galyang) with 0.91, showing that 91% of the time series is accounted by trend not considering seasonality. It is on upward trend. Meanwhile, the vegetable that has the weakest trend is wombok with 0.14, showing that 14% of the time series is accounted by trend not considering seasonality. The vegetable that has the strongest seasonality is cauliflower with 0.72, showing that 72% of the time series is accounted by seasonality not considering trend. Its peak is in August and its trough is March. The vegetable that has the weakest seasonality is cabbage with 0.18, showing that 18% of the time series is accounted by seasonality not considering trend.
+The broccoli time series has a trend strength of `r tbl_stl$'Trend Strength'[tbl_stl$Vegetable == 'broccoli']`, showing that `r tbl_stl$'Trend Strength'[tbl_stl$Vegetable == 'broccoli']*100`% of the time series is accounted by trend not considering seasonality. It has an upward trend. On the other hand, it has a seasonal strength of `r tbl_stl$'Seasonal Strength'[tbl_stl$Vegetable == 'broccoli']`, showing that `r tbl_stl$'Seasonal Strength'[tbl_stl$Vegetable == 'broccoli']*100`% of the time series is accounted by seasonality not considering trend. Its peak is in `r tbl_stl$'Seasonal Peak'[tbl_stl$Vegetable == 'broccoli']` and its trough is in `r tbl_stl$'Seasonal Trough'[tbl_stl$Vegetable == 'broccoli']`.
+
+The vegetable that has the strongest trend is gabi (galyang) with 0.91, showing that 91% of the time series is accounted by trend not considering seasonality. It is on upward trend. Meanwhile, the vegetable that has the weakest trend is wombok with 0.14, showing that 14% of the time series is accounted by trend not considering seasonality. The vegetable that has the strongest seasonality is cauliflower with 0.72, showing that 72% of the time series is accounted by seasonality not considering trend. Its peak is in August and its trough is March. The vegetable that has the weakest seasonality is cabbage with 0.18, showing that 18% of the time series is accounted by seasonality not considering trend.
 
 ```{r}
 #| include: false
 
 nvat_monthly_long |>
-  filter(vegetable == "gabi_galyang") |>
+  filter(vegetable == "broccoli") |>
   gg_subseries(price)
 ```
 
@@ -428,10 +432,10 @@ nvat_monthly_long |>
 ```
 
 ```{r}
-#| include: false
+#| include: true
 
 nvat_monthly_long |>
-  filter(vegetable == "pepper_taiwan") |>
+  filter(vegetable == "broccoli") |>
   model(STL(price)) |>
   components() |>
   autoplot() +
@@ -467,6 +471,6 @@ fit |>
   rename(Model = .model)
 ```
 
-The table shows the model performance for forecasting montly vegetable prices. Brocolli for auto AutoRegressive Integrated Moving Average (ARIMA) is better in Mean Absolute Error (MAE), Mean Absolute Percetage Error (MAPE), and  Mean Absolute Scaled Error (MASE) but has a very low negligence in Root Mean Square Error (RMSE) in ARIMA. Additionally, the rest of the vegetables are best fitted in auto ARIMA for MAE, MAPE, and MASE model.
+The table shows the model performance for forecasting montly vegetable prices. Brocolli for auto AutoRegressive Integrated Moving Average (ARIMA) is better in Mean Absolute Error (MAE), Mean Absolute Percetage Error (MAPE), and Mean Absolute Scaled Error (MASE) but has a very low negligence in Root Mean Square Error (RMSE) in ARIMA. Additionally, the rest of the vegetables are best fitted in auto ARIMA for MAE, MAPE, and MASE model.
 
 # References
