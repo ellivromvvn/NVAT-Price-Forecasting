@@ -262,7 +262,11 @@ nvat_monthly <- nvat |>
     across(
       everything(), ~ mean(.[. != 0], na.rm = TRUE)
     )
-  )
+  ) |>
+  ungroup()
+
+nvat_monthly <- nvat_monthly |>
+  mutate(month = format(date, '%B %Y'))
 ```
 
 ```{r}
@@ -416,7 +420,7 @@ flextable(tbl_stl) |>
 
 The broccoli time series has a trend strength of `r tbl_stl$'Trend Strength'[tbl_stl$Vegetable == 'broccoli']`, showing that `r tbl_stl$'Trend Strength'[tbl_stl$Vegetable == 'broccoli']*100`% of the time series is accounted by trend not considering seasonality. It has an upward trend. On the other hand, it has a seasonal strength of `r tbl_stl$'Seasonal Strength'[tbl_stl$Vegetable == 'broccoli']`, showing that `r tbl_stl$'Seasonal Strength'[tbl_stl$Vegetable == 'broccoli']*100`% of the time series is accounted by seasonality not considering trend. Its peak is in `r tbl_stl$'Seasonal Peak'[tbl_stl$Vegetable == 'broccoli']` and its trough is in `r tbl_stl$'Seasonal Trough'[tbl_stl$Vegetable == 'broccoli']`.
 
-The vegetable that has the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable that has the strongest seasonality is cauliflower. Meanwhile, the vegetable that has the weakest seasonality is cabbage.
+The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage.
 
 ```{r}
 #| include: false
@@ -454,7 +458,7 @@ nvat_monthly_long |>
 ```
 
 ```{r}
-#| include: false
+#| include: true
 
 nvat_monthly_long |>
   filter(vegetable == "broccoli") |>
