@@ -470,7 +470,7 @@ nvat_monthly_long |>
     )
 ```
 
-### ARIMA and ETS Models for Monthly Vegetable Prices
+### ARIMA and ETS Models for the Time Series of Monthly Vegetable Prices
 
 ```{r}
 #| include: false
