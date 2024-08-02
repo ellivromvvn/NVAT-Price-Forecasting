@@ -173,15 +173,15 @@ The study was conducted in Bambang, Nueva Vizcaya. Specifically, the data for th
 
 ### Source and Subject of the Study
 
-The primary source of data for the research is the NVAT. Five (5) years available time series of vegetable prices from the NVAT would be used to come up with forecasts of monthly vegetable prices in Nueva Vizcaya.
+The primary source of data for the research is the NVAT. Five (5) years available time series of vegetable prices from the NVAT were used to come up with forecasts of monthly vegetable prices in Nueva Vizcaya.
 
 ### Data Gathering Procedure
 
-The researchers would inquire about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research would be written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively). Subsequently, the researchers would collect five (5) years available time series of vegetable prices. Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, would be maintained.
+The researchers inquired about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research were written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively). Subsequently, the researchers were able to collect time series of vegetable prices for five (5) years. Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, were maintained.
 
 ### Data Analysis and Treatment of Data
 
-In forecasting monthly vegetable prices in Nueva Vizcaya, the researchers would follow the process illustrated in @fig-workflow. It is an adapted representation of the workflow introduced by @hyndman21.
+In forecasting monthly vegetable prices in Nueva Vizcaya, the researchers followed the process illustrated in @fig-workflow. It is an adapted representation of the workflow introduced by @hyndman21.
 
 ```{r}
 #| label: diagram-workflow
@@ -210,17 +210,17 @@ vtree::grVizToPNG(workflow, filename = "pictures/workflow.png", width = 600)
 
 ![Data Treatment and Analysis Workflow](pictures/workflow.png){#fig-workflow fig-align="center" width="600"}
 
-The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values in order to create a tidy time series data for monthly vegetable prices. The researchers would utilize the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
+The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values in order to create a tidy time series data for monthly vegetable prices. The researchers utilized the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
 
-Subsequently, the researchers would visualize the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data would also be visualized using the seasonal and trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations are integral in describing the data.
+Subsequently, the researchers visualized the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data were also be visualized using the seasonal and trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations were integral in describing the data.
 
-Next, automatic algorithms introduced by @hyndman21 would be used to estimate or fit the optimal ARIMA and ETS models to the data. The researchers would implement these algorithms in R using the `fable` package[@fable].
+Next, automatic algorithms introduced by @hyndman21 were used to estimate or fit optimal ARIMA and ETS models to the data. The researchers would implement these algorithms in R using the `fable` package[@fable].
 
-Moreover, time series cross-validation would be used to evaluate forecast accuracy of the ARIMA and ETS models [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) would be computed and compared to determine the better model for each vegetable. The model with lower point forecast accuracy measures would be selected.
+Moreover, time series cross-validation was used to evaluate forecast accuracy of the ARIMA and ETS models [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) were computed and compared to determine the best model for each vegetable. The model with lower point forecast accuracy measures was selected as the best model for each vegetable.
 
-Furthermore, a portmanteau test in the form of the Ljung-Box test would be computed. This would allow the researchers to describe the performance of the selected model for each vegetable. Computed p-values greater than 0.05 confirms that the residuals are similar to white noise. Otherwise, the residuals still have some remaining autocorrelation that is not accounted for in the model.
+Furthermore, a portmanteau test in the form of the Ljung-Box test was computed for the best model for each vegetable. This allowed the researchers to describe the performance of the best model for each vegetable. Computed p-values greater than 0.05 confirms that the residuals are similar to white noise. Otherwise, the residuals still have some remaining autocorrelation that is not accounted for in the model.
 
-Finally, the selected models would be used to forecast monthly vegetable prices in Nueva Vizcaya.
+Finally, the best models were used to forecast monthly vegetable prices in Nueva Vizcaya.
 
 # CHAPTER IV
 
