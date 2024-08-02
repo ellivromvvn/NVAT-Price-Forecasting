@@ -87,11 +87,9 @@ The researchers would not make adjustments and transformations to the data. Mode
 
 ### Conceptual Framework
 
-The research paradigm as shown in @fig-rp would guide the researchers in conducting the study. It consists of input, process, and output. The input would be the available time series of vegetable prices from NVAT. The output would be ARIMA and/or ETS models and their corresponding monthly forecasts. Under process, automatic algorithms would determine the best ARIMA and ETS models. From this, the better model would be determined using time series cross-validation; comparing their point forecast accuracy measures.
+The research paradigm as shown in @fig-rp guided the researchers in conducting the study. It consists of input, process, and output. The input is the available time series of vegetable prices from NVAT. The output are ARIMA and/or ETS models and their corresponding monthly forecasts. Under process, time series analysis was carried out using automatic algorithms and time series cross-validation to generate different optimal ARIMA and ETS models for each vegetable. From this, the final model for each vegetable were determined by comparing point forecast accuracy measures. Also, portmanteau test of residuals were performed to describe the performance of the final model for each vegetable.
 
 ![Research Paradigm](pictures/rp.png){#fig-rp fig-align="center" width="600"}
-
-During the process phase, automated algorithms would be employed for time series analysis to identify the optimal ARIMA and ETS models for each vegetable. Subsequently, the optimal ARIMA or ETS model for forecasting the prices of each vegetable would be determined using time series cross-validation, enabling a comparison of their point forecast accuracy measures.Also, a portmanteau test of residuals would be performed to describe the performance of the optimal model for each vegetable.
 
 ### Definition of Terms
 
