@@ -470,7 +470,154 @@ nvat_monthly_long |>
     )
 ```
 
+<<<<<<< HEAD
 ### ARIMA and ETS Models for the Time Series of Monthly Vegetable Prices
+=======
+```{r}
+#| include: true
+
+nvat_monthly_long |>
+  filter(vegetable == "cabbage") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 8)
+    )
+```
+
+```{r}
+#| include: true
+
+nvat_monthly_long |>
+  filter(vegetable == "carrots") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 8)
+    )
+```
+
+```{r}
+#| include: true
+
+nvat_monthly_long |>
+  filter(vegetable == "cauliflower") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 8)
+    )
+```
+
+```{r}
+#| include: true
+
+nvat_monthly_long |>
+  filter(vegetable == "celery") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 8)
+    )
+```
+
+```{r}
+#| include: true
+
+nvat_monthly_long |>
+  filter(vegetable == "chayote_bunga") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 8)
+    )
+```
+
+```{r}
+#| include: true
+
+nvat_monthly_long |>
+  filter(vegetable == "cucumber") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 8)
+    )
+```
+
+```{r}
+#| include: true
+
+nvat_monthly_long |>
+  filter(vegetable == "gabi_galyang") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 8)
+    )
+```
+
+```{r}
+#| include: true
+
+nvat_monthly_long |>
+  filter(vegetable == "pepper_sultan") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 8)
+    )
+```
+
+```{r}
+#| include: true
+
+nvat_monthly_long |>
+  filter(vegetable == "pepper_taiwan") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 8)
+    )
+```
+
+```{r}
+#| include: true
+
+nvat_monthly_long |>
+  filter(vegetable == "potato") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 8)
+    )
+```
+
+```{r}
+#| include: true
+
+nvat_monthly_long |>
+  filter(vegetable == "wombok") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 8)
+    )
+```
+
+### ARIMA and ETS Models for Monthly Vegetable Prices
+>>>>>>> 6cd846fc709bdc31a03dff9e1a7a7048da1ac239
 
 ```{r}
 #| include: false
