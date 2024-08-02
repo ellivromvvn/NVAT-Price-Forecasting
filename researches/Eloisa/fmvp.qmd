@@ -163,11 +163,11 @@ In conclusion, vegetable prices are influenced by various factors internationall
 
 ### Research Design
 
-The research would purely be quantitative in nature. Specifically, the researchers would employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models would be estimated using the monthly vegetable prices from NVAT. The researchers would then compare the estimated models and choose the one with higher accuracy to forecast monthly vegetable prices in Nueva Vizcaya.
+The research is purely quantitative in nature. Specifically, the researchers employed comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models were compared to determine which will best forecast monthly prices for each vegetable.
 
 ### Locale of the Study
 
-The study would be conducted in Bambang, Nueva Vizcaya. Specifically, the data for this study would be collected from NVAT, which is located in Bambang. Bambang is the next town south of Bayombong --- the capital town of the province of Nueva Vizcaya. Please see @fig-bambang below.
+The study was conducted in Bambang, Nueva Vizcaya. Specifically, the data for this study would be collected from NVAT, which is located in Bambang. Bambang is the next town south of Bayombong --- the capital town of the province of Nueva Vizcaya. Please see @fig-bambang below.
 
 ![Map of Bambang, Nueva Vizcaya (https://en.wikipedia.org/wiki/Bambang,\_Nueva_Vizcaya#/media/File:Ph_locator_nueva_vizcaya_bambang.png)](pictures/bambang.png){#fig-bambang fig-align="center"}
 
