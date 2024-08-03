@@ -91,6 +91,8 @@ The research paradigm as shown in @fig-rp guided the researchers in conducting t
 
 ![Research Paradigm](pictures/rp.png){#fig-rp fig-align="center" width="600"}
 
+<br>
+
 ### Definition of Terms
 
 **AutoRegressive Integrated Moving Average (ARIMA).** Utilize ARIMA to model and predict monthly vegetable prices by considering autoregressive and moving average components while addressing seasonality or trends through differencing, ensuring a more accurate representation of the variations over time.
@@ -171,6 +173,8 @@ The study was conducted in Bambang, Nueva Vizcaya. Specifically, the data for th
 
 ![Map of Bambang, Nueva Vizcaya (https://en.wikipedia.org/wiki/Bambang,\_Nueva_Vizcaya#/media/File:Ph_locator_nueva_vizcaya_bambang.png)](pictures/bambang.png){#fig-bambang fig-align="center"}
 
+<br>
+
 ### Source and Subject of the Study
 
 The primary source of data for the research is the NVAT. Five (5) years available time series of vegetable prices from the NVAT were used to come up with forecasts of monthly vegetable prices in Nueva Vizcaya.
@@ -210,6 +214,8 @@ vtree::grVizToPNG(workflow, filename = "pictures/workflow.png", width = 600)
 
 ![Data Treatment and Analysis Workflow](pictures/workflow.png){#fig-workflow fig-align="center" width="600"}
 
+<br>
+
 The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values in order to create a tidy time series data for monthly vegetable prices. The researchers utilized the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
 
 Subsequently, the researchers visualized the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data were also be visualized using the seasonal and trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations were integral in describing the data.
@@ -226,7 +232,7 @@ Finally, the best models were used to forecast monthly vegetable prices in Nueva
 
 ## RESULTS AND DISCUSSION
 
-### Time Series of the Monthly Vegetable Prices in NVAT
+### Time Series of the Monthly Vegetable Prices
 
 ```{r}
 #| label: load-packages
@@ -237,6 +243,9 @@ library(clock)
 library(fpp3)
 library(modelsummary)
 library(flextable)
+library(viridis)
+library(hrbrthemes)
+library(gghighlight)
 ```
 
 ```{r}
@@ -284,7 +293,7 @@ nvat_monthly_long <- gather(
 #| label: tibble-to-tsibble
 #| include: false
 
-nvat_monthly_long <- nvat_monthly_long |>
+nvat_monthly_long_ts <- nvat_monthly_long |>
   mutate(date = yearmonth(date)) |>
   as_tsibble(key = vegetable, index = date)
 ```
@@ -294,6 +303,13 @@ nvat_monthly_long <- nvat_monthly_long |>
 #| include: false
 
 veg_labels <- c('broccoli', 'cabbage', 'carrots', 'cauliflower', 'celery', 'chayote (bunga)', 'cucumber', 'gabi (galyang)', 'pepper (sultan)', 'pepper (taiwan)', 'potato', 'wombok')
+
+veg_labels1 <- c(
+  "chayote_bunga" = "chayote (bunga)",
+  "gabi_galyang" = "gabi (galyang)",
+  "pepper_sultan" = "pepper (sultan)",
+  "pepper_taiwan" = "pepper (taiwan)"
+)
 ```
 
 After encoding the available vegetable prices from the NVAT Facebook page, only 12 vegetables were chosen for the study. These vegetables are broccoli, cabbage, carrots, cauliflower, celery, chayote (bunga) cucumber, gabi, pepper (sultan), pepper (taiwan), potato, and wombok. The graph of the time series of the monthly prices of these vegetables are shown in @fig-plot_all. The time series of the monthly vegetable prices are from October 2017 to December 2023. Thus, each vegetable time series consist of 75 observations.
@@ -301,14 +317,33 @@ After encoding the available vegetable prices from the NVAT Facebook page, only 
 ```{r}
 #| label: fig-plot_all
 #| fig-cap: "Time Series of Monthly Vegetable Prices"
+#| fig-width: 6
 #| echo: false
 
-autoplot(nvat_monthly_long, price) +
+nvat_monthly_long |>
+  ggplot(aes(x = date, y = price, colour = vegetable)) +
+  geom_line(
+    color="darkgreen",
+    linewidth = .75
+  ) +
+  gghighlight(
+    use_direct_label = F,
+    unhighlighted_params = list(linewidth = .5, alpha = .75)
+  ) +
   theme_minimal() +
-  labs(y = "Price", x = "Date") +
-  guides(color = guide_legend(title = "Vegetable")) +
-  scale_color_discrete(labels = veg_labels)
+  theme(
+    legend.position="none",
+    axis.text.x = element_text(angle = 45, hjust = .75)
+  ) +
+  labs(y = "Price", x = "Year") +
+  facet_wrap(
+    ~vegetable,
+    labeller = labeller(vegetable = veg_labels1),
+    ncol = 3
+  )
 ```
+
+<br>
 
 The summary of the time series of monthly vegetable prices from October 2017 to December 2023 is shown in @tbl-all.
 
@@ -337,6 +372,8 @@ flextable(tbl_all) |>
   font(part = "all", fontname = "Times New Roman") |>
   fontsize(size = 12, part = "all")
 ```
+
+<br>
 
 For the broccoli time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'broccoli']` in April 2018 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'broccoli']` in September 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'broccoli']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'broccoli']`.
 
@@ -372,7 +409,7 @@ The vegetable with the most variability is pepper (taiwan). It also has the high
 #| tbl-cap: "STL Features of the Time Series of Monthly Vegetable Prices"
 #| echo: false
 
-tbl_stl <- nvat_monthly_long |>
+tbl_stl <- nvat_monthly_long_ts |>
   index_by(date) |>
   features(price, feat_stl) |>
   select(
@@ -416,6 +453,8 @@ flextable(tbl_stl) |>
   fontsize(size = 12, part = "all")
 ```
 
+<br>
+
 The broccoli time series has a trend strength of `r tbl_stl$'Trend Strength'[tbl_stl$Vegetable == 'broccoli']`, showing that `r tbl_stl$'Trend Strength'[tbl_stl$Vegetable == 'broccoli']*100`% of the time series is accounted by trend not considering seasonality. It has an upward trend. On the other hand, it has a seasonal strength of `r tbl_stl$'Seasonal Strength'[tbl_stl$Vegetable == 'broccoli']`, showing that `r tbl_stl$'Seasonal Strength'[tbl_stl$Vegetable == 'broccoli']*100`% of the time series is accounted by seasonality not considering trend. Its peak is in `r tbl_stl$'Seasonal Peak'[tbl_stl$Vegetable == 'broccoli']` and its trough is in `r tbl_stl$'Seasonal Trough'[tbl_stl$Vegetable == 'broccoli']`.
 
 The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage.
@@ -423,7 +462,7 @@ The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetab
 ```{r}
 #| include: false
 
-nvat_monthly_long |>
+nvat_monthly_long_ts |>
   filter(vegetable == "broccoli") |>
   gg_subseries(price)
 ```
@@ -433,7 +472,7 @@ nvat_monthly_long |>
 #| fig-cap: "Seasonal Strength vs Trend Strength of the Monthly Vegetable Prices"
 #| include: false
 
-nvat_monthly_long |>
+nvat_monthly_long_ts |>
   features(price, feat_stl) |>
   ggplot(aes(x = trend_strength, y = seasonal_strength_year,
              col = vegetable)) +
@@ -450,15 +489,15 @@ nvat_monthly_long |>
 ```{r}
 #| include: false
 
-nvat_monthly_long |>
+nvat_monthly_long_ts |>
   filter(vegetable == "cauliflower" | vegetable == "gabi_galyang") |>
   gg_season(price)
 ```
 
 ```{r}
-#| include: true
+#| include: false
 
-nvat_monthly_long |>
+nvat_monthly_long_ts |>
   filter(vegetable == "broccoli") |>
   model(STL(price)) |>
   components() |>
@@ -473,7 +512,7 @@ nvat_monthly_long |>
 ```{r}
 #| include: false
 
-fit <- nvat_monthly_long |>
+fit <- nvat_monthly_long_ts |>
   stretch_tsibble(.init = 15, .step = 4) |>
   filter(.id != max(.id)) |>
   model(
@@ -485,15 +524,26 @@ fit <- nvat_monthly_long |>
 ```{r}
 #| echo: false
 
-fit |>
+tbl_fit <- fit |>
   forecast(h = 4) |>
-  accuracy(nvat_monthly_long) |>
+  accuracy(nvat_monthly_long_ts) |>
   select(.model, RMSE, MAE, MAPE, MASE) |>
   mutate(Vegetable = rep(veg_labels, 2), .before = .model) |>
   arrange(Vegetable) |>
   mutate_if(is.numeric, round, 2) |>
   rename(Model = .model)
+
+flextable(tbl_fit) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  align(align = "center", part = "header") |>
+  align(j = -1, align = "center", part = "body") |>
+  fontsize(size = 12, part = "all")
 ```
+
+<br>
 
 The table shows the model performance for forecasting monthly vegetable prices. Broccoli for auto AutoRegressive Integrated Moving Average (ARIMA) is better in Mean Absolute Error (MAE), Mean Absolute Percetage Error (MAPE), and Mean Absolute Scaled Error (MASE) but has a very low negligence in Root Mean Square Error (RMSE) in ARIMA. Additionally, the rest of the vegetables are best fitted in auto ARIMA for MAE, MAPE, and MASE model.
 
