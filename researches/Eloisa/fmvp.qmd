@@ -59,7 +59,7 @@ The researchers will forecast monthly vegetable prices in Nueva Vizcaya by accom
 
 3.  Evaluate the performance of ARIMA and ETS models and determine the best model to forecast monthly prices for each vegetable in Nueva Vizcaya.
 
-4.  Use either ARIMA or ETS model to generate forecasts for monthly prices for each vegetable in Nueva Vizcaya.
+4.  Use either the ARIMA or ETS model to generate forecasts for monthly prices for each vegetable in Nueva Vizcaya.
 
 ### Significance of the Study
 
@@ -87,11 +87,11 @@ The researchers would not make adjustments and transformations to the data. Mode
 
 ### Conceptual Framework
 
-The research paradigm as shown in @fig-rp would guide the researchers in conducting the study. It consists of input, process, and output. The input would be the available time series of vegetable prices from NVAT. The output would be ARIMA and/or ETS models and their corresponding monthly forecasts. Under process, automatic algorithms would determine the best ARIMA and ETS models. From this, the better model would be determined using time series cross-validation; comparing their point forecast accuracy measures.
+The research paradigm as shown in @fig-rp guided the researchers in conducting the study. It consists of input, process, and output. The input is the available time series of vegetable prices from NVAT. The output are ARIMA and/or ETS models and their corresponding monthly forecasts. Under process, time series analysis was carried out using automatic algorithms and time series cross-validation to generate different optimal ARIMA and ETS models for each vegetable. From this, the final model for each vegetable were determined by comparing point forecast accuracy measures. Also, portmanteau test of residuals were performed to describe the performance of the final model for each vegetable.
 
 ![Research Paradigm](pictures/rp.png){#fig-rp fig-align="center" width="600"}
 
-During the process phase, automated algorithms would be employed for time series analysis to identify the optimal ARIMA and ETS models for each vegetable. Subsequently, the optimal ARIMA or ETS model for forecasting the prices of each vegetable would be determined using time series cross-validation, enabling a comparison of their point forecast accuracy measures.Also, a portmanteau test of residuals would be performed to describe the performance of the optimal model for each vegetable.
+<br>
 
 ### Definition of Terms
 
@@ -165,25 +165,27 @@ In conclusion, vegetable prices are influenced by various factors internationall
 
 ### Research Design
 
-The research would purely be quantitative in nature. Specifically, the researchers would employ comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models would be estimated using the monthly vegetable prices from NVAT. The researchers would then compare the estimated models and choose the one with higher accuracy to forecast monthly vegetable prices in Nueva Vizcaya.
+The research is purely quantitative in nature. Specifically, the researchers employed comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models were compared to determine the best model to forecast monthly prices for each vegetable.
 
 ### Locale of the Study
 
-The study would be conducted in Bambang, Nueva Vizcaya. Specifically, the data for this study would be collected from NVAT, which is located in Bambang. Bambang is the next town south of Bayombong --- the capital town of the province of Nueva Vizcaya. Please see @fig-bambang below.
+The study was conducted in Bambang, Nueva Vizcaya. Specifically, the data for this study was collected from the Nueva Vizcaya Agricultural Terminal (NVAT), which is located in Bambang. Bambang is the next town south of Bayombong --- the capital town of the province of Nueva Vizcaya. Please see @fig-bambang below.
 
 ![Map of Bambang, Nueva Vizcaya (https://en.wikipedia.org/wiki/Bambang,\_Nueva_Vizcaya#/media/File:Ph_locator_nueva_vizcaya_bambang.png)](pictures/bambang.png){#fig-bambang fig-align="center"}
 
+<br>
+
 ### Source and Subject of the Study
 
-The primary source of data for the research is the NVAT. Five (5) years available time series of vegetable prices from the NVAT would be used to come up with forecasts of monthly vegetable prices in Nueva Vizcaya.
+The primary source of data for the research is the NVAT. Five (5) years available time series of vegetable prices from the NVAT were used to come up with forecasts of monthly vegetable prices in Nueva Vizcaya.
 
 ### Data Gathering Procedure
 
-The researchers would inquire about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research would be written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively). Subsequently, the researchers would collect five (5) years available time series of vegetable prices. Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, would be maintained.
+The researchers inquired about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research were written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively). Subsequently, the researchers were able to collect time series of vegetable prices for five (5) years. Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, were maintained.
 
 ### Data Analysis and Treatment of Data
 
-In forecasting monthly vegetable prices in Nueva Vizcaya, the researchers would follow the process illustrated in @fig-workflow. It is an adapted representation of the workflow introduced by @hyndman21.
+In forecasting monthly vegetable prices in Nueva Vizcaya, the researchers followed the process illustrated in @fig-workflow. It is an adapted representation of the workflow introduced by @hyndman21.
 
 ```{r}
 #| label: diagram-workflow
@@ -212,23 +214,25 @@ vtree::grVizToPNG(workflow, filename = "pictures/workflow.png", width = 600)
 
 ![Data Treatment and Analysis Workflow](pictures/workflow.png){#fig-workflow fig-align="center" width="600"}
 
-The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values in order to create a tidy time series data for monthly vegetable prices. The researchers would utilize the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
+<br>
 
-Subsequently, the researchers would visualize the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data would also be visualized using the seasonal and trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations are integral in describing the data.
+The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values in order to create a tidy time series data for monthly vegetable prices. The researchers utilized the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
 
-Next, automatic algorithms introduced by @hyndman21 would be used to estimate or fit the optimal ARIMA and ETS models to the data. The researchers would implement these algorithms in R using the `fable` package[@fable].
+Subsequently, the researchers visualized the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data were also be visualized using the seasonal and trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations were integral in describing the data.
 
-Moreover, time series cross-validation would be used to evaluate forecast accuracy of the ARIMA and ETS models [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) would be computed and compared to determine the better model for each vegetable. The model with lower point forecast accuracy measures would be selected.
+Next, automatic algorithms introduced by @hyndman21 were used to estimate or fit optimal ARIMA and ETS models to the data. The researchers would implement these algorithms in R using the `fable` package[@fable].
 
-Furthermore, a portmanteau test in the form of the Ljung-Box test would be computed. This would allow the researchers to describe the performance of the selected model for each vegetable. Computed p-values greater than 0.05 confirms that the residuals are similar to white noise. Otherwise, the residuals still have some remaining autocorrelation that is not accounted for in the model.
+Moreover, time series cross-validation was used to evaluate forecast accuracy of the ARIMA and ETS models [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) were computed and compared to determine the best model for each vegetable. The model with lower point forecast accuracy measures was selected as the best model for each vegetable.
 
-Finally, the selected models would be used to forecast monthly vegetable prices in Nueva Vizcaya.
+Furthermore, a portmanteau test in the form of the Ljung-Box test was computed for the best model for each vegetable. This allowed the researchers to describe the performance of the best model for each vegetable. Computed p-values greater than 0.05 confirms that the residuals are similar to white noise. Otherwise, the residuals still have some remaining autocorrelation that is not accounted for in the model.
+
+Finally, the best models were used to forecast monthly vegetable prices in Nueva Vizcaya.
 
 # CHAPTER IV
 
 ## RESULTS AND DISCUSSION
 
-### Time Series of the Monthly Vegetable Prices in NVAT
+### Time Series of the Monthly Vegetable Prices
 
 ```{r}
 #| label: load-packages
@@ -237,8 +241,9 @@ Finally, the selected models would be used to forecast monthly vegetable prices 
 library(tidyverse)
 library(clock)
 library(fpp3)
-library(modelsummary)
 library(flextable)
+library(gghighlight)
+library(MOTE)
 ```
 
 ```{r}
@@ -286,7 +291,7 @@ nvat_monthly_long <- gather(
 #| label: tibble-to-tsibble
 #| include: false
 
-nvat_monthly_long <- nvat_monthly_long |>
+nvat_monthly_long_ts <- nvat_monthly_long |>
   mutate(date = yearmonth(date)) |>
   as_tsibble(key = vegetable, index = date)
 ```
@@ -296,6 +301,13 @@ nvat_monthly_long <- nvat_monthly_long |>
 #| include: false
 
 veg_labels <- c('broccoli', 'cabbage', 'carrots', 'cauliflower', 'celery', 'chayote (bunga)', 'cucumber', 'gabi (galyang)', 'pepper (sultan)', 'pepper (taiwan)', 'potato', 'wombok')
+
+veg_labels1 <- c(
+  "chayote_bunga" = "chayote (bunga)",
+  "gabi_galyang" = "gabi (galyang)",
+  "pepper_sultan" = "pepper (sultan)",
+  "pepper_taiwan" = "pepper (taiwan)"
+)
 ```
 
 After encoding the available vegetable prices from the NVAT Facebook page, only 12 vegetables were chosen for the study. These vegetables are broccoli, cabbage, carrots, cauliflower, celery, chayote (bunga) cucumber, gabi, pepper (sultan), pepper (taiwan), potato, and wombok. The graph of the time series of the monthly prices of these vegetables are shown in @fig-plot_all. The time series of the monthly vegetable prices are from October 2017 to December 2023. Thus, each vegetable time series consist of 75 observations.
@@ -303,14 +315,33 @@ After encoding the available vegetable prices from the NVAT Facebook page, only 
 ```{r}
 #| label: fig-plot_all
 #| fig-cap: "Time Series of Monthly Vegetable Prices"
+#| fig-width: 6
 #| echo: false
 
-autoplot(nvat_monthly_long, price) +
+nvat_monthly_long |>
+  ggplot(aes(x = date, y = price, colour = vegetable)) +
+  geom_line(
+    color="darkgreen",
+    linewidth = .75
+  ) +
+  gghighlight(
+    use_direct_label = F,
+    unhighlighted_params = list(linewidth = .5, alpha = .75)
+  ) +
   theme_minimal() +
-  labs(y = "Price", x = "Date") +
-  guides(color = guide_legend(title = "Vegetable")) +
-  scale_color_discrete(labels = veg_labels)
+  theme(
+    legend.position="none",
+    axis.text.x = element_text(angle = 45, hjust = .75)
+  ) +
+  labs(y = "Price", x = "Year") +
+  facet_wrap(
+    ~vegetable,
+    labeller = labeller(vegetable = veg_labels1),
+    ncol = 3
+  )
 ```
+
+<br>
 
 The summary of the time series of monthly vegetable prices from October 2017 to December 2023 is shown in @tbl-all.
 
@@ -337,8 +368,11 @@ flextable(tbl_all) |>
   line_spacing(space = .5, part = "body") |>
   set_table_properties(layout = "autofit", width = 1) |>
   font(part = "all", fontname = "Times New Roman") |>
+  align(align = "center", part = "header") |>
   fontsize(size = 12, part = "all")
 ```
+
+<br>
 
 For the broccoli time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'broccoli']` in April 2018 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'broccoli']` in September 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'broccoli']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'broccoli']`.
 
@@ -374,7 +408,7 @@ The vegetable with the most variability is pepper (taiwan). It also has the high
 #| tbl-cap: "STL Features of the Time Series of Monthly Vegetable Prices"
 #| echo: false
 
-tbl_stl <- nvat_monthly_long |>
+tbl_stl <- nvat_monthly_long_ts |>
   index_by(date) |>
   features(price, feat_stl) |>
   select(
@@ -413,19 +447,21 @@ flextable(tbl_stl) |>
   line_spacing(space = .5, part = "body") |>
   set_table_properties(layout = "autofit", width = 1) |>
   font(part = "all", fontname = "Times New Roman") |>
-  align(align = "center", part = "header") |>
+  align(j = -1, align = "center", part = "header") |>
   align(j = -1, align = "center", part = "body") |>
   fontsize(size = 12, part = "all")
 ```
 
+<br>
+
 The broccoli time series has a trend strength of `r tbl_stl$'Trend Strength'[tbl_stl$Vegetable == 'broccoli']`, showing that `r tbl_stl$'Trend Strength'[tbl_stl$Vegetable == 'broccoli']*100`% of the time series is accounted by trend not considering seasonality. It has an upward trend. On the other hand, it has a seasonal strength of `r tbl_stl$'Seasonal Strength'[tbl_stl$Vegetable == 'broccoli']`, showing that `r tbl_stl$'Seasonal Strength'[tbl_stl$Vegetable == 'broccoli']*100`% of the time series is accounted by seasonality not considering trend. Its peak is in `r tbl_stl$'Seasonal Peak'[tbl_stl$Vegetable == 'broccoli']` and its trough is in `r tbl_stl$'Seasonal Trough'[tbl_stl$Vegetable == 'broccoli']`.
 
-The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage.
+The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage. Please see Appendix D for the seasonal and trend decomposition using LOESS (STL).
 
 ```{r}
 #| include: false
 
-nvat_monthly_long |>
+nvat_monthly_long_ts |>
   filter(vegetable == "broccoli") |>
   gg_subseries(price)
 ```
@@ -435,7 +471,7 @@ nvat_monthly_long |>
 #| fig-cap: "Seasonal Strength vs Trend Strength of the Monthly Vegetable Prices"
 #| include: false
 
-nvat_monthly_long |>
+nvat_monthly_long_ts |>
   features(price, feat_stl) |>
   ggplot(aes(x = trend_strength, y = seasonal_strength_year,
              col = vegetable)) +
@@ -452,15 +488,15 @@ nvat_monthly_long |>
 ```{r}
 #| include: false
 
-nvat_monthly_long |>
+nvat_monthly_long_ts |>
   filter(vegetable == "cauliflower" | vegetable == "gabi_galyang") |>
   gg_season(price)
 ```
 
 ```{r}
-#| include: true
+#| include: false
 
-nvat_monthly_long |>
+nvat_monthly_long_ts |>
   filter(vegetable == "broccoli") |>
   model(STL(price)) |>
   components() |>
@@ -470,155 +506,14 @@ nvat_monthly_long |>
     )
 ```
 
-```{r}
-#| include: true
+### Models for Monthly Vegetable Prices
 
-nvat_monthly_long |>
-  filter(vegetable == "cabbage") |>
-  model(STL(price)) |>
-  components() |>
-  autoplot() +
-    theme(
-      strip.text = element_text(size = 8)
-    )
-```
-
-```{r}
-#| include: true
-
-nvat_monthly_long |>
-  filter(vegetable == "carrots") |>
-  model(STL(price)) |>
-  components() |>
-  autoplot() +
-    theme(
-      strip.text = element_text(size = 8)
-    )
-```
-
-```{r}
-#| include: true
-
-nvat_monthly_long |>
-  filter(vegetable == "cauliflower") |>
-  model(STL(price)) |>
-  components() |>
-  autoplot() +
-    theme(
-      strip.text = element_text(size = 8)
-    )
-```
-
-```{r}
-#| include: true
-
-nvat_monthly_long |>
-  filter(vegetable == "celery") |>
-  model(STL(price)) |>
-  components() |>
-  autoplot() +
-    theme(
-      strip.text = element_text(size = 8)
-    )
-```
-
-```{r}
-#| include: true
-
-nvat_monthly_long |>
-  filter(vegetable == "chayote_bunga") |>
-  model(STL(price)) |>
-  components() |>
-  autoplot() +
-    theme(
-      strip.text = element_text(size = 8)
-    )
-```
-
-```{r}
-#| include: true
-
-nvat_monthly_long |>
-  filter(vegetable == "cucumber") |>
-  model(STL(price)) |>
-  components() |>
-  autoplot() +
-    theme(
-      strip.text = element_text(size = 8)
-    )
-```
-
-```{r}
-#| include: true
-
-nvat_monthly_long |>
-  filter(vegetable == "gabi_galyang") |>
-  model(STL(price)) |>
-  components() |>
-  autoplot() +
-    theme(
-      strip.text = element_text(size = 8)
-    )
-```
-
-```{r}
-#| include: true
-
-nvat_monthly_long |>
-  filter(vegetable == "pepper_sultan") |>
-  model(STL(price)) |>
-  components() |>
-  autoplot() +
-    theme(
-      strip.text = element_text(size = 8)
-    )
-```
-
-```{r}
-#| include: true
-
-nvat_monthly_long |>
-  filter(vegetable == "pepper_taiwan") |>
-  model(STL(price)) |>
-  components() |>
-  autoplot() +
-    theme(
-      strip.text = element_text(size = 8)
-    )
-```
-
-```{r}
-#| include: true
-
-nvat_monthly_long |>
-  filter(vegetable == "potato") |>
-  model(STL(price)) |>
-  components() |>
-  autoplot() +
-    theme(
-      strip.text = element_text(size = 8)
-    )
-```
-
-```{r}
-#| include: true
-
-nvat_monthly_long |>
-  filter(vegetable == "wombok") |>
-  model(STL(price)) |>
-  components() |>
-  autoplot() +
-    theme(
-      strip.text = element_text(size = 8)
-    )
-```
-
-### ARIMA and ETS Models for Monthly Vegetable Prices
+The time series cross-validation yielded 360 models; 180 ARIMA and 180 ETS. That is 15 ARIMA models and 15 ETS models for each vegetable. Please see Appendix E for the full list of these models.
 
 ```{r}
 #| include: false
 
-fit <- nvat_monthly_long |>
+fit <- nvat_monthly_long_ts |>
   stretch_tsibble(.init = 15, .step = 4) |>
   filter(.id != max(.id)) |>
   model(
@@ -627,19 +522,755 @@ fit <- nvat_monthly_long |>
   )
 ```
 
+### Model Evaluation
+
+@tbl-fit shows the performance of ARIMA and ETS for each vegetable.
+
 ```{r}
+#| label: tbl-fit
+#| tbl-cap-location: top
+#| tbl-cap: "ARIMA and ETS Performance for Each Vegetable"
 #| echo: false
 
-fit |>
+tbl_fit <- fit |>
   forecast(h = 4) |>
-  accuracy(nvat_monthly_long) |>
+  accuracy(nvat_monthly_long_ts) |>
   select(.model, RMSE, MAE, MAPE, MASE) |>
   mutate(Vegetable = rep(veg_labels, 2), .before = .model) |>
   arrange(Vegetable) |>
   mutate_if(is.numeric, round, 2) |>
   rename(Model = .model)
+
+flextable(tbl_fit) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  width(j = 1, width = 2) |>
+  width(j = 2, width = .9) |>
+  width(j = 3, width = .9) |>
+  width(j = 4, width = .9) |>
+  width(j = 5, width = .9) |>
+  width(j = 6, width = .9)
 ```
 
-The table shows the model performance for forecasting monthly vegetable prices. Broccoli for auto AutoRegressive Integrated Moving Average (ARIMA) is better in Mean Absolute Error (MAE), Mean Absolute Percetage Error (MAPE), and Mean Absolute Scaled Error (MASE) but has a very low negligence in Root Mean Square Error (RMSE) in ARIMA. Additionally, the rest of the vegetables are best fitted in auto ARIMA for MAE, MAPE, and MASE model.
+<br>
+
+The ARIMA model proved to be better in forecasting monthly prices for all vegetables except for gabi (galyang). The ETS model is better in all the accuracy measures for gabi (galyang). However, it is notable that ETS slightly outperformed ARIMA in RMSE for broccoli showing a minimal difference. Nonetheless, ARIMA is better in the other accuracy measures showing a big difference in MAPE and minimal differences in MAE and MASE. It is also notable that there is minimal difference in all the accuracy measures for potato.
+
+### Forecasting Monthly Vegetable Prices.
+
+```{r}
+#| include: false
+
+broccoli <- nvat_monthly_long_ts |>
+  filter(vegetable == "broccoli")
+  
+fit_broccoli <- broccoli |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_broccoli <- fit_broccoli |>
+  forecast(h = 4)
+  
+fc_broccoli |>
+  autoplot(broccoli) +
+  theme_minimal() +
+  labs(
+    y = "Price",
+    x = "Date"
+  )
+```
+
+```{r}
+tbl_broccoli <- fc_broccoli |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_broccoli) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_broccoli <- augment(fit_broccoli) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 3) |>
+  mutate(Model = fit_broccoli$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+cabbage <- nvat_monthly_long_ts |>
+  filter(vegetable == "cabbage")
+  
+fit_cabbage <- cabbage |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_cabbage <- fit_cabbage |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_cabbage <- fc_cabbage |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_cabbage) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_cabbage <- augment(fit_cabbage) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 3) |>
+  mutate(Model = fit_cabbage$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+carrots <- nvat_monthly_long_ts |>
+  filter(vegetable == "carrots")
+  
+fit_carrots <- carrots |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_carrots <- fit_carrots |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_carrots <- fc_carrots |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_carrots) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_carrots <- augment(fit_carrots) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 3) |>
+  mutate(Model = fit_carrots$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+cauliflower <- nvat_monthly_long_ts |>
+  filter(vegetable == "cauliflower")
+  
+fit_cauliflower <- cauliflower |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_cauliflower <- fit_cauliflower |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_cauliflower <- fc_cauliflower |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_cauliflower) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_cauliflower <- augment(fit_cauliflower) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 1) |>
+  mutate(Model = fit_cauliflower$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+celery <- nvat_monthly_long_ts |>
+  filter(vegetable == "celery")
+  
+fit_celery <- celery |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_celery <- fit_celery |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_celery <- fc_celery |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_celery) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_celery <- augment(fit_celery) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 2) |>
+  mutate(Model = fit_celery$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+chayote_bunga <- nvat_monthly_long_ts |>
+  filter(vegetable == "chayote_bunga")
+  
+fit_chayote_bunga <- chayote_bunga |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_chayote_bunga <- fit_chayote_bunga |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_chayote_bunga <- fc_chayote_bunga |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_chayote_bunga) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_chayote_bunga <- augment(fit_chayote_bunga) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 1) |>
+  mutate(Model = fit_chayote_bunga$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+cucumber <- nvat_monthly_long_ts |>
+  filter(vegetable == "cucumber")
+  
+fit_cucumber <- cucumber |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_cucumber <- fit_cucumber |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_cucumber <- fc_cucumber |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_cucumber) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_cucumber <- augment(fit_cucumber) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 3) |>
+  mutate(Model = fit_cucumber$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+gabi_galyang <- nvat_monthly_long_ts |>
+  filter(vegetable == "gabi_galyang")
+  
+fit_gabi_galyang <- gabi_galyang |>
+  model(
+    ETS = ETS(log(price))
+  )
+
+fc_gabi_galyang <- fit_gabi_galyang |>
+  forecast(h = 4)
+
+```
+
+```{r}
+tbl_gabi_galyang <- fc_gabi_galyang |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_gabi_galyang) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_gabi_galyang <- augment(fit_gabi_galyang) |>
+  filter(.model == "ETS") |>
+  features(.innov, ljung_box, lag = 12, dof = 1) |>
+  mutate(Model = fit_gabi_galyang$ETS) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+pepper_sultan <- nvat_monthly_long_ts |>
+  filter(vegetable == "pepper_sultan")
+  
+fit_pepper_sultan <- pepper_sultan |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_pepper_sultan <- fit_pepper_sultan |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_pepper_sultan <- fc_pepper_sultan |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_pepper_sultan) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_pepper_sultan <- augment(fit_pepper_sultan) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 4) |>
+  mutate(Model = fit_pepper_sultan$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+pepper_taiwan <- nvat_monthly_long_ts |>
+  filter(vegetable == "pepper_taiwan")
+  
+fit_pepper_taiwan <- pepper_taiwan |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_pepper_taiwan <- fit_pepper_taiwan |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_pepper_taiwan <- fc_pepper_taiwan |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_pepper_taiwan) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_pepper_taiwan <- augment(fit_pepper_taiwan) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 3) |>
+  mutate(Model = fit_pepper_taiwan$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+potato <- nvat_monthly_long_ts |>
+  filter(vegetable == "potato")
+  
+fit_potato <- potato |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_potato <- fit_potato |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_potato <- fc_potato |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_potato) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_potato <- augment(fit_potato) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 4) |>
+  mutate(Model = fit_potato$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+wombok <- nvat_monthly_long_ts |>
+  filter(vegetable == "wombok")
+  
+fit_wombok <- wombok |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_wombok <- fit_wombok |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_wombok <- fc_wombok |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_wombok) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_wombok <- augment(fit_wombok) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 2) |>
+  mutate(Model = fit_wombok$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+tbl_ljb <- bind_rows(
+  tbl_ljb_broccoli,
+  tbl_ljb_cabbage,
+  tbl_ljb_carrots,
+  tbl_ljb_cauliflower,
+  tbl_ljb_celery,
+  tbl_ljb_chayote_bunga,
+  tbl_ljb_cucumber,
+  tbl_ljb_gabi_galyang,
+  tbl_ljb_pepper_sultan,
+  tbl_ljb_pepper_taiwan,
+  tbl_ljb_potato,
+  tbl_ljb_wombok
+) |>
+  mutate(
+    Model = as.character(Model),
+    Model = str_sub(Model, 2, -2),
+    Vegetable = veg_labels
+  ) |>
+  mutate(across(starts_with("LB"), ~round(., 2))) |>
+  mutate(across(starts_with("P"), ~apa(., 3, FALSE)))
+
+flextable(tbl_ljb) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 4, align = "right", part = "all")
+```
 
 # References
