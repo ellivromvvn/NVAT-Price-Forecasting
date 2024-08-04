@@ -59,7 +59,7 @@ The researchers will forecast monthly vegetable prices in Nueva Vizcaya by accom
 
 3.  Evaluate the performance of ARIMA and ETS models and determine the best model to forecast monthly prices for each vegetable in Nueva Vizcaya.
 
-4.  Use either ARIMA or ETS model to generate forecasts for monthly prices for each vegetable in Nueva Vizcaya.
+4.  Use either the ARIMA or ETS model to generate forecasts for monthly prices for each vegetable in Nueva Vizcaya.
 
 ### Significance of the Study
 
@@ -165,7 +165,7 @@ In conclusion, vegetable prices are influenced by various factors internationall
 
 ### Research Design
 
-The research is purely quantitative in nature. Specifically, the researchers employed comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models were compared to determine which will best forecast monthly prices for each vegetable.
+The research is purely quantitative in nature. Specifically, the researchers employed comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models were compared to determine the best model to forecast monthly prices for each vegetable.
 
 ### Locale of the Study
 
@@ -241,11 +241,9 @@ Finally, the best models were used to forecast monthly vegetable prices in Nueva
 library(tidyverse)
 library(clock)
 library(fpp3)
-library(modelsummary)
 library(flextable)
-library(viridis)
-library(hrbrthemes)
 library(gghighlight)
+library(MOTE)
 ```
 
 ```{r}
@@ -370,6 +368,7 @@ flextable(tbl_all) |>
   line_spacing(space = .5, part = "body") |>
   set_table_properties(layout = "autofit", width = 1) |>
   font(part = "all", fontname = "Times New Roman") |>
+  align(align = "center", part = "header") |>
   fontsize(size = 12, part = "all")
 ```
 
@@ -448,7 +447,7 @@ flextable(tbl_stl) |>
   line_spacing(space = .5, part = "body") |>
   set_table_properties(layout = "autofit", width = 1) |>
   font(part = "all", fontname = "Times New Roman") |>
-  align(align = "center", part = "header") |>
+  align(j = -1, align = "center", part = "header") |>
   align(j = -1, align = "center", part = "body") |>
   fontsize(size = 12, part = "all")
 ```
@@ -457,7 +456,7 @@ flextable(tbl_stl) |>
 
 The broccoli time series has a trend strength of `r tbl_stl$'Trend Strength'[tbl_stl$Vegetable == 'broccoli']`, showing that `r tbl_stl$'Trend Strength'[tbl_stl$Vegetable == 'broccoli']*100`% of the time series is accounted by trend not considering seasonality. It has an upward trend. On the other hand, it has a seasonal strength of `r tbl_stl$'Seasonal Strength'[tbl_stl$Vegetable == 'broccoli']`, showing that `r tbl_stl$'Seasonal Strength'[tbl_stl$Vegetable == 'broccoli']*100`% of the time series is accounted by seasonality not considering trend. Its peak is in `r tbl_stl$'Seasonal Peak'[tbl_stl$Vegetable == 'broccoli']` and its trough is in `r tbl_stl$'Seasonal Trough'[tbl_stl$Vegetable == 'broccoli']`.
 
-The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage.
+The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage. Please see Appendix D for the seasonal and trend decomposition using LOESS (STL).
 
 ```{r}
 #| include: false
@@ -507,7 +506,9 @@ nvat_monthly_long_ts |>
     )
 ```
 
-### ARIMA and ETS Models for the Time Series of Monthly Vegetable Prices
+### Models for Monthly Vegetable Prices
+
+The time series cross-validation yielded 360 models; 180 ARIMA and 180 ETS. That is 15 ARIMA models and 15 ETS models for each vegetable. Please see Appendix E for the full list of these models.
 
 ```{r}
 #| include: false
@@ -521,7 +522,14 @@ fit <- nvat_monthly_long_ts |>
   )
 ```
 
+### Model Evaluation
+
+@tbl-fit shows the performance of ARIMA and ETS for each vegetable.
+
 ```{r}
+#| label: tbl-fit
+#| tbl-cap-location: top
+#| tbl-cap: "ARIMA and ETS Performance for Each Vegetable"
 #| echo: false
 
 tbl_fit <- fit |>
@@ -536,15 +544,733 @@ tbl_fit <- fit |>
 flextable(tbl_fit) |>
   bold(part = "header") |>
   line_spacing(space = .5, part = "body") |>
-  set_table_properties(layout = "autofit", width = 1) |>
   font(part = "all", fontname = "Times New Roman") |>
-  align(align = "center", part = "header") |>
-  align(j = -1, align = "center", part = "body") |>
-  fontsize(size = 12, part = "all")
+  fontsize(size = 12, part = "all") |>
+  width(j = 1, width = 2) |>
+  width(j = 2, width = .9) |>
+  width(j = 3, width = .9) |>
+  width(j = 4, width = .9) |>
+  width(j = 5, width = .9) |>
+  width(j = 6, width = .9)
 ```
 
 <br>
 
-The table shows the model performance for forecasting monthly vegetable prices. Broccoli for auto AutoRegressive Integrated Moving Average (ARIMA) is better in Mean Absolute Error (MAE), Mean Absolute Percetage Error (MAPE), and Mean Absolute Scaled Error (MASE) but has a very low negligence in Root Mean Square Error (RMSE) in ARIMA. Additionally, the rest of the vegetables are best fitted in auto ARIMA for MAE, MAPE, and MASE model.
+The ARIMA model proved to be better in forecasting monthly prices for all vegetables except for gabi (galyang). The ETS model is better in all the accuracy measures for gabi (galyang). However, it is notable that ETS slightly outperformed ARIMA in RMSE for broccoli showing a minimal difference. Nonetheless, ARIMA is better in the other accuracy measures showing a big difference in MAPE and minimal differences in MAE and MASE. It is also notable that there is minimal difference in all the accuracy measures for potato.
+
+### Forecasting Monthly Vegetable Prices.
+
+```{r}
+#| include: false
+
+broccoli <- nvat_monthly_long_ts |>
+  filter(vegetable == "broccoli")
+  
+fit_broccoli <- broccoli |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_broccoli <- fit_broccoli |>
+  forecast(h = 4)
+  
+fc_broccoli |>
+  autoplot(broccoli) +
+  theme_minimal() +
+  labs(
+    y = "Price",
+    x = "Date"
+  )
+```
+
+```{r}
+tbl_broccoli <- fc_broccoli |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_broccoli) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_broccoli <- augment(fit_broccoli) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 3) |>
+  mutate(Model = fit_broccoli$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+cabbage <- nvat_monthly_long_ts |>
+  filter(vegetable == "cabbage")
+  
+fit_cabbage <- cabbage |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_cabbage <- fit_cabbage |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_cabbage <- fc_cabbage |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_cabbage) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_cabbage <- augment(fit_cabbage) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 3) |>
+  mutate(Model = fit_cabbage$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+carrots <- nvat_monthly_long_ts |>
+  filter(vegetable == "carrots")
+  
+fit_carrots <- carrots |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_carrots <- fit_carrots |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_carrots <- fc_carrots |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_carrots) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_carrots <- augment(fit_carrots) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 3) |>
+  mutate(Model = fit_carrots$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+cauliflower <- nvat_monthly_long_ts |>
+  filter(vegetable == "cauliflower")
+  
+fit_cauliflower <- cauliflower |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_cauliflower <- fit_cauliflower |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_cauliflower <- fc_cauliflower |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_cauliflower) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_cauliflower <- augment(fit_cauliflower) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 1) |>
+  mutate(Model = fit_cauliflower$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+celery <- nvat_monthly_long_ts |>
+  filter(vegetable == "celery")
+  
+fit_celery <- celery |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_celery <- fit_celery |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_celery <- fc_celery |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_celery) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_celery <- augment(fit_celery) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 2) |>
+  mutate(Model = fit_celery$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+chayote_bunga <- nvat_monthly_long_ts |>
+  filter(vegetable == "chayote_bunga")
+  
+fit_chayote_bunga <- chayote_bunga |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_chayote_bunga <- fit_chayote_bunga |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_chayote_bunga <- fc_chayote_bunga |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_chayote_bunga) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_chayote_bunga <- augment(fit_chayote_bunga) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 1) |>
+  mutate(Model = fit_chayote_bunga$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+cucumber <- nvat_monthly_long_ts |>
+  filter(vegetable == "cucumber")
+  
+fit_cucumber <- cucumber |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_cucumber <- fit_cucumber |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_cucumber <- fc_cucumber |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_cucumber) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_cucumber <- augment(fit_cucumber) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 3) |>
+  mutate(Model = fit_cucumber$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+gabi_galyang <- nvat_monthly_long_ts |>
+  filter(vegetable == "gabi_galyang")
+  
+fit_gabi_galyang <- gabi_galyang |>
+  model(
+    ETS = ETS(log(price))
+  )
+
+fc_gabi_galyang <- fit_gabi_galyang |>
+  forecast(h = 4)
+
+```
+
+```{r}
+tbl_gabi_galyang <- fc_gabi_galyang |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_gabi_galyang) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_gabi_galyang <- augment(fit_gabi_galyang) |>
+  filter(.model == "ETS") |>
+  features(.innov, ljung_box, lag = 12, dof = 1) |>
+  mutate(Model = fit_gabi_galyang$ETS) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+pepper_sultan <- nvat_monthly_long_ts |>
+  filter(vegetable == "pepper_sultan")
+  
+fit_pepper_sultan <- pepper_sultan |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_pepper_sultan <- fit_pepper_sultan |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_pepper_sultan <- fc_pepper_sultan |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_pepper_sultan) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_pepper_sultan <- augment(fit_pepper_sultan) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 4) |>
+  mutate(Model = fit_pepper_sultan$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+pepper_taiwan <- nvat_monthly_long_ts |>
+  filter(vegetable == "pepper_taiwan")
+  
+fit_pepper_taiwan <- pepper_taiwan |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_pepper_taiwan <- fit_pepper_taiwan |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_pepper_taiwan <- fc_pepper_taiwan |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_pepper_taiwan) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_pepper_taiwan <- augment(fit_pepper_taiwan) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 3) |>
+  mutate(Model = fit_pepper_taiwan$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+potato <- nvat_monthly_long_ts |>
+  filter(vegetable == "potato")
+  
+fit_potato <- potato |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_potato <- fit_potato |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_potato <- fc_potato |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_potato) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_potato <- augment(fit_potato) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 4) |>
+  mutate(Model = fit_potato$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+#| include: false
+
+wombok <- nvat_monthly_long_ts |>
+  filter(vegetable == "wombok")
+  
+fit_wombok <- wombok |>
+  model(
+    ARIMA = ARIMA(log(price))
+  )
+
+fc_wombok <- fit_wombok |>
+  forecast(h = 4)
+```
+
+```{r}
+tbl_wombok <- fc_wombok |>
+  hilo() |>
+  unpack_hilo(c(`80%`, `95%`)) |>
+  as_tibble() |>
+  group_by(date) |>
+  summarise(across(c(.mean, ends_with("upper"), ends_with("lower")), sum)) |>
+  mutate_if(is.numeric, round, 2) |>
+  select(
+    Date = date,
+    Mean = .mean,
+    "80% Lower" = "80%_lower",
+    "80% Upper" = "80%_upper",
+    "95% Lower" = "95%_lower",
+    "95% Upper" = "95%_upper" 
+  )
+
+flextable(tbl_wombok) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 1, align = "left", part = "all")
+```
+
+```{r}
+#| include: false
+
+tbl_ljb_wombok <- augment(fit_wombok) |>
+  filter(.model == "ARIMA") |>
+  features(.innov, ljung_box, lag = 12, dof = 2) |>
+  mutate(Model = fit_wombok$ARIMA) |>
+  select(
+    Vegetable = vegetable,
+    Model,
+    "LB Statistics" = lb_stat,
+    "P-value" = lb_pvalue
+  )
+```
+
+```{r}
+tbl_ljb <- bind_rows(
+  tbl_ljb_broccoli,
+  tbl_ljb_cabbage,
+  tbl_ljb_carrots,
+  tbl_ljb_cauliflower,
+  tbl_ljb_celery,
+  tbl_ljb_chayote_bunga,
+  tbl_ljb_cucumber,
+  tbl_ljb_gabi_galyang,
+  tbl_ljb_pepper_sultan,
+  tbl_ljb_pepper_taiwan,
+  tbl_ljb_potato,
+  tbl_ljb_wombok
+) |>
+  mutate(
+    Model = as.character(Model),
+    Model = str_sub(Model, 2, -2),
+    Vegetable = veg_labels
+  ) |>
+  mutate(across(starts_with("LB"), ~round(., 2))) |>
+  mutate(across(starts_with("P"), ~apa(., 3, FALSE)))
+
+flextable(tbl_ljb) |>
+  bold(part = "header") |>
+  line_spacing(space = .5, part = "body") |>
+  set_table_properties(layout = "autofit", width = 1) |>
+  font(part = "all", fontname = "Times New Roman") |>
+  fontsize(size = 12, part = "all") |>
+  align(j = 4, align = "right", part = "all")
+```
 
 # References
