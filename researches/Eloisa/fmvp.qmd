@@ -13,6 +13,7 @@ bibliography: references.bib
 csl: apa.csl
 crossref:
   title-delim: "."
+toc: true
 execute: 
   cache: true
 ---
@@ -642,13 +643,13 @@ flextable(tbl_broccoli) |>
 
 <br>
 
-In January 2024, the point forecast for broccoli price is `r tbl_broccoli[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_broccoli[1, 3]` to `r tbl_broccoli[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_broccoli[1, 5]` to `r tbl_broccoli[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+For January 2024, the point forecast for broccoli price is `r tbl_broccoli[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_broccoli[1, 3]` to `r tbl_broccoli[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_broccoli[1, 5]` to `r tbl_broccoli[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-In February 2024, the point forecast for broccoli price is `r tbl_broccoli[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_broccoli[2, 3]` to `r tbl_broccoli[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_broccoli[2, 5]` to `r tbl_broccoli[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+For February 2024, the point forecast for broccoli price is `r tbl_broccoli[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_broccoli[2, 3]` to `r tbl_broccoli[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_broccoli[2, 5]` to `r tbl_broccoli[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-In March 2024, the point forecast for broccoli price is `r tbl_broccoli[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_broccoli[3, 3]` to `r tbl_broccoli[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_broccoli[3, 5]` to `r tbl_broccoli[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+For March 2024, the point forecast for broccoli price is `r tbl_broccoli[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_broccoli[3, 3]` to `r tbl_broccoli[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_broccoli[3, 5]` to `r tbl_broccoli[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-In April 2024, the point forecast for broccoli price is `r tbl_broccoli[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_broccoli[4, 3]` to `r tbl_broccoli[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_broccoli[4, 5]` to `r tbl_broccoli[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+For April 2024, the point forecast for broccoli price is `r tbl_broccoli[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_broccoli[4, 3]` to `r tbl_broccoli[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_broccoli[4, 5]` to `r tbl_broccoli[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 ```{r}
 #| include: false
@@ -715,13 +716,13 @@ flextable(tbl_cabbage) |>
 
 <br>
 
-In January 2024, the point forecast for cabbage price is `r tbl_cabbage[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cabbage[1, 3]` to `r tbl_cabbage[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cabbage[1, 5]` to `r tbl_cabbage[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+For January 2024, the point forecast for cabbage price is `r tbl_cabbage[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cabbage[1, 3]` to `r tbl_cabbage[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cabbage[1, 5]` to `r tbl_cabbage[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-In February 2024, the point forecast for cabbage price is `r tbl_cabbage[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cabbage[2, 3]` to `r tbl_cabbage[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cabbage[2, 5]` to `r tbl_cabbage[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+For February 2024, the point forecast for cabbage price is `r tbl_cabbage[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cabbage[2, 3]` to `r tbl_cabbage[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cabbage[2, 5]` to `r tbl_cabbage[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-In March 2024, the point forecast for cabbage price is `r tbl_cabbage[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cabbage[3, 3]` to `r tbl_cabbage[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cabbage[3, 5]` to `r tbl_cabbage[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+For March 2024, the point forecast for cabbage price is `r tbl_cabbage[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cabbage[3, 3]` to `r tbl_cabbage[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cabbage[3, 5]` to `r tbl_cabbage[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-In April 2024, the point forecast for cabbage price is `r tbl_cabbage[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cabbage[4, 3]` to `r tbl_cabbage[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cabbage[4, 5]` to `r tbl_cabbage[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+For April 2024, the point forecast for cabbage price is `r tbl_cabbage[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cabbage[4, 3]` to `r tbl_cabbage[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cabbage[4, 5]` to `r tbl_cabbage[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 ```{r}
 #| include: false
@@ -788,13 +789,13 @@ flextable(tbl_carrot) |>
 
 <br>
 
-In January 2024, the point forecast for carrot price is `r tbl_carrot[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_carrot[1, 3]` to `r tbl_carrot[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_carrot[1, 5]` to `r tbl_carrot[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+For January 2024, the point forecast for carrot price is `r tbl_carrot[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_carrot[1, 3]` to `r tbl_carrot[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_carrot[1, 5]` to `r tbl_carrot[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-In February 2024, the point forecast for carrot price is `r tbl_carrot[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_carrot[2, 3]` to `r tbl_carrot[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_carrot[2, 5]` to `r tbl_carrot[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+For February 2024, the point forecast for carrot price is `r tbl_carrot[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_carrot[2, 3]` to `r tbl_carrot[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_carrot[2, 5]` to `r tbl_carrot[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-In March 2024, the point forecast for carrot price is `r tbl_carrot[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_carrot[3, 3]` to `r tbl_carrot[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_carrot[3, 5]` to `r tbl_carrot[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+For March 2024, the point forecast for carrot price is `r tbl_carrot[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_carrot[3, 3]` to `r tbl_carrot[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_carrot[3, 5]` to `r tbl_carrot[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-In April 2024, the point forecast for carrot price is `r tbl_carrot[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_carrot[4, 3]` to `r tbl_carrot[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_carrot[4, 5]` to `r tbl_carrot[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+For April 2024, the point forecast for carrot price is `r tbl_carrot[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_carrot[4, 3]` to `r tbl_carrot[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_carrot[4, 5]` to `r tbl_carrot[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 ```{r}
 #| include: false
@@ -861,6 +862,14 @@ flextable(tbl_cauliflower) |>
 
 <br>
 
+For January 2024, the point forecast for cauliflower price is `r tbl_cauliflower[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cauliflower[1, 3]` to `r tbl_cauliflower[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cauliflower[1, 5]` to `r tbl_cauliflower[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For February 2024, the point forecast for cauliflower price is `r tbl_cauliflower[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cauliflower[2, 3]` to `r tbl_cauliflower[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cauliflower[2, 5]` to `r tbl_cauliflower[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For March 2024, the point forecast for cauliflower price is `r tbl_cauliflower[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cauliflower[3, 3]` to `r tbl_cauliflower[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cauliflower[3, 5]` to `r tbl_cauliflower[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For April 2024, the point forecast for cauliflower price is `r tbl_cauliflower[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cauliflower[4, 3]` to `r tbl_cauliflower[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cauliflower[4, 5]` to `r tbl_cauliflower[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
 ```{r}
 #| include: false
 
@@ -890,6 +899,8 @@ fit_celery <- celery |>
 fc_celery <- fit_celery |>
   forecast(h = 4)
 ```
+
+@tbl-celery shows the forecasts of celery prices for the next 4 months from January to April 2024. It shows the means or the point forecasts along with their corresponding 80% and 95% confidence intervals. The forecast is from an ARIMA model generated using the automatic algorithm. The model generated is shown in @tbl-ljb.
 
 ```{r}
 #| label: tbl-celery
@@ -922,6 +933,16 @@ flextable(tbl_celery) |>
   align(j = 1, align = "left", part = "all")
 ```
 
+<br>
+
+For January 2024, the point forecast for celery price is `r tbl_celery[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_celery[1, 3]` to `r tbl_celery[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_celery[1, 5]` to `r tbl_celery[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For February 2024, the point forecast for celery price is `r tbl_celery[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_celery[2, 3]` to `r tbl_celery[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_celery[2, 5]` to `r tbl_celery[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For March 2024, the point forecast for celery price is `r tbl_celery[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_celery[3, 3]` to `r tbl_celery[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_celery[3, 5]` to `r tbl_celery[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For April 2024, the point forecast for celery price is `r tbl_celery[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_celery[4, 3]` to `r tbl_celery[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_celery[4, 5]` to `r tbl_celery[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
 ```{r}
 #| include: false
 
@@ -951,6 +972,8 @@ fit_chayote_bunga <- chayote_bunga |>
 fc_chayote_bunga <- fit_chayote_bunga |>
   forecast(h = 4)
 ```
+
+@tbl-chayote_bunga shows the forecasts of chayote (bunga) prices for the next 4 months from January to April 2024. It shows the means or the point forecasts along with their corresponding 80% and 95% confidence intervals. The forecast is from an ARIMA model generated using the automatic algorithm. The model generated is shown in @tbl-ljb.
 
 ```{r}
 #| label: tbl-chayote_bunga
@@ -983,6 +1006,16 @@ flextable(tbl_chayote_bunga) |>
   align(j = 1, align = "left", part = "all")
 ```
 
+<br>
+
+For January 2024, the point forecast for chayote (bunga) price is `r tbl_chayote_bunga[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_chayote_bunga[1, 3]` to `r tbl_chayote_bunga[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_chayote_bunga[1, 5]` to `r tbl_chayote_bunga[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For February 2024, the point forecast for chayote (bunga) price is `r tbl_chayote_bunga[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_chayote_bunga[2, 3]` to `r tbl_chayote_bunga[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_chayote_bunga[2, 5]` to `r tbl_chayote_bunga[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For March 2024, the point forecast for chayote (bunga) price is `r tbl_chayote_bunga[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_chayote_bunga[3, 3]` to `r tbl_chayote_bunga[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_chayote_bunga[3, 5]` to `r tbl_chayote_bunga[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For April 2024, the point forecast for chayote (bunga) price is `r tbl_chayote_bunga[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_chayote_bunga[4, 3]` to `r tbl_chayote_bunga[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_chayote_bunga[4, 5]` to `r tbl_chayote_bunga[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
 ```{r}
 #| include: false
 
@@ -1012,6 +1045,8 @@ fit_cucumber <- cucumber |>
 fc_cucumber <- fit_cucumber |>
   forecast(h = 4)
 ```
+
+@tbl-cucumber shows the forecasts of cucumber prices for the next 4 months from January to April 2024. It shows the means or the point forecasts along with their corresponding 80% and 95% confidence intervals. The forecast is from an ARIMA model generated using the automatic algorithm. The model generated is shown in @tbl-ljb.
 
 ```{r}
 #| label: tbl-cucumber
@@ -1044,6 +1079,16 @@ flextable(tbl_cucumber) |>
   align(j = 1, align = "left", part = "all")
 ```
 
+<br>
+
+For January 2024, the point forecast for cucumber price is `r tbl_cucumber[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cucumber[1, 3]` to `r tbl_cucumber[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cucumber[1, 5]` to `r tbl_cucumber[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For February 2024, the point forecast for cucumber price is `r tbl_cucumber[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cucumber[2, 3]` to `r tbl_cucumber[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cucumber[2, 5]` to `r tbl_cucumber[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For March 2024, the point forecast for cucumber price is `r tbl_cucumber[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cucumber[3, 3]` to `r tbl_cucumber[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cucumber[3, 5]` to `r tbl_cucumber[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For April 2024, the point forecast for cucumber price is `r tbl_cucumber[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cucumber[4, 3]` to `r tbl_cucumber[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cucumber[4, 5]` to `r tbl_cucumber[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
 ```{r}
 #| include: false
 
@@ -1074,6 +1119,8 @@ fc_gabi_galyang <- fit_gabi_galyang |>
   forecast(h = 4)
 
 ```
+
+@tbl-gabi_galyang shows the forecasts of gabi (galyang) prices for the next 4 months from January to April 2024. It shows the means or the point forecasts along with their corresponding 80% and 95% confidence intervals. The forecast is from an ETS model generated using the automatic algorithm. The model generated is shown in @tbl-ljb.
 
 ```{r}
 #| label: tbl-gabi_galyang
@@ -1106,6 +1153,16 @@ flextable(tbl_gabi_galyang) |>
   align(j = 1, align = "left", part = "all")
 ```
 
+<br>
+
+For January 2024, the point forecast for gabi (galyang) price is `r tbl_gabi_galyang[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_gabi_galyang[1, 3]` to `r tbl_gabi_galyang[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_gabi_galyang[1, 5]` to `r tbl_gabi_galyang[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For February 2024, the point forecast for gabi (galyang) price is `r tbl_gabi_galyang[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_gabi_galyang[2, 3]` to `r tbl_gabi_galyang[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_gabi_galyang[2, 5]` to `r tbl_gabi_galyang[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For March 2024, the point forecast for gabi (galyang) price is `r tbl_gabi_galyang[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_gabi_galyang[3, 3]` to `r tbl_gabi_galyang[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_gabi_galyang[3, 5]` to `r tbl_gabi_galyang[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For April 2024, the point forecast for gabi (galyang) price is `r tbl_gabi_galyang[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_gabi_galyang[4, 3]` to `r tbl_gabi_galyang[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_gabi_galyang[4, 5]` to `r tbl_gabi_galyang[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
 ```{r}
 #| include: false
 
@@ -1135,6 +1192,8 @@ fit_pepper_sultan <- pepper_sultan |>
 fc_pepper_sultan <- fit_pepper_sultan |>
   forecast(h = 4)
 ```
+
+@tbl-pepper_sultan shows the forecasts of pepper (sultan) prices for the next 4 months from January to April 2024. It shows the means or the point forecasts along with their corresponding 80% and 95% confidence intervals. The forecast is from an ARIMA model generated using the automatic algorithm. The model generated is shown in @tbl-ljb.
 
 ```{r}
 #| label: tbl-pepper_sultan
@@ -1167,6 +1226,16 @@ flextable(tbl_pepper_sultan) |>
   align(j = 1, align = "left", part = "all")
 ```
 
+<br>
+
+For January 2024, the point forecast for pepper (sultan) price is `r tbl_pepper_sultan[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_sultan[1, 3]` to `r tbl_pepper_sultan[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_sultan[1, 5]` to `r tbl_pepper_sultan[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For February 2024, the point forecast for pepper (sultan) price is `r tbl_pepper_sultan[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_sultan[2, 3]` to `r tbl_pepper_sultan[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_sultan[2, 5]` to `r tbl_pepper_sultan[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For March 2024, the point forecast for pepper (sultan) price is `r tbl_pepper_sultan[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_sultan[3, 3]` to `r tbl_pepper_sultan[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_sultan[3, 5]` to `r tbl_pepper_sultan[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For April 2024, the point forecast for pepper (sultan) price is `r tbl_pepper_sultan[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_sultan[4, 3]` to `r tbl_pepper_sultan[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_sultan[4, 5]` to `r tbl_pepper_sultan[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
 ```{r}
 #| include: false
 
@@ -1196,6 +1265,8 @@ fit_pepper_taiwan <- pepper_taiwan |>
 fc_pepper_taiwan <- fit_pepper_taiwan |>
   forecast(h = 4)
 ```
+
+@tbl-pepper_taiwan shows the forecasts of pepper (taiwan) prices for the next 4 months from January to April 2024. It shows the means or the point forecasts along with their corresponding 80% and 95% confidence intervals. The forecast is from an ARIMA model generated using the automatic algorithm. The model generated is shown in @tbl-ljb.
 
 ```{r}
 #| label: tbl-pepper_taiwan
@@ -1228,6 +1299,16 @@ flextable(tbl_pepper_taiwan) |>
   align(j = 1, align = "left", part = "all")
 ```
 
+<br>
+
+For January 2024, the point forecast for pepper (taiwan) price is `r tbl_pepper_taiwan[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_taiwan[1, 3]` to `r tbl_pepper_taiwan[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_taiwan[1, 5]` to `r tbl_pepper_taiwan[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For February 2024, the point forecast for pepper (taiwan) price is `r tbl_pepper_taiwan[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_taiwan[2, 3]` to `r tbl_pepper_taiwan[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_taiwan[2, 5]` to `r tbl_pepper_taiwan[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For March 2024, the point forecast for pepper (taiwan) price is `r tbl_pepper_taiwan[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_taiwan[3, 3]` to `r tbl_pepper_taiwan[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_taiwan[3, 5]` to `r tbl_pepper_taiwan[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For April 2024, the point forecast for pepper (taiwan) price is `r tbl_pepper_taiwan[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_taiwan[4, 3]` to `r tbl_pepper_taiwan[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_taiwan[4, 5]` to `r tbl_pepper_taiwan[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
 ```{r}
 #| include: false
 
@@ -1257,6 +1338,8 @@ fit_potato <- potato |>
 fc_potato <- fit_potato |>
   forecast(h = 4)
 ```
+
+@tbl-potato shows the forecasts of potato prices for the next 4 months from January to April 2024. It shows the means or the point forecasts along with their corresponding 80% and 95% confidence intervals. The forecast is from an ARIMA model generated using the automatic algorithm. The model generated is shown in @tbl-ljb.
 
 ```{r}
 #| label: tbl-potato
@@ -1289,6 +1372,16 @@ flextable(tbl_potato) |>
   align(j = 1, align = "left", part = "all")
 ```
 
+<br>
+
+For January 2024, the point forecast for potato price is `r tbl_potato[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_potato[1, 3]` to `r tbl_potato[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_potato[1, 5]` to `r tbl_potato[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For February 2024, the point forecast for potato price is `r tbl_potato[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_potato[2, 3]` to `r tbl_potato[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_potato[2, 5]` to `r tbl_potato[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For March 2024, the point forecast for potato price is `r tbl_potato[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_potato[3, 3]` to `r tbl_potato[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_potato[3, 5]` to `r tbl_potato[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For April 2024, the point forecast for potato price is `r tbl_potato[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_potato[4, 3]` to `r tbl_potato[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_potato[4, 5]` to `r tbl_potato[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
 ```{r}
 #| include: false
 
@@ -1318,6 +1411,8 @@ fit_wombok <- wombok |>
 fc_wombok <- fit_wombok |>
   forecast(h = 4)
 ```
+
+@tbl-wombok shows the forecasts of wombok prices for the next 4 months from January to April 2024. It shows the means or the point forecasts along with their corresponding 80% and 95% confidence intervals. The forecast is from an ARIMA model generated using the automatic algorithm. The model generated is shown in @tbl-ljb.
 
 ```{r}
 #| label: tbl-wombok
@@ -1350,6 +1445,16 @@ flextable(tbl_wombok) |>
   align(j = 1, align = "left", part = "all")
 ```
 
+<br>
+
+For January 2024, the point forecast for wombok price is `r tbl_wombok[1, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_wombok[1, 3]` to `r tbl_wombok[1, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_wombok[1, 5]` to `r tbl_wombok[1, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For February 2024, the point forecast for wombok price is `r tbl_wombok[2, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_wombok[2, 3]` to `r tbl_wombok[2, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_wombok[2, 5]` to `r tbl_wombok[2, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For March 2024, the point forecast for wombok price is `r tbl_wombok[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_wombok[3, 3]` to `r tbl_wombok[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_wombok[3, 5]` to `r tbl_wombok[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+For April 2024, the point forecast for wombok price is `r tbl_wombok[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_wombok[4, 3]` to `r tbl_wombok[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_wombok[4, 5]` to `r tbl_wombok[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
 ```{r}
 #| include: false
 
@@ -1365,10 +1470,12 @@ tbl_ljb_wombok <- augment(fit_wombok) |>
   )
 ```
 
+@tbl-ljb shows the results of the portmanteau test for the models.
+
 ```{r}
 #| label: tbl-ljb
 #| tbl-cap-location: top
-#| tbl-cap: "Portmanteau Test of Residuals for the Models"
+#| tbl-cap: "Result of the Portmanteau Test of Residuals for the Models"
 #| echo: false
 
 tbl_ljb <- bind_rows(
@@ -1391,7 +1498,8 @@ tbl_ljb <- bind_rows(
     Vegetable = veg_labels
   ) |>
   mutate(across(starts_with("LB"), ~round(., 2))) |>
-  mutate(across(starts_with("P"), ~apa(., 3, FALSE)))
+  mutate(across(starts_with("P"), ~apa(., 3, FALSE))) |>
+  rename("Q-statistics" = "LB Statistics")
 
 flextable(tbl_ljb) |>
   bold(part = "header") |>
@@ -1405,20 +1513,18 @@ flextable(tbl_ljb) |>
   width(j = 4, width = 1)
 ```
 
+<br>
+
+Results show that all the ARIMA models have a large p-value but the ETS model for gabi (galyang) have a p-value less than .05. This shows that the residuals of all the ARIMA models are independently distributed. This indicates that there is no significant autocorrelation in the residuals up to 12 lags. The ARIMA models are good fit to the data. They can be used in forecasting their corresponding monthly vegetable prices. On the other hand, the ETS model failed the portmanteau test since there is still significant autocorrelation in the residuals up to 12 lags. The model can still be used for forecasting monthly gabi (galyang) prices, but the prediction or confidence intervals may not be accurate due to the correlated residuals.
+
 # Chapter V
 
 ## SUMMARY, CONCLUSION AND RECOMMENDATIONS
 
 ### Summary
 
-
-
 ### Conclusion
 
-
-
 ### Recommendations
-
-
 
 # References
