@@ -1405,4 +1405,20 @@ flextable(tbl_ljb) |>
   width(j = 4, width = 1)
 ```
 
+# Chapter V
+
+## SUMMARY, CONCLUSION AND RECOMMENDATIONS
+
+### Summary
+
+
+
+### Conclusion
+
+
+
+### Recommendations
+
+
+
 # References
