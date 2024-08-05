@@ -1411,14 +1411,8 @@ flextable(tbl_ljb) |>
 
 ### Summary
 
-
-
 ### Conclusion
 
-
-
 ### Recommendations
-
-
 
 # References
