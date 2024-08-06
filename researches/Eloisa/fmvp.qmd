@@ -452,7 +452,8 @@ flextable(tbl_stl) |>
   font(part = "all", fontname = "Times New Roman") |>
   align(j = -1, align = "center", part = "all") |>
   fontsize(size = 12, part = "all") |>
-  set_table_properties(width = 1, layout = "autofit")
+  padding(j = 1, padding.right = 0) |>
+  autofit()
 ```
 
 <br>
