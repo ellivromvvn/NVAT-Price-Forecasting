@@ -542,8 +542,8 @@ fit <- nvat_monthly_long_ts |>
   stretch_tsibble(.init = 15, .step = 4) |>
   filter(.id != max(.id)) |>
   model(
-    ARIMA = ARIMA(price),
-    ETS = ETS(price)
+    ARIMA = ARIMA(log(price)),
+    ETS = ETS(log(price))
   )
 ```
 
@@ -577,7 +577,7 @@ flextable(tbl_fit) |>
 
 <br>
 
-The automatic ARIMA method proved to be better in forecasting monthly prices for all vegetables except for gabi (galyang). The automatic ETS method is better in all the accuracy measures for gabi (galyang). However, it is notable that ETS slightly outperformed ARIMA in RMSE for broccoli showing a minimal difference. Nonetheless, ARIMA is better in the other accuracy measures showing a big difference in MAPE and minimal differences in MAE and MASE. It is also notable that ETS slightly outperformed ARIMA in RMSE for potato showing a minimal difference. Nonetheless, ARIMA is better in the other accuracy measures but with only minimal differences. Thus, automatic ARIMA method be used to generate forecasts for all the vegetables except for gabi (galyang), for which automatic ETS method will be used.
+The automatic ARIMA method proved to be better than the automatic ETS method based on the time series cross-validation performance measures, except for gabi (galyang). The automatic ARIMA method showed higher accuracy on all performance measures for all vegetables except for gabi (galyang). The automatic ETS method also showed higher accuracy on all performance measures for gabi (galyang). Thus, the automatic ARIMA method was used to generate models and forecasts for all the vegetables except for gabi (galyang), for which automatic ETS method was used.
 
 ### Forecasts for Monthly Vegetable Prices.
 
