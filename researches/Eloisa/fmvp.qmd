@@ -320,7 +320,7 @@ After encoding the available vegetable prices from the NVAT Facebook page, only 
 ```{r}
 #| label: fig-plot_all
 #| fig-cap: "Time Series for Monthly Vegetable Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 nvat_monthly_long |>
@@ -660,7 +660,7 @@ tbl_ljb_broccoli <- augment(fit_broccoli) |>
 ```{r}
 #| label: fig-broccoli
 #| fig-cap: "Forecasts for Monthly Broccoli Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 fc_broccoli |>
@@ -752,7 +752,7 @@ tbl_ljb_cabbage <- augment(fit_cabbage) |>
 ```{r}
 #| label: fig-cabbage
 #| fig-cap: "Forecast for Monthly Cabbage Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 fc_cabbage |>
@@ -844,7 +844,7 @@ tbl_ljb_carrot <- augment(fit_carrot) |>
 ```{r}
 #| label: fig-carrot
 #| fig-cap: "Forecast for Monthly Carrot Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 fc_carrot |>
@@ -936,7 +936,7 @@ tbl_ljb_cauliflower <- augment(fit_cauliflower) |>
 ```{r}
 #| label: fig-cauliflower
 #| fig-cap: "Forecast for Monthly Cauliflower Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 fc_cauliflower |>
@@ -1028,7 +1028,7 @@ tbl_ljb_celery <- augment(fit_celery) |>
 ```{r}
 #| label: fig-celery
 #| fig-cap: "Forecast for Monthly Celery Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 fc_celery |>
@@ -1120,7 +1120,7 @@ tbl_ljb_chayote_bunga <- augment(fit_chayote_bunga) |>
 ```{r}
 #| label: fig-chayote_bunga
 #| fig-cap: "Forecast for Monthly Chayote (Bunga) Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 fc_chayote_bunga |>
@@ -1212,7 +1212,7 @@ tbl_ljb_cucumber <- augment(fit_cucumber) |>
 ```{r}
 #| label: fig-cucumber
 #| fig-cap: "Forecasts for Monthly cucumber Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 fc_cucumber |>
@@ -1305,7 +1305,7 @@ tbl_ljb_gabi_galyang <- augment(fit_gabi_galyang) |>
 ```{r}
 #| label: fig-gabi_galyang
 #| fig-cap: "Forecasts for Monthly Gabi (Galyang) Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 fc_gabi_galyang |>
@@ -1397,7 +1397,7 @@ tbl_ljb_pepper_sultan <- augment(fit_pepper_sultan) |>
 ```{r}
 #| label: fig-pepper_sultan
 #| fig-cap: "Forecasts for Monthly Pepper (Sultan) Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 fc_pepper_sultan |>
@@ -1489,7 +1489,7 @@ tbl_ljb_pepper_taiwan <- augment(fit_pepper_taiwan) |>
 ```{r}
 #| label: fig-pepper_taiwan
 #| fig-cap: "Forecasts for Monthly Pepper (Taiwan) Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 fc_pepper_taiwan |>
@@ -1581,7 +1581,7 @@ tbl_ljb_potato <- augment(fit_potato) |>
 ```{r}
 #| label: fig-potato
 #| fig-cap: "Forecasts for Monthly Potato Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 fc_potato |>
@@ -1673,7 +1673,7 @@ tbl_ljb_wombok <- augment(fit_wombok) |>
 ```{r}
 #| label: fig-wombok
 #| fig-cap: "Forecasts for Monthly Wombok Prices"
-#| fig-width: 6
+#| fig-width: 6.5
 #| echo: false
 
 fc_wombok |>

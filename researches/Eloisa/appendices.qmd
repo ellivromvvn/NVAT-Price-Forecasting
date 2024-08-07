@@ -1,0 +1,244 @@
+---
+format:
+  docx:
+    reference-doc: appendices-template.docx
+editor: visual
+---
+
+# Appendix D. Seasonal and Trend decomposition using LOESS (STL)
+
+## Broccoli
+
+```{r}
+#| include: false
+
+library(fpp3)
+library(tidyverse)
+attach("data/fmvpEnvironment.RData")
+```
+
+```{r}
+#| label: fig-stl_broccoli
+#| fig-width: 6.5
+#| fig-height: 6.5
+#| echo: false
+
+nvat_monthly_long_ts |>
+  filter(vegetable == "broccoli") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 10)
+    ) +
+  theme_minimal()
+```
+
+## Cabbage
+
+```{r}
+#| label: fig-stl_cabbage
+#| fig-width: 6.5
+#| fig-height: 6.5
+#| echo: false
+
+nvat_monthly_long_ts |>
+  filter(vegetable == "cabbage") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 10)
+    ) +
+  theme_minimal()
+```
+
+## Carrot
+
+```{r}
+#| label: fig-stl_carrot
+#| fig-width: 6.5
+#| fig-height: 6.5
+#| echo: false
+
+nvat_monthly_long_ts |>
+  filter(vegetable == "carrot") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 10)
+    ) +
+  theme_minimal()
+```
+
+## Cauliflower
+
+```{r}
+#| label: fig-stl_cauliflower
+#| fig-width: 6.5
+#| fig-height: 6.5
+#| echo: false
+
+nvat_monthly_long_ts |>
+  filter(vegetable == "cauliflower") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 10)
+    ) +
+  theme_minimal()
+```
+
+## Celery
+
+```{r}
+#| label: fig-stl_celery
+#| fig-width: 6.5
+#| fig-height: 6.5
+#| echo: false
+
+nvat_monthly_long_ts |>
+  filter(vegetable == "celery") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 10)
+    ) +
+  theme_minimal()
+```
+
+## Chayote (Bunga)
+
+```{r}
+#| label: fig-stl_chayote_bunga
+#| fig-width: 6.5
+#| fig-height: 6.5
+#| echo: false
+
+nvat_monthly_long_ts |>
+  filter(vegetable == "chayote_bunga") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 10)
+    ) +
+  theme_minimal()
+```
+
+## Cucumber
+
+```{r}
+#| label: fig-stl_cucumber
+#| fig-width: 6.5
+#| fig-height: 6.5
+#| echo: false
+
+nvat_monthly_long_ts |>
+  filter(vegetable == "cucumber") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 10)
+    ) +
+  theme_minimal()
+```
+
+## Gabi (Galyang)
+
+```{r}
+#| label: fig-stl_gabi_galyang
+#| fig-width: 6.5
+#| fig-height: 6.5
+#| echo: false
+
+nvat_monthly_long_ts |>
+  filter(vegetable == "gabi_galyang") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 10)
+    ) +
+  theme_minimal()
+```
+
+## Pepper (Sultan)
+
+```{r}
+#| label: fig-stl_pepper_sultan
+#| fig-width: 6.5
+#| fig-height: 6.5
+#| echo: false
+
+nvat_monthly_long_ts |>
+  filter(vegetable == "pepper_sultan") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 10)
+    ) +
+  theme_minimal()
+```
+
+## Pepper (Taiwan)
+
+```{r}
+#| label: fig-stl_pepper_taiwan
+#| fig-width: 6.5
+#| fig-height: 6.5
+#| echo: false
+
+nvat_monthly_long_ts |>
+  filter(vegetable == "pepper_taiwan") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 10)
+    ) +
+  theme_minimal()
+```
+
+## Potato
+
+```{r}
+#| label: fig-stl_potato
+#| fig-width: 6.5
+#| fig-height: 6.5
+#| echo: false
+
+nvat_monthly_long_ts |>
+  filter(vegetable == "potato") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 10)
+    ) +
+  theme_minimal()
+```
+
+## wombok
+
+```{r}
+#| label: fig-stl_wombok
+#| fig-width: 6.5
+#| fig-height: 6.5
+#| echo: false
+
+nvat_monthly_long_ts |>
+  filter(vegetable == "wombok") |>
+  model(STL(price)) |>
+  components() |>
+  autoplot() +
+    theme(
+      strip.text = element_text(size = 10)
+    ) +
+  theme_minimal()
+```
