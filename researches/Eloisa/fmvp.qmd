@@ -180,11 +180,11 @@ The study was conducted in Bambang, Nueva Vizcaya. Specifically, the data for th
 
 ### Source and Subject of the Study
 
-The primary source of data for the research is the NVAT. Five (5) years available time series of vegetable prices from the NVAT were used to come up with forecasts of monthly vegetable prices in Nueva Vizcaya.
+The primary source of data for the research is the NVAT. Six years and two months of available time series of vegetable prices from the NVAT were used to come up with forecasts of monthly vegetable prices in Nueva Vizcaya.
 
 ### Data Gathering Procedure
 
-The researchers inquired about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research were written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively). Subsequently, the researchers were able to collect time series of vegetable prices for five (5) years. Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, were maintained.
+The researchers inquired about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research were written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively). Subsequently, the researchers were able to collect time series of vegetable prices for six years and 2 months. Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, were maintained.
 
 ### Data Analysis and Treatment of Data
 
@@ -1734,6 +1734,8 @@ Results show that all the ARIMA models have a large p-value but the ETS model fo
 ## SUMMARY, CONCLUSION AND RECOMMENDATIONS
 
 ### Summary
+
+
 
 ### Conclusion
 
