@@ -458,29 +458,55 @@ flextable(tbl_stl) |>
 
 The broccoli time series has a trend strength of `r tbl_stl[1, 2]`, showing that `r tbl_stl[1, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[1, 3]`, showing that `r tbl_stl[1, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[1, 4]` and its trough is in `r tbl_stl[1, 5]`.
 
+Broccoli has a moderate trend and a moderate seasonal strength. For farmers, this means that although production and sales volume are increasing over the long run, there are also significant seasonal fluctuations. Since the relative amount of broccoli peaks in September and troughs in January, it may be expected that it is abundant in late summer and early fall, when it can be harvested and sold within a certain period of time. During peak season, consumers may have easier access to the product and pay less, whereas during trough season, the product may be rare and more expensive.
+
 The cabbage time series has a trend strength of `r tbl_stl[2, 2]`, showing that `r tbl_stl[2, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[2, 3]`, showing that `r tbl_stl[2, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[2, 4]` and its trough is in `r tbl_stl[2, 5]`.
+
+The trend for cabbage is weak and the seasonality is considerably weaker. This shows that production is moderate and nearly consistent all year round, with very little indications of the holiday season. Since the price of cabbage is highest in March and lowest in September, it may be purchased at any time of year, though September is likely the best month to buy it because it is more affordable. Farmers can, in a sense, plan their crop production and storage operations to ensure that consumer expectations regarding costs do not significantly change.
 
 The carrot time series has a trend strength of `r tbl_stl[3, 2]`, showing that `r tbl_stl[3, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[3, 3]`, showing that `r tbl_stl[3, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[3, 4]` and its trough is in `r tbl_stl[3, 5]`.
 
+The trend strength and seasonal strength of the carrot are both medium. Given that it peaks in August and troughs in May suggests that late summer is a great time for carrot production.  Its August peak and May trough indicate that late summer is a favorable period to harvest carrots. Farmers may find it beneficial to focus on harvest and marketing around that time to optimize profit, even though consumers may benefit from more favorable pricing and availability in August rather than May.
+
 The cauliflower time series has a trend strength of `r tbl_stl[4, 2]`, showing that `r tbl_stl[4, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[4, 3]`, showing that `r tbl_stl[4, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[4, 4]` and its trough is in `r tbl_stl[4, 5]`.
+
+Cauliflower has a medium trend and a very seasonal series. This is the best time of year for the farmer to sell cauliflower since there will be a market for it, with peaks in August and troughs in March. During the peak months, consumers can anticipate cheaper costs and better availability, and during the trough, they should anticipate higher prices and less availability.
 
 The celery time series has a trend strength of `r tbl_stl[5, 2]`, showing that `r tbl_stl[5, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[5, 3]`, showing that `r tbl_stl[5, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[5, 4]` and its trough is in `r tbl_stl[5, 5]`.
 
+Celery has a moderate trend and strong seasonal pattern.  As a result, celery cultivation and sales are seasonal, reaching their peak in September and trough in March. During this time, farmers can plan how to harvest and sell their products when there is most demand. Consumers should anticipate more supply and lower prices in September. 
+
 The chayote (bunga) time series has a trend strength of `r tbl_stl[6, 2]`, showing that `r tbl_stl[6, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[6, 3]`, showing that `r tbl_stl[6, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[6, 4]` and its trough is in `r tbl_stl[6, 5]`.
+
+The seasonal and trend strength of the chayote (bunga) was well-balanced. Given that it peaks in September and troughs in March suggests that seasonality and the trend were significant contributors to its production. Farmers can so anticipate consistent yield with distinct peaks and troughs, while consumers can make purchases based on seasonal availability.
 
 The cucumber time series has a trend strength of `r tbl_stl[7, 2]`, showing that `r tbl_stl[7, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[7, 3]`, showing that `r tbl_stl[7, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[7, 4]` and its trough is in `r tbl_stl[7, 5]`.
 
+The seasonal strength of cucumber was a significantly lower compared to its trend strength. The peak in December and the trough in July suggest that there might be an oversupply of cucumbers in the winter. Farmers would have to focus on winter harvests, even though consumers are expected to have better access to and probably purchase at lower prices during this peak season.
+
 The gabi (galyang) time series has a trend strength of `r tbl_stl[8, 2]`, showing that `r tbl_stl[8, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[8, 3]`, showing that `r tbl_stl[8, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[8, 4]` and its trough is in `r tbl_stl[8, 5]`.
+
+Gabi (Galyang) has the strongest trend with a mild seasonality. There is a strong long-term trend with strong seasonal fluctuation, peaking in September and troughing in February. Farmers should focus a lot of effort on maximizing sales and availability during the peak season. September is anticipated to have the best supply and prices for consumers. 
 
 The pepper (sultan) time series has a trend strength of `r tbl_stl[9, 2]`, showing that `r tbl_stl[9, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[9, 3]`, showing that `r tbl_stl[9, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[9, 4]` and its trough is in `r tbl_stl[9, 5]`.
 
+The seasonal strength and weak trend of pepper (Sultan) are characterized by September peaks and May troughs. With the peak in September, farmers can aim a higher market that month, but this would indicate minimal effects of trend and seasonality, suggesting rather consistent production. Consumers would make purchases around September for better availability and probably lower prices.
+
 The pepper (taiwan) time series has a trend strength of `r tbl_stl[10, 2]`, showing that `r tbl_stl[10, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[10, 3]`, showing that `r tbl_stl[10, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[10, 4]` and its trough is in `r tbl_stl[10, 5]`.
+
+The pepper (taiwan) seasonal strength is stronger while the trend strength. Farmers would seek to optimize production and sales throughout the winter months because the peak was in December and the trough was in April. Consumers would find more availability of peppers at a reasonable price in April.
 
 The potato time series has a trend strength of `r tbl_stl[11, 2]`, showing that `r tbl_stl[11, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[11, 3]`, showing that `r tbl_stl[11, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[11, 4]` and its trough is in `r tbl_stl[11, 5]`.
 
+Potato shows moderate seasonality and a significant trend. The peak is in October and the trough is in May. Consumers should anticipate October prices to be more accommodating than the prices on May, allowing farmers to take advantage of peak seasons to guarantee larger returns.
+
 The wombok time series has a trend strength of `r tbl_stl[12, 2]`, showing that `r tbl_stl[12, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[12, 3]`, showing that `r tbl_stl[12, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[12, 4]` and its trough is in `r tbl_stl[12, 5]`.
 
+Wombok indicates a trend of 0.14 and seasonality of 0.19, the weakest of all. This would indicate that its supply is fairly steady, with just small seasonal fluctuations, with a peak in September and a trough in March. Produce availability and costs should be fairly stable for consumers throughout the year, and farmers can maintain a consistent production schedule.
+
 The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage. Please see Appendix D for the seasonal and trend decomposition using LOESS (STL).
+
+These trends and seasonality allow farmers to plan accordingly in production and marketing, while consumers are better placed in making decisions on when to buy vegetables for the best prices and availability.
 
 ```{r}
 #| include: false
@@ -638,6 +664,10 @@ For March 2024, the point forecast for broccoli price is `r tbl_broccoli[3, 2]`.
 
 For April 2024, the point forecast for broccoli price is `r tbl_broccoli[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_broccoli[4, 3]` to `r tbl_broccoli[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_broccoli[4, 5]` to `r tbl_broccoli[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
+Using the SARIMA model, the forecast is stating that the average price per head of broccoli will hover around the indicated mark and steadily rise starting from January to April of the year 2024. This therefore indicates that cost could be on a rising trend as they were approximated to be; 35.97 for January down to 39.72 in April.
+
+On the other hand, with the increase in uncertainty, the confidence intervals enlarge. January’s 80% confidence interval is equal to 21.38 to 53. The number is 10 before the new month and 46; by the middle of the month, it rises to 12.65 to 79.09. Likewise, the 95% confidence intervals expand with the length of the horizons indicating higher degree of forecast error volatility.
+
 ```{r}
 #| include: false
 
@@ -729,6 +759,8 @@ For February 2024, the point forecast for cabbage price is `r tbl_cabbage[2, 2]`
 For March 2024, the point forecast for cabbage price is `r tbl_cabbage[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cabbage[3, 3]` to `r tbl_cabbage[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cabbage[3, 5]` to `r tbl_cabbage[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 For April 2024, the point forecast for cabbage price is `r tbl_cabbage[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cabbage[4, 3]` to `r tbl_cabbage[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cabbage[4, 5]` to `r tbl_cabbage[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+From January to April of 2024, a SARIMA model predicts that the price of cabbage will generally be rising. The average price is expected to increase from 9.78 in January to 24.98 in April, according to the point forecasts. Nonetheless, there is a lot of ambiguity surrounding these estimates. Especially in the later months, the confidence intervals are wide, suggesting a greater degree of unpredictability. For instance, even though there is an 80% likelihood that the price would drop between 5.28 and 15.34 in January, the range of possible price volatility increases to 9.31 to 46.71 in April.
 
 ```{r}
 #| include: false
@@ -822,6 +854,8 @@ For March 2024, the point forecast for carrot price is `r tbl_carrot[3, 2]`. The
 
 For April 2024, the point forecast for carrot price is `r tbl_carrot[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_carrot[4, 3]` to `r tbl_carrot[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_carrot[4, 5]` to `r tbl_carrot[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
+Based on a SARIMA model, carrot prices are expected to remain relatively stable from January to April 2024, with a minor gain in January through March and a slight decrease in April. However, the model suggests that these forecasts are highly uncertain. The huge confidence intervals indicate the prospect of large price movements, especially at the 95% chance level. Although there is an 80% chance that the price in January will fall between 15.43 and 37.07, the range for April expands to 9.68 to 83.27, implying a far wider range of possible values. 
+
 ```{r}
 #| include: false
 
@@ -913,6 +947,8 @@ For February 2024, the point forecast for cauliflower price is `r tbl_cauliflowe
 For March 2024, the point forecast for cauliflower price is `r tbl_cauliflower[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cauliflower[3, 3]` to `r tbl_cauliflower[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cauliflower[3, 5]` to `r tbl_cauliflower[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 For April 2024, the point forecast for cauliflower price is `r tbl_cauliflower[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cauliflower[4, 3]` to `r tbl_cauliflower[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cauliflower[4, 5]` to `r tbl_cauliflower[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+Based on a SARIMA model, cauliflower prices are expected to rise steadily from January to April 2024, with occasional swings. The point estimates show that prices would rise from January to February, then fall somewhat in March before rising again in April. However, the confidence intervals are relatively broad, indicating that these forecasts are highly questionable. While there is an 80% likelihood that the January price would fall between 16 and 36.6, this range widens to 15.07 to 57.11 in April, indicating a greater potential price range.
 
 ```{r}
 #| include: false
@@ -1006,6 +1042,8 @@ For March 2024, the point forecast for celery price is `r tbl_celery[3, 2]`. The
 
 For April 2024, the point forecast for celery price is `r tbl_celery[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_celery[4, 3]` to `r tbl_celery[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_celery[4, 5]` to `r tbl_celery[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
+According to the ARIMA model, the price for celery from January to April 2024 is very flat with a slight up trend. According to the point forecasts, the price will go up from January to April, with an average price of around 40. However, the model does show a lot of uncertainty in these forecasts. There is a high possibility of large price volatility as shown by the huge confidence intervals especially at the 95% level. Although there is 80% chance the price in Jan will be between 19.12 and 61.76, the range for Apr is 9.74 to 120.13 which means a wide range of possible prices.
+
 ```{r}
 #| include: false
 
@@ -1098,6 +1136,8 @@ For March 2024, the point forecast for chayote (bunga) price is `r tbl_chayote_b
 
 For April 2024, the point forecast for chayote (bunga) price is `r tbl_chayote_bunga[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_chayote_bunga[4, 3]` to `r tbl_chayote_bunga[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_chayote_bunga[4, 5]` to `r tbl_chayote_bunga[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
+The price estimate for chayote (bunga) from January to April 2024 is very stable with small movements. For the whole 4 months, the point forecast is around 12.80. However, the model shows a lot of uncertainty in these forecasts. The big confidence intervals show big price fluctuations possible, especially at 95% level. Although there is 80% chance that the price in January will be between 6.52 to 20.91, the range for April is 3.89 to 32.11 which means bigger range.
+
 ```{r}
 #| include: false
 
@@ -1189,6 +1229,8 @@ For February 2024, the point forecast for cucumber price is `r tbl_cucumber[2, 2
 For March 2024, the point forecast for cucumber price is `r tbl_cucumber[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cucumber[3, 3]` to `r tbl_cucumber[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cucumber[3, 5]` to `r tbl_cucumber[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 For April 2024, the point forecast for cucumber price is `r tbl_cucumber[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cucumber[4, 3]` to `r tbl_cucumber[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cucumber[4, 5]` to `r tbl_cucumber[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+The forecast for cucumber prices from January to April 2024 is steady with a slight up trend. The point forecasts show a gradual increase from January to April with the average price around 32. However, the model shows high degree of uncertainty in these forecasts. The wide confidence intervals especially for 95% probability level shows that the prices can fluctuate greatly. While there’s 80% chance the Jan price will be between 16.56 and 48.4, this range expands to 12.1 to 73.61 for April which means a very wide price range. 
 
 ```{r}
 #| include: false
@@ -1283,6 +1325,8 @@ For March 2024, the point forecast for gabi (galyang) price is `r tbl_gabi_galya
 
 For April 2024, the point forecast for gabi (galyang) price is `r tbl_gabi_galyang[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_gabi_galyang[4, 3]` to `r tbl_gabi_galyang[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_gabi_galyang[4, 5]` to `r tbl_gabi_galyang[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
+The forecast for gabi (galyang) prices from January to April 2024 based on ETS model shows an upward trend. The point forecast is increasing from 42.88 in January to 44.02 in April. However, the model also shows high uncertainty in the forecast. The wide confidence intervals especially for 95% probability level means big price fluctuations are possible. While there’s 80% chance that January price will be between 35.8 to 50.46, this range widens to 25.14 to 71.85 for April which means more price range is possible.
+
 ```{r}
 #| include: false
 
@@ -1374,6 +1418,8 @@ For February 2024, the point forecast for pepper (sultan) price is `r tbl_pepper
 For March 2024, the point forecast for pepper (sultan) price is `r tbl_pepper_sultan[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_sultan[3, 3]` to `r tbl_pepper_sultan[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_sultan[3, 5]` to `r tbl_pepper_sultan[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 For April 2024, the point forecast for pepper (sultan) price is `r tbl_pepper_sultan[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_sultan[4, 3]` to `r tbl_pepper_sultan[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_sultan[4, 5]` to `r tbl_pepper_sultan[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+The pepper prices forecast (sultan) for the month of January to April 2024, according to an ARIMA model, indicated that there will be a steep upward trend. Point forecasts imply that from January’s 38.6, price will sharply rise to 112.63 by April. The confidence intervals widen consistently and especially much more for the 95% level emphasizing this movement upwards. While in January there is an 80% chance these prices would move between 21.65 and 59.3 per kg, by April such a range can go as high as between 36.11 and 273.5, meaning there are many possible prices over four months period. 
 
 ```{r}
 #| include: false
@@ -1467,6 +1513,8 @@ For March 2024, the point forecast for pepper (taiwan) price is `r tbl_pepper_ta
 
 For April 2024, the point forecast for pepper (taiwan) price is `r tbl_pepper_taiwan[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_taiwan[4, 3]` to `r tbl_pepper_taiwan[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_taiwan[4, 5]` to `r tbl_pepper_taiwan[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
+In January through to April 2024, the ARIMA model indicates that pepper (Taiwan) prices will be uncertain and highly dynamic. The path predicted by the mean forecasts presents a general declining tendency with January having a spike then followed by a downward slope till April. But the large confidence intervals, particularly at the 95% level of probability demonstrate high levels of uncertainty in these predictions. This range bulges to 9.39-197.44 in April from 36.15-137.75 in January implying a wider possible range of price outcomes.
+
 ```{r}
 #| include: false
 
@@ -1558,6 +1606,8 @@ For February 2024, the point forecast for potato price is `r tbl_potato[2, 2]`. 
 For March 2024, the point forecast for potato price is `r tbl_potato[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_potato[3, 3]` to `r tbl_potato[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_potato[3, 5]` to `r tbl_potato[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 For April 2024, the point forecast for potato price is `r tbl_potato[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_potato[4, 3]` to `r tbl_potato[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_potato[4, 5]` to `r tbl_potato[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
+
+The forecast for potato prices from January to April 2024 based on ARIMA model, suggests a relatively stable price level with some fluctuations. The point forecasts indicate a slight decrease from January to February. This is followed by a minor increase in March. Then a more pronounced increase in April. However, the model highlights a significant degree of uncertainty in these predictions. The wide confidence intervals, especially for the 95% probability level emphasize the potential for substantial price variations. While there's an 80% chance the January price will fall between 55.76 and 93.89, this range expands to 35.24 to 151.43 for April. This indicates a broader potential price range.
 
 ```{r}
 #| include: false
@@ -1651,6 +1701,11 @@ For March 2024, the point forecast for wombok price is `r tbl_wombok[3, 2]`. The
 
 For April 2024, the point forecast for wombok price is `r tbl_wombok[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_wombok[4, 3]` to `r tbl_wombok[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_wombok[4, 5]` to `r tbl_wombok[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
+The forecast for wombok prices from January to April 2024 based on provided data suggests general upward trend. Point forecasts indicate price increase from 10.6 in January to 15.3 in March. In April same price is expected. However, model also highlights significant degree of uncertainty in these predictions. 
+
+Wide confidence intervals emphasize potential for substantial price fluctuations especially for 95% probability level. There's 80% chance January price will fall between 5.26 and 17.38. This range expands to 3.55 to 45.03 for March and April indicating broader potential price range.
+
+
 ```{r}
 #| include: false
 
@@ -1735,6 +1790,17 @@ Results show that all the ARIMA models have a large p-value but the ETS model fo
 
 ### Summary
 
+The price trends of 12 vegetables from 2018 to 2024 exhibited significant fluctuations over the period. Among the vegetables, pepper (taiwan) has demonstrated the most volatile price behavior, with frequent and substantial price swings. Conversely, potato has shown relatively stable prices throughout the period. Other vegetables, such as broccoli, cabbage, and carrot, have experienced moderate price fluctuations.
+
+Additionally, chayote (bunga) and gabi (galyang) have exhibited relatively stable price trends, with minimal fluctuations. Celery, cucumber, and wombok have shown moderate price variations, with occasional spikes or dips. Pepper (sultan) has experienced significant price fluctuations, with both upward and downward trends. Finally, cauliflower has demonstrated moderate price volatility, with occasional peaks and troughs.
+
+The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage.
+
+The automatic ARIMA method outperformed the automatic ETS method in time series cross-validation performance measures for all vegetables except gabi (galyang). The automatic ARIMA method showed higher accuracy in all performance measures for all vegetables except gabi (galyang). Thus, the automatic ARIMA method was used to generate models and forecasts for all the vegetables except for gabi (galyang), for which automatic ETS method was used.
+
+SARIMA model forecasts for vegetable prices from January to April 2024 indicate different trends and considerable uncertainty. Broccoli and celery prices will rise steadily; cauliflower and cucumber prices will rise, but at a slower rate. Carrot prices will remain relatively stable with small fluctuations. Chayote and gabi prices will be relatively stable with slight increases. Both pepper (sultan) and pepper (Taiwan) prices are forecast to be volatile; pepper (sultan) will have a strong upturn, while pepper (Taiwan) will turn down. Potato and wombok prices will oscillate with a relatively stable increase. Meanwhile, gabi (galyang) for ETS model, the price will rise steadily.  Most notably, the volatility is high in all forecasts. High volatility is also indicated by the wide confidence interval, which indicates the potential for large price movements.
+
+The Portmanteau test of residuals for ARIMA models revealed that all models have a large p-value, but the ETS model for gabi (galyang) has a p-value less than.05. This indicates that the residuals are independently distributed, with no significant autocorrelation up to 12 lags. The ARIMA models are a good fit for forecasting monthly vegetable prices, while the ETS model failed the test due to significant autocorrelation up to 12 lags. Despite this, the model can still be used for gabi (galyang) price forecasting, but the prediction or confidence intervals may not be accurate due to correlated residuals.
 
 
 ### Conclusion
