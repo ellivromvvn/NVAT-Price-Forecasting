@@ -231,8 +231,6 @@ Then, the best method for each vegetable was used to generate models to forecast
 
 Finally, a portmanteau test in the form of the Ljung-Box test was computed for the models used to forecast monthly vegetable prices. This allowed the researchers to describe the performance of these models. Computed p-values greater than .05 confirm that the residuals are similar to white noise. Otherwise, the residuals still have some remaining autocorrelation that is not accounted for in the model [@hyndman21].
 
-
-
 # CHAPTER IV
 
 ## RESULTS AND DISCUSSION
