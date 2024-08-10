@@ -1802,7 +1802,6 @@ SARIMA model forecasts for vegetable prices from January to April 2024 indicate 
 
 The Portmanteau test of residuals for ARIMA models revealed that all models have a large p-value, but the ETS model for gabi (galyang) has a p-value less than.05. This indicates that the residuals are independently distributed, with no significant autocorrelation up to 12 lags. The ARIMA models are a good fit for forecasting monthly vegetable prices, while the ETS model failed the test due to significant autocorrelation up to 12 lags. Despite this, the model can still be used for gabi (galyang) price forecasting, but the prediction or confidence intervals may not be accurate due to correlated residuals.
 
-
 ### Conclusion
 
 ### Recommendations
