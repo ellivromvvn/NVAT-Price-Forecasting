@@ -494,7 +494,7 @@ The seasonal strength and weak trend of pepper (Sultan) are characterized by Sep
 
 The pepper (taiwan) time series has a trend strength of `r tbl_stl[10, 2]`, showing that `r tbl_stl[10, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[10, 3]`, showing that `r tbl_stl[10, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[10, 4]` and its trough is in `r tbl_stl[10, 5]`.
 
-
+The pepper (taiwan) seasonal strength is stronger while the trend strength. Farmers would seek to optimize production and sales throughout the winter months because the peak was in December and the trough was in April. Consumers would find more availability of peppers at a reasonable price in April.
 
 The potato time series has a trend strength of `r tbl_stl[11, 2]`, showing that `r tbl_stl[11, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[11, 3]`, showing that `r tbl_stl[11, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[11, 4]` and its trough is in `r tbl_stl[11, 5]`.
 
