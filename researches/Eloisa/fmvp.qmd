@@ -378,8 +378,6 @@ flextable(tbl_all) |>
 
 For the broccoli time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'broccoli']` in April 2018 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'broccoli']` in September 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'broccoli']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'broccoli']`.
 
-
-
 For the cabbage time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'cabbage']` in February 2020 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'cabbage']` in August 2021. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'cabbage']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'cabbage']`.
 
 For the carrot time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'carrot']` in May 2020 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'carrot']` in July 2023. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'carrot']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'carrot']`.
@@ -453,14 +451,28 @@ flextable(tbl_stl) |>
   align(j = -1, align = "center", part = "all") |>
   fontsize(size = 12, part = "all") |>
   padding(j = 1, padding.right = 0) |>
-  autofit()
+  set_header_labels(
+    'Trend Strength' = 'Trend\nStrenth',
+    'Seasonal Strength' = 'Seasonal\nStrength',
+    'Seasonal Peak' = 'Seasonal\nPeak',
+    'Seasonal Trough' = 'Seasonal\nTrough'
+  ) |>
+  set_table_properties(width = 1, layout = "autofit")
 ```
 
 <br>
 
 The broccoli time series has a trend strength of `r tbl_stl[1, 2]`, showing that `r tbl_stl[1, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[1, 3]`, showing that `r tbl_stl[1, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[1, 4]` and its trough is in `r tbl_stl[1, 5]`.
 
-Broccoli has a moderate trend and a moderate seasonal strength. For farmers, this means that although production and sales volume are increasing over the long run, there are also significant seasonal fluctuations. Since the relative amount of broccoli peaks in September and troughs in January, it may be expected that it is abundant in late summer and early fall, when it can be harvested and sold within a certain period of time. During peak season, farmers may have the product may be rare and more expensive, whereas during trough season, consumers may have easier access to the product and pay less.
+The trend strength suggests a stable increase or decrease in prices over time, which may reflect broader economic conditions affecting both farmers and consumers. Moreover, results suggest that supply of broccoli is scarce in September. Thus the peak in price due to high demand. Also, results suggest that supply is abundant in January. Thus the trough in price due to low demand.
+
+For farmers, understanding these seasonal dynamics is crucial for optimizing production and marketing strategies. By aligning planting schedules with peak demand periods, they can maximize profits and reduce the risk of oversupply, which often leads to lower prices. Conversely, during low-demand months, farmers can plan for reduced production or explore alternative crops to mitigate financial losses.
+
+Consumers also benefit from this knowledge by timing their purchases to coincide during the trough period, when prices are generally lower. This strategic buying behavior not only helps consumers save money but also encourages a more efficient market where supply and demand are better balanced. 
+
+Awareness of the seasonal peak and trough in broccoli pricing enables both farmers and consumers to make informed decisions, fostering a more resilient agricultural economy.
+
+Broccoli has a moderate trend and a moderate seasonal strength. For farmers, this means that although production and sales volume are increasing over the long run, there are also significant seasonal fluctuations. Since the price of broccoli peaks in September and troughs in January, it may be expected that it is abundant in late summer and early fall, when it can be harvested and sold within a certain period of time. During peak season, farmers may have the product may be rare and more expensive, whereas during trough season, consumers may have easier access to the product and pay less.
 
 The cabbage time series has a trend strength of `r tbl_stl[2, 2]`, showing that `r tbl_stl[2, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[2, 3]`, showing that `r tbl_stl[2, 3]*100`% of the time series is accounted for by seasonality not considering trend. Its peak is in `r tbl_stl[2, 4]` and its trough is in `r tbl_stl[2, 5]`.
 
@@ -599,7 +611,21 @@ flextable(tbl_fit) |>
   font(part = "all", fontname = "Times New Roman") |>
   fontsize(size = 12, part = "all") |>
   align(j = 2, align = "center", part = "all") |>
-  set_table_properties(width = 1, layout = "autofit")
+  padding(j = 1, padding.right = 0, part = "all") |>
+  padding(j = 2, padding.right = 0, padding.left = 0, part = "all") |>
+  padding(j = 3, padding.right = 0, padding.left = 0, part = "all") |>
+  padding(j = 4, padding.right = 0, padding.left = 0, part = "all") |>
+  padding(j = 5, padding.right = 0, padding.left = 0, part = "all") |>
+  padding(j = 6, padding.left = 0, part = "all") |>
+  set_header_labels(
+    'Automatic Method' = 'Automatic\nMethod'
+  ) |>
+  width(j = 1, width = 1.5) |>
+  width(j = 2, width = 1) |>
+  width(j = 3, width = 1) |>
+  width(j = 4, width = 1) |>
+  width(j = 5, width = 1) |>
+  width(j = 6, width = .85)
 ```
 
 <br>
@@ -1779,7 +1805,10 @@ flextable(tbl_ljb) |>
   font(part = "all", fontname = "Times New Roman") |>
   fontsize(size = 12, part = "all") |>
   align(j = 4, align = "right", part = "all") |>
-  set_table_properties(width = 1, layout = "autofit")
+  width(j = 1, width = 1.75) |>
+  width(j = 2, width = 2.75) |>
+  width(j = 3, width = 1) |>
+  width(j = 4, width = .85)
 ```
 
 <br>
@@ -1792,8 +1821,6 @@ Results show that all the ARIMA models have a large p-value but the ETS model fo
 
 ### Summary
 
-<<<<<<< HEAD
-=======
 The price trends of 12 vegetables from 2018 to 2024 exhibited significant fluctuations over the period. Among the vegetables, pepper (taiwan) has demonstrated the most volatile price behavior, with frequent and substantial price swings. Conversely, potato has shown relatively stable prices throughout the period. Other vegetables, such as broccoli, cabbage, and carrot, have experienced moderate price fluctuations.
 
 Additionally, chayote (bunga) and gabi (galyang) have exhibited relatively stable price trends, with minimal fluctuations. Celery, cucumber, and wombok have shown moderate price variations, with occasional spikes or dips. Pepper (sultan) has experienced significant price fluctuations, with both upward and downward trends. Finally, cauliflower has demonstrated moderate price volatility, with occasional peaks and troughs.
@@ -1806,15 +1833,13 @@ SARIMA model forecasts for vegetable prices from January to April 2024 indicate 
 
 The Portmanteau test of residuals for ARIMA models revealed that all models have a large p-value, but the ETS model for gabi (galyang) has a p-value less than.05. This indicates that the residuals are independently distributed, with no significant autocorrelation up to 12 lags. The ARIMA models are a good fit for forecasting monthly vegetable prices, while the ETS model failed the test due to significant autocorrelation up to 12 lags. Despite this, the model can still be used for gabi (galyang) price forecasting, but the prediction or confidence intervals may not be accurate due to correlated residuals.
 
->>>>>>> d869bfb55cef1b8c123b21cf2f4c4e00f3e98b65
 ### Conclusion
 
 The results show that gabi (galyang) has the strongest trend, while wombok has the weakest trend, cauliflower shows the strongest seasonality, while cabbage shows the weakest seasonality. Farmers should focus on producing vegetables with strong trends, like gabi (galyang), to benefit on increasing demand. Farmers can also plan their production and marketing strategies according to the trend and seasonality of specific vegetable vegetables. Consumers, and can make good decisions about when to buy vegetables. For example, consumers may expect better availability and lower prices for cauliflower in August, while the highest and lowest prices for cabbage are found in March and September, however. All things considered, farmers can improve their production and sales and increase their earnings by knowing the trends and seasonality of vegetables. This knowledge can also help customers make wiser desicions in buying.
 
-	The result shows that Broccoli and celery prices will rise steadily; cauliflower and cucumber prices will rise, but at a slower rate. Carrot prices will remain relatively stable with small fluctuations. Chayote and gabi for ETS model prices will be relatively stable with slight increases. Both pepper (sultan) and pepper (Taiwan) prices are forecast to be volatile; pepper (sultan) will have a strong upturn, while pepper (Taiwan) will turn down. Potato and wombok prices will oscillate with a relatively stable increase. Farmers should focus on vegetables that will be steadily increases like Broccoli, Celery, pepper (taiwan and sultan), but they should also be mindful that the confidence interval as month goes by, the price range increases, indicating that a higher chance of forecast error. Consumers should focus on vegetables that vegetables that will be stable with small fluctuations and slight increases like cauliflower, cucumber, carrots, chayote, and gabi but should also be knowledgeable about the forecast error since the price range as months goes by, the forecast error increases.
+The result shows that Broccoli and celery prices will rise steadily; cauliflower and cucumber prices will rise, but at a slower rate. Carrot prices will remain relatively stable with small fluctuations. Chayote and gabi for ETS model prices will be relatively stable with slight increases. Both pepper (sultan) and pepper (Taiwan) prices are forecast to be volatile; pepper (sultan) will have a strong upturn, while pepper (Taiwan) will turn down. Potato and wombok prices will oscillate with a relatively stable increase. Farmers should focus on vegetables that will be steadily increases like Broccoli, Celery, pepper (taiwan and sultan), but they should also be mindful that the confidence interval as month goes by, the price range increases, indicating that a higher chance of forecast error. Consumers should focus on vegetables that vegetables that will be stable with small fluctuations and slight increases like cauliflower, cucumber, carrots, chayote, and gabi but should also be knowledgeable about the forecast error since the price range as months goes by, the forecast error increases.
 	
-	The ARIMA model proves to be better in all 12 lags in forecasting vegetable prices except for Gabi (galyang) indicating that ARIMA model is  better fit model for forecasting monthly vegetable prices.
-
+The ARIMA model proves to be better in all 12 lags in forecasting vegetable prices except for Gabi (galyang) indicating that ARIMA model is  better fit model for forecasting monthly vegetable prices.
 
 ### Recommendations
 
