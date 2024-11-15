@@ -1813,8 +1813,17 @@ The Portmanteau test of residuals for ARIMA models revealed that all models have
 The results show that gabi (galyang) has the strongest trend, while wombok has the weakest trend, cauliflower shows the strongest seasonality, while cabbage shows the weakest seasonality. Farmers should focus on producing vegetables with strong trends, like gabi (galyang), to benefit on increasing demand. Farmers can also plan their production and marketing strategies according to the trend and seasonality of specific vegetable vegetables. Consumers, and can make good decisions about when to buy vegetables. For example, consumers may expect better availability and lower prices for cauliflower in August, while the highest and lowest prices for cabbage are found in March and September, however. All things considered, farmers can improve their production and sales and increase their earnings by knowing the trends and seasonality of vegetables. This knowledge can also help customers make wiser desicions in buying.
 
 The result shows that Broccoli and celery prices will rise steadily; cauliflower and cucumber prices will rise, but at a slower rate. Carrot prices will remain relatively stable with small fluctuations. Chayote and gabi for ETS model prices will be relatively stable with slight increases. Both pepper (sultan) and pepper (Taiwan) prices are forecast to be volatile; pepper (sultan) will have a strong upturn, while pepper (Taiwan) will turn down. Potato and wombok prices will oscillate with a relatively stable increase. Farmers should focus on vegetables that will be steadily increases like Broccoli, Celery, pepper (taiwan and sultan), but they should also be mindful that the confidence interval as month goes by, the price range increases, indicating that a higher chance of forecast error. Consumers should focus on vegetables that vegetables that will be stable with small fluctuations and slight increases like cauliflower, cucumber, carrots, chayote, and gabi but should also be knowledgeable about the forecast error since the price range as months goes by, the forecast error increases.
+<<<<<<< HEAD
 
 The ARIMA model proves to be better in all 12 lags in forecasting vegetable prices except for Gabi (galyang) indicating that ARIMA model is better fit model for forecasting monthly vegetable prices.
+=======
+	
+The ARIMA model proves to be better in all 12 lags in forecasting vegetable prices except for Gabi (galyang) indicating that ARIMA model is  better fit model for forecasting monthly vegetable prices.
+<<<<<<< HEAD
+
+=======
+>>>>>>> 98734f95ffda6b52700ad845e78dba39ab6127c4
+>>>>>>> 84f469ca52e323451855c3fc8dc781c3ef487433
 
 ### Recommendations
 
