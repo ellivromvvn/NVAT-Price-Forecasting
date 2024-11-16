@@ -24,8 +24,6 @@ execute:
 
 ### Background of the Study
 
-according to @betterhealth and @gan20
-
 The fluctuation of vegetable prices is a global concern in both developed and emerging economies. The demand for vegetables as a primary source of essential nutrients and dietary variety has increased concomitantly with urbanization and global population growth. Consequently, the dynamics of vegetable pricing have grown more intricate and significant, having an effect not just on consumer choices but also on food security, economic stability, and agricultural practices. Understanding the factors driving these price fluctuations is paramount for policymakers, farmers, consumers, and the broader food industry [@chen18].
 
 Vegetables are a major life necessity for urban and rural residents, and the vegetable market massively supports rural economic development. Fluctuations in vegetable prices affect farmers' income, quality of life, and decision-making regarding vegetable planting. Therefore, issues regarding maintaining price stability have long been focused on government policies. In recent years, the price of vegetables has exhibited dramatic and frequent volatility, which caused a series of negative effects on stakeholders in the supply-chain, e.g., farmers, logistics, wholesale, retail, and consumers. In view of the above adverse effects on stakeholders, it is of crucial importance to filter out key factors that relate to price fluctuations, targeting effective monitoring of real-time abnormal fluctuations [@chen18].
@@ -46,13 +44,13 @@ As stated by @vibas19, Agricultural commodities significantly impact a country's
 
 Nueva Vizcaya Agricultural Terminal (NVAT) General Manager Gilbert Cumila said, vegetable prices in the Philippines continue to rise as demand exceeds supply. Wholesale prices of vegetables increases due to the demand of people. This significantly affect the way consumers purchase vegetables to sustain their necessities.
 
-The purpose of the study is to fully comprehend the factors affecting changes in vegetable prices in Nueva Vizcaya. The study intends to offer significant insights and suggestions for farmers, consumers, and distributors by concentrating on forecasting the monthly vegetable prices. These stakeholders should be more prepared to react to monthly changes in vegetable prices when making decisions as a result of this research.
+The purpose of the study is to fully comprehend the factors affecting changes in vegetable prices in Nueva Vizcaya. The study intends to offer significant insights and suggestions for farmers, consumers, and distributors by concentrating on forecasting the monthly vegetable prices. These stakeholders should be more prepared to react to monthly changes in vegetable prices when making decisions.
 
 ### Statement of the Problem
 
 In response to the challenge of volatile vegetable prices faced by local farmers, distributors, and consumers, the researchers provided forecasts of monthly vegetable prices in Nueva Vizcaya. This effort aimed to assist them in making informed decisions regarding agricultural production, distribution, and vegetable purchases.
 
-To do this, the researchers used five years of available time series data on vegetable prices from the Nueva Vizcaya Agricultural Terminal (NVAT) to come up with models that forecast monthly vegetable prices in Nueva Vizcaya. First, the researchers described the monthly vegetable prices in Nueva Vizcaya. Next, they fitted models to the data using automatic methods. The researchers then determined which automatic method had the best forecast performance for each vegetable and used these methods to forecast monthly vegetable prices in Nueva Vizcaya.
+To do this, the researchers used five years of available time series data of vegetable prices from the Nueva Vizcaya Agricultural Terminal (NVAT) to come up with models to forecast monthly vegetable prices in Nueva Vizcaya. First, the researchers described the monthly vegetable prices in Nueva Vizcaya. Next, they fitted models to the data using automatic methods. The researchers then determined which automatic method had the best forecast performance for each vegetable and used these methods to forecast monthly vegetable prices in Nueva Vizcaya.
 
 ### Objectives of the Study
 
@@ -60,11 +58,11 @@ The researchers forecasted monthly vegetable prices in Nueva Vizcaya by accompli
 
 1.  Describe the monthly prices for each vegetable in Nueva Vizcaya from 2017-2023.
 
-2.  Fit models using automatic methods to the monthly prices of each vegetable in Nueva Vizcaya from 2017-2023.
+2.  Fit models using automatic algorithms to the monthly prices of each vegetable in Nueva Vizcaya from 2017-2023.
 
-3.  Evaluate the performance of these models and determine the best method to forecast monthly prices for each vegetable in Nueva Vizcaya.
+3.  Evaluate the performance of these models and determine the best automatic algorithm to forecast monthly vegetable prices in Nueva Vizcaya.
 
-4.  Use the best method to generate forecasts for monthly prices for each vegetable in Nueva Vizcaya.
+4.  Use the best automatic approach to generate forecasts for monthly vegetable prices in Nueva Vizcaya.
 
 ### Significance of the Study
 
@@ -86,7 +84,7 @@ This study is focused on forecasting monthly vegetable prices in Nueva Vizcaya. 
 
 ### Scope and Delimitation of the Study
 
-The study focused on forecasting the monthly prices of vegetables in NVAT, Bambang, Nueva Vizcaya. The researchers used time series of vegetable prices for five years available from NVAT. From this data, monthly time series of prices for each vegetable were described. ARIMA, SARIMA, and ETS models were then fitted to the data using automatic algorithms and time series cross-validation to generate optimal models for each vegetable. Comparison of computed point forecast measures for the generated models determined the best automatic method to use in forecasting monthly prices for each vegetable. A portmanteau test of residuals was used to assess the performance of the models generated by the best automatic method to forecast monthly prices for each vegetable.
+The study focused on forecasting the monthly vegetable prices at NVAT, Bambang, Nueva Vizcaya. The researchers used time series of vegetable prices for five years available from NVAT. From this data, monthly time series of prices for each vegetable were described. ARIMA, SARIMA, and ETS models were then fitted to the data using automatic algorithms and time series cross-validation to generate optimal models for each vegetable. Comparison of computed point forecast measures for the generated models determined the best automatic method to use in forecasting monthly vegetable prices. A portmanteau test of residuals was used to assess the performance of the models generated by the best automatic method to forecast monthly prices for each vegetable.
 
 The researchers performed log transformations with the data to make sure that forecasts stay positive. Model specifications were not set either, as this process was performed automatically using default settings. All computations and visualizations were performed in the R programming language [@r]. Moreover, external variables impacting vegetable prices were not investigated nor incorporated in the modeling process.
 
@@ -170,7 +168,7 @@ In conclusion, vegetable prices are influenced by various factors internationall
 
 ### Research Design
 
-The research is purely quantitative in nature. Specifically, the researchers employed comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models were compared to determine the best model to forecast monthly prices for each vegetable.
+The research is purely quantitative in nature. Specifically, the researchers employed comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models were compared to determine the best model to forecast monthly vegetable prices.
 
 ### Locale of the Study
 
@@ -227,7 +225,7 @@ Subsequently, the researchers visualized the monthly vegetable prices in Nueva V
 
 Next, automatic algorithms introduced by @hyndman21 were used to estimate or fit optimal ARIMA and ETS models to the data. The researchers would implement these algorithms in R using the `fable` package [@fable].
 
-Moreover, time series cross-validation was used to evaluate the forecast accuracy of the automatic ARIMA method and the automatic ETS method [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) were computed from the generated models and then compared to determine the best method to be used in forecasting monthly vegetable prices. The method with lower point forecast accuracy measures was selected as the best method for each vegetable.
+Moreover, time series cross-validation was used to evaluate the forecast accuracy of the automatic ARIMA algorithm and the automatic ETS algorithm [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) were computed from the generated models and then compared to determine the best method to be used in forecasting monthly vegetable prices. The method with lower point forecast accuracy measures was selected as the best method for each vegetable.
 
 Then, the best method for each vegetable was used to generate models to forecast monthly vegetable prices in Nueva Vizcaya.
 
@@ -315,7 +313,7 @@ veg_labels1 <- c(
 )
 ```
 
-After encoding the available vegetable prices from the NVAT Facebook page, only 12 vegetables were chosen for the study. These vegetables are broccoli, cabbage, carrots, cauliflower, celery, chayote (bunga) cucumber, gabi, pepper (sultan), pepper (taiwan), potato, and wombok. The graph of the time series of the monthly prices of these vegetables are shown in @fig-plot_all. The time series of the monthly vegetable prices are from October 2017 to December 2023. Thus, each vegetable time series consists of 75 observations.
+After encoding the available vegetable prices from the NVAT Facebook page, only 12 vegetables were chosen for the study. These vegetables are broccoli, cabbage, carrots, cauliflower, celery, chayote (bunga) cucumber, gabi, pepper (sultan), pepper (taiwan), potato, and wombok. The graph of the time series of the monthly prices of these vegetables are shown in @fig-plot_all. The time series of the monthly vegetable prices are from October 2017 to December 2023; that is 6 years and 3 months of data. Thus, each vegetable time series consists of 75 observations.
 
 ```{r}
 #| label: fig-plot_all
@@ -402,7 +400,7 @@ For the potato time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetabl
 
 For the wombok time series, the minimum price is `r tbl_all$Min[tbl_all$Vegetable == 'wombok']` in December 2018 and the maximum price is `r tbl_all$Max[tbl_all$Vegetable == 'wombok']` in December 2020. The average price is `r tbl_all$Mean[tbl_all$Vegetable == 'wombok']`. It has a standard deviation of `r tbl_all$SD[tbl_all$Vegetable == 'wombok']`.
 
-The vegetable with the most variability is pepper (taiwan). It also has the highest maximum price and the highest average price among all the vegetables. On the other hand, the vegetable that has the least variability is chayote (bunga). It also has the lowest average price. The vegetable that has the lowest minimum price is wombok.
+The vegetable with the most variability in price is pepper (taiwan). It also has the highest maximum price and the highest average price among all the vegetables. On the other hand, the vegetable that has the least variability is chayote (bunga). It also has the lowest average price. The vegetable that has the lowest minimum price is wombok.
 
 @tbl-stl shows the STL features of the time series of monthly vegetable prices.
 
@@ -488,7 +486,7 @@ The potato time series has a trend strength of `r tbl_stl[11, 2]`, showing that 
 
 The wombok time series has a trend strength of `r tbl_stl[12, 2]`, showing that `r tbl_stl[12, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[12, 3]`, showing that `r tbl_stl[12, 3]*100`% of the time series is accounted for by seasonality not considering trend. Prices peak in `r tbl_stl[12, 4]` and trough in `r tbl_stl[12, 5]`.
 
-The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage. Please see Appendix D for the seasonal and trend decomposition using LOESS (STL).
+The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage. Most often the prices peak in the third quarter, while some peak in the fourth. All of the prices trough in the first quarter. Please see Appendix D for the seasonal and trend decomposition using LOESS (STL).
 
 Trend strength and seasonal strength of vegetable prices are influenced by supply and production levels, seasonal demand patterns, market conditions and consumer preferences, economic factors, environmental conditions, and logistic and transportation costs [@liu2015; @illankoon2020a; @zhang2024].
 
@@ -496,7 +494,7 @@ These trends and seasonality allow farmers to plan accordingly in production and
 
 For farmers, understanding these seasonal dynamics is crucial for optimizing production and marketing strategies. By aligning planting schedules with peak demand periods, they can maximize profits and reduce the risk of oversupply, which often leads to lower prices. Conversely, during low-demand months, farmers can plan for reduced production or explore alternative crops to mitigate financial losses.
 
-Consumers also benefit from this knowledge by timing their purchases to coincide during the trough period, when prices are generally lower. This strategic buying behavior not only helps consumers save money but also encourages a more efficient market where supply and demand are better balanced.
+Consumers also benefit from this knowledge by timing their business processes with purchases during the trough period, when prices are generally lower. This strategic buying behavior not only helps consumers save money and encourages a more efficient market where supply and demand are better balanced.
 
 ```{r}
 #| include: false
@@ -548,7 +546,7 @@ nvat_monthly_long_ts |>
 
 ### Models for Monthly Vegetable Prices
 
-The time series cross-validation using automatic ARIMA method and automatic ETS method yielded 360 models: 180 ARIMA and SARIMA models and 180 ETS models. There are 15 ARIMA and/or SARIMA models and 15 ETS models for each vegetable. Please see Appendix E for the full list of these models per vegetable.
+The time series cross-validation using automatic ARIMA method and automatic ETS method produced 360 models: 180 ARIMA and SARIMA models and 180 ETS models. There are 15 ARIMA and/or SARIMA models and 15 ETS models for each vegetable. Please see Appendix E for the full list of these models per vegetable.
 
 ```{r}
 #| include: false
@@ -601,12 +599,13 @@ flextable(tbl_fit) |>
   width(j = 3, width = 1) |>
   width(j = 4, width = 1) |>
   width(j = 5, width = 1) |>
-  width(j = 6, width = .85)
+  width(j = 6, width = .85) |>
+  set_table_properties(width = 1, layout = "autofit")
 ```
 
 <br>
 
-The automatic ARIMA method proved to be better than the automatic ETS method based on the time series cross-validation performance measures, except for gabi (galyang). The automatic ARIMA method showed higher accuracy on all performance measures for all vegetables except for gabi (galyang). The automatic ETS method also showed higher accuracy on all performance measures for gabi (galyang). Thus, the automatic ARIMA method was used to generate models and forecasts for all the vegetables except for gabi (galyang), for which automatic ETS method was used.
+The automatic ARIMA method proved to be better than the automatic ETS method based on the time series cross-validation performance measures, except for gabi (galyang). The automatic ARIMA method showed higher accuracy on all performance measures for all vegetables except for gabi (galyang). The automatic ETS method only showed higher accuracy on all performance measures for gabi (galyang). Thus, the automatic ARIMA method was used to generate models to forecasts for all the vegetables except for gabi (galyang), for which automatic ETS method was used.
 
 ### Forecasts for Monthly Vegetable Prices.
 
@@ -667,10 +666,6 @@ For February 2024, the point forecast for broccoli price is `r tbl_broccoli[2, 2
 For March 2024, the point forecast for broccoli price is `r tbl_broccoli[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_broccoli[3, 3]` to `r tbl_broccoli[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_broccoli[3, 5]` to `r tbl_broccoli[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 For April 2024, the point forecast for broccoli price is `r tbl_broccoli[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_broccoli[4, 3]` to `r tbl_broccoli[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_broccoli[4, 5]` to `r tbl_broccoli[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
-
-Using the SARIMA model, the forecast is stating that the average price per head of broccoli will hover around the indicated mark and steadily rise starting from January to April of the year 2024. This therefore indicates that cost could be on a rising trend as they were approximated to be; 35.97 for January down to 39.72 in April.
-
-On the other hand, with the increase in uncertainty, the confidence intervals enlarge. January’s 80% confidence interval is equal to 21.38 to 53. The number is 10 before the new month and 46; by the middle of the month, it rises to 12.65 to 79.09. Likewise, the 95% confidence intervals expand with the length of the horizons indicating higher degree of forecast error volatility.
 
 ```{r}
 #| include: false
@@ -952,8 +947,6 @@ For March 2024, the point forecast for cauliflower price is `r tbl_cauliflower[3
 
 For April 2024, the point forecast for cauliflower price is `r tbl_cauliflower[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cauliflower[4, 3]` to `r tbl_cauliflower[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cauliflower[4, 5]` to `r tbl_cauliflower[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-Based on a SARIMA model, cauliflower prices are expected to rise steadily from January to April 2024, with occasional swings. The point estimates show that prices would rise from January to February, then fall somewhat in March before rising again in April. However, the confidence intervals are relatively broad, indicating that these forecasts are highly questionable. While there is an 80% likelihood that the January price would fall between 16 and 36.6, this range widens to 15.07 to 57.11 in April, indicating a greater potential price range.
-
 ```{r}
 #| include: false
 
@@ -1045,8 +1038,6 @@ For February 2024, the point forecast for celery price is `r tbl_celery[2, 2]`. 
 For March 2024, the point forecast for celery price is `r tbl_celery[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_celery[3, 3]` to `r tbl_celery[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_celery[3, 5]` to `r tbl_celery[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 For April 2024, the point forecast for celery price is `r tbl_celery[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_celery[4, 3]` to `r tbl_celery[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_celery[4, 5]` to `r tbl_celery[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
-
-According to the ARIMA model, the price for celery from January to April 2024 is very flat with a slight up trend. According to the point forecasts, the price will go up from January to April, with an average price of around 40. However, the model does show a lot of uncertainty in these forecasts. There is a high possibility of large price volatility as shown by the huge confidence intervals especially at the 95% level. Although there is 80% chance the price in Jan will be between 19.12 and 61.76, the range for Apr is 9.74 to 120.13 which means a wide range of possible prices.
 
 ```{r}
 #| include: false
@@ -1140,8 +1131,6 @@ For March 2024, the point forecast for chayote (bunga) price is `r tbl_chayote_b
 
 For April 2024, the point forecast for chayote (bunga) price is `r tbl_chayote_bunga[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_chayote_bunga[4, 3]` to `r tbl_chayote_bunga[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_chayote_bunga[4, 5]` to `r tbl_chayote_bunga[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-The price estimate for chayote (bunga) from January to April 2024 is very stable with small movements. For the whole 4 months, the point forecast is around 12.80. However, the model shows a lot of uncertainty in these forecasts. The big confidence intervals show big price fluctuations possible, especially at 95% level. Although there is 80% chance that the price in January will be between 6.52 to 20.91, the range for April is 3.89 to 32.11 which means bigger range.
-
 ```{r}
 #| include: false
 
@@ -1233,8 +1222,6 @@ For February 2024, the point forecast for cucumber price is `r tbl_cucumber[2, 2
 For March 2024, the point forecast for cucumber price is `r tbl_cucumber[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cucumber[3, 3]` to `r tbl_cucumber[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cucumber[3, 5]` to `r tbl_cucumber[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 For April 2024, the point forecast for cucumber price is `r tbl_cucumber[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_cucumber[4, 3]` to `r tbl_cucumber[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_cucumber[4, 5]` to `r tbl_cucumber[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
-
-The forecast for cucumber prices from January to April 2024 is steady with a slight up trend. The point forecasts show a gradual increase from January to April with the average price around 32. However, the model shows high degree of uncertainty in these forecasts. The wide confidence intervals especially for 95% probability level shows that the prices can fluctuate greatly. While there’s 80% chance the Jan price will be between 16.56 and 48.4, this range expands to 12.1 to 73.61 for April which means a very wide price range.
 
 ```{r}
 #| include: false
@@ -1329,8 +1316,6 @@ For March 2024, the point forecast for gabi (galyang) price is `r tbl_gabi_galya
 
 For April 2024, the point forecast for gabi (galyang) price is `r tbl_gabi_galyang[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_gabi_galyang[4, 3]` to `r tbl_gabi_galyang[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_gabi_galyang[4, 5]` to `r tbl_gabi_galyang[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-The forecast for gabi (galyang) prices from January to April 2024 based on ETS model shows an upward trend. The point forecast is increasing from 42.88 in January to 44.02 in April. However, the model also shows high uncertainty in the forecast. The wide confidence intervals especially for 95% probability level means big price fluctuations are possible. While there’s 80% chance that January price will be between 35.8 to 50.46, this range widens to 25.14 to 71.85 for April which means more price range is possible.
-
 ```{r}
 #| include: false
 
@@ -1422,8 +1407,6 @@ For February 2024, the point forecast for pepper (sultan) price is `r tbl_pepper
 For March 2024, the point forecast for pepper (sultan) price is `r tbl_pepper_sultan[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_sultan[3, 3]` to `r tbl_pepper_sultan[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_sultan[3, 5]` to `r tbl_pepper_sultan[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 For April 2024, the point forecast for pepper (sultan) price is `r tbl_pepper_sultan[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_sultan[4, 3]` to `r tbl_pepper_sultan[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_sultan[4, 5]` to `r tbl_pepper_sultan[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
-
-The pepper prices forecast (sultan) for the month of January to April 2024, according to an ARIMA model, indicated that there will be a steep upward trend. Point forecasts imply that from January’s 38.6, price will sharply rise to 112.63 by April. The confidence intervals widen consistently and especially much more for the 95% level emphasizing this movement upwards. While in January there is an 80% chance these prices would move between 21.65 and 59.3 per kg, by April such a range can go as high as between 36.11 and 273.5, meaning there are many possible prices over four months period.
 
 ```{r}
 #| include: false
@@ -1517,8 +1500,6 @@ For March 2024, the point forecast for pepper (taiwan) price is `r tbl_pepper_ta
 
 For April 2024, the point forecast for pepper (taiwan) price is `r tbl_pepper_taiwan[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_pepper_taiwan[4, 3]` to `r tbl_pepper_taiwan[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_pepper_taiwan[4, 5]` to `r tbl_pepper_taiwan[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-In January through to April 2024, the ARIMA model indicates that pepper (Taiwan) prices will be uncertain and highly dynamic. The path predicted by the mean forecasts presents a general declining tendency with January having a spike then followed by a downward slope till April. But the large confidence intervals, particularly at the 95% level of probability demonstrate high levels of uncertainty in these predictions. This range bulges to 9.39-197.44 in April from 36.15-137.75 in January implying a wider possible range of price outcomes.
-
 ```{r}
 #| include: false
 
@@ -1610,8 +1591,6 @@ For February 2024, the point forecast for potato price is `r tbl_potato[2, 2]`. 
 For March 2024, the point forecast for potato price is `r tbl_potato[3, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_potato[3, 3]` to `r tbl_potato[3, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_potato[3, 5]` to `r tbl_potato[3, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
 For April 2024, the point forecast for potato price is `r tbl_potato[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_potato[4, 3]` to `r tbl_potato[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_potato[4, 5]` to `r tbl_potato[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
-
-The forecast for potato prices from January to April 2024 based on ARIMA model, suggests a relatively stable price level with some fluctuations. The point forecasts indicate a slight decrease from January to February. This is followed by a minor increase in March. Then a more pronounced increase in April. However, the model highlights a significant degree of uncertainty in these predictions. The wide confidence intervals, especially for the 95% probability level emphasize the potential for substantial price variations. While there's an 80% chance the January price will fall between 55.76 and 93.89, this range expands to 35.24 to 151.43 for April. This indicates a broader potential price range.
 
 ```{r}
 #| include: false
@@ -1705,10 +1684,6 @@ For March 2024, the point forecast for wombok price is `r tbl_wombok[3, 2]`. The
 
 For April 2024, the point forecast for wombok price is `r tbl_wombok[4, 2]`. The 80% confidence interval for this forecast ranges from `r tbl_wombok[4, 3]` to `r tbl_wombok[4, 4]`, indicating that there is an 80% probability that the actual value will fall within this range. Additionally, the 95% confidence interval extends from `r tbl_wombok[4, 5]` to `r tbl_wombok[4, 6]`, suggesting that there is a 95% probability that the actual value will be within this broader range.
 
-The forecast for wombok prices from January to April 2024 based on provided data suggests general upward trend. Point forecasts indicate price increase from 10.6 in January to 15.3 in March. In April same price is expected. However, model also highlights significant degree of uncertainty in these predictions.
-
-Wide confidence intervals emphasize potential for substantial price fluctuations especially for 95% probability level. There's 80% chance January price will fall between 5.26 and 17.38. This range expands to 3.55 to 45.03 for March and April indicating broader potential price range.
-
 ```{r}
 #| include: false
 
@@ -1783,12 +1758,13 @@ flextable(tbl_ljb) |>
   width(j = 1, width = 1.75) |>
   width(j = 2, width = 2.75) |>
   width(j = 3, width = 1) |>
-  width(j = 4, width = .85)
+  width(j = 4, width = .85) |>
+  set_table_properties(width = 1, layout = "autofit")
 ```
 
 <br>
 
-Results show that all the ARIMA models have a large p-value but the ETS model for gabi (galyang) has a p-value less than .05. This shows that the residuals of all the ARIMA models are independently distributed. This indicates that there is no significant autocorrelation in the residuals up to 12 lags. The ARIMA models are a good fit to the data. They can be used in forecasting their corresponding monthly vegetable prices. On the other hand, the ETS model failed the portmanteau test since there is still significant autocorrelation in the residuals up to 12 lags. The model can still be used for forecasting monthly gabi (galyang) prices, but the prediction or confidence intervals may not be accurate due to the correlated residuals.
+Results showed that all the ARIMA models have a large p-value. This indicates that there is no significant autocorrelation in the residuals up to 12 lags. This shows that the residuals of all the ARIMA models are independently distributed. Thus, the ARIMA models are a good fit to the data. They can be used in forecasting monthly vegetable prices at NVAT. However, the ETS model for gabi (galyang) has a p-value less than .05. The ETS model failed the portmanteau test since there is still significant autocorrelation in the residuals up to 12 lags. The model can still be used for forecasting monthly gabi (galyang) prices, but the prediction or confidence intervals may not be accurate due to the correlated residuals.
 
 # Chapter V
 
@@ -1796,35 +1772,32 @@ Results show that all the ARIMA models have a large p-value but the ETS model fo
 
 ### Summary
 
-The price trends of 12 vegetables from 2018 to 2024 exhibited significant fluctuations over the period. Among the vegetables, pepper (taiwan) has demonstrated the most volatile price behavior, with frequent and substantial price swings. Conversely, potato has shown relatively stable prices throughout the period. Other vegetables, such as broccoli, cabbage, and carrot, have experienced moderate price fluctuations.
+The monthly vegetable prices in NVAT is comprised of prices for the following vegetables: broccoli, cabbage, carrot, cauliflower, celery, chayote (bunga), cucumber, gabi (galyang), pepper (sultan), pepper (taiwan), potato, and wombok. Among the time series, the vegetable with the most variability in price is pepper (taiwan). It also has the highest maximum price and the highest average price among all the vegetables. On the other hand, the vegetable that has the least variability is chayote (bunga). It also has the lowest average price. The vegetable that has the lowest minimum price is wombok. Furthermore, the vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage. Most often the prices peak in the third quarter, while some peak in the fourth. All of the prices trough in the first quarter.
 
-Additionally, chayote (bunga) and gabi (galyang) have exhibited relatively stable price trends, with minimal fluctuations. Celery, cucumber, and wombok have shown moderate price variations, with occasional spikes or dips. Pepper (sultan) has experienced significant price fluctuations, with both upward and downward trends. Finally, cauliflower has demonstrated moderate price volatility, with occasional peaks and troughs.
+On the other hand, the time series cross-validation generated 360 models for the monthly vegetable prices at NVAT. Out of these models, half are automatic ARIMA models and half are automatic ETS models; that is 15 ARIMA models and 15 ETS models for each vegetable. 
 
-The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage.
+Evaluating the models, the automatic ARIMA method outperformed the automatic ETS method in all vegetables except for gabi (galyang). 
 
-The automatic ARIMA method outperformed the automatic ETS method in time series cross-validation performance measures for all vegetables except gabi (galyang). The automatic ARIMA method showed higher accuracy in all performance measures for all vegetables except gabi (galyang). Thus, the automatic ARIMA method was used to generate models and forecasts for all the vegetables except for gabi (galyang), for which automatic ETS method was used.
-
-SARIMA model forecasts for vegetable prices from January to April 2024 indicate different trends and considerable uncertainty. Broccoli and celery prices will rise steadily; cauliflower and cucumber prices will rise, but at a slower rate. Carrot prices will remain relatively stable with small fluctuations. Chayote and gabi prices will be relatively stable with slight increases. Both pepper (sultan) and pepper (Taiwan) prices are forecast to be volatile; pepper (sultan) will have a strong upturn, while pepper (Taiwan) will turn down. Potato and wombok prices will oscillate with a relatively stable increase. Meanwhile, gabi (galyang) for ETS model, the price will rise steadily. Most notably, the volatility is high in all forecasts. High volatility is also indicated by the wide confidence interval, which indicates the potential for large price movements.
-
-The Portmanteau test of residuals for ARIMA models revealed that all models have a large p-value, but the ETS model for gabi (galyang) has a p-value less than.05. This indicates that the residuals are independently distributed, with no significant autocorrelation up to 12 lags. The ARIMA models are a good fit for forecasting monthly vegetable prices, while the ETS model failed the test due to significant autocorrelation up to 12 lags. Despite this, the model can still be used for gabi (galyang) price forecasting, but the prediction or confidence intervals may not be accurate due to correlated residuals.
+Finally, the automatic ARIMA method was used to forecast monthly vegetable prices at NVAT except for gabi (galyang) where automatic ETS was used. Forecasts for monthly vegetable prices from January to April, 2024 were made.
 
 ### Conclusion
 
-The results show that gabi (galyang) has the strongest trend, while wombok has the weakest trend, cauliflower shows the strongest seasonality, while cabbage shows the weakest seasonality. Farmers should focus on producing vegetables with strong trends, like gabi (galyang), to benefit on increasing demand. Farmers can also plan their production and marketing strategies according to the trend and seasonality of specific vegetable vegetables. Consumers, and can make good decisions about when to buy vegetables. For example, consumers may expect better availability and lower prices for cauliflower in August, while the highest and lowest prices for cabbage are found in March and September, however. All things considered, farmers can improve their production and sales and increase their earnings by knowing the trends and seasonality of vegetables. This knowledge can also help customers make wiser desicions in buying.
+The analysis of vegetable time series data reveals distinct seasonal pricing trends that are crucial for both farmers and consumers. Vegetables like broccoli and cauliflower exhibit strong trends with peak prices during high-demand months, prompting farmers to optimize production schedules and consumers to time their purchases strategically. In contrast, crops like cabbage and wombok show weak trend strength, indicating less predictable pricing patterns that require farmers to adapt to supply fluctuations while allowing consumers to benefit from lower prices during trough periods. Overall, understanding these dynamics enables farmers to align their harvests with market demands and helps consumers make informed purchasing decisions.
 
-The result shows that Broccoli and celery prices will rise steadily; cauliflower and cucumber prices will rise, but at a slower rate. Carrot prices will remain relatively stable with small fluctuations. Chayote and gabi for ETS model prices will be relatively stable with slight increases. Both pepper (sultan) and pepper (Taiwan) prices are forecast to be volatile; pepper (sultan) will have a strong upturn, while pepper (Taiwan) will turn down. Potato and wombok prices will oscillate with a relatively stable increase. Farmers should focus on vegetables that will be steadily increases like Broccoli, Celery, pepper (taiwan and sultan), but they should also be mindful that the confidence interval as month goes by, the price range increases, indicating that a higher chance of forecast error. Consumers should focus on vegetables that vegetables that will be stable with small fluctuations and slight increases like cauliflower, cucumber, carrots, chayote, and gabi but should also be knowledgeable about the forecast error since the price range as months goes by, the forecast error increases.
-<<<<<<< HEAD
+R is a very powerful programming language allowing the analysis, modeling, and forecasting of monthly vegetable prices at NVAT through the `fable` package and other packages in R used in this research. Aside from the time series cross-validation approach used in this research, the `fable` package offers other powerful approaches to time series analysis. None the less, the automatic ARIMA and automatic ETS approaches of the `fable` package are convenient ways of quickly generating models and forecasts for monthly vegetable prices at NVAT.
 
-The ARIMA model proves to be better in all 12 lags in forecasting vegetable prices except for Gabi (galyang) indicating that ARIMA model is better fit model for forecasting monthly vegetable prices.
-=======
-	
-The ARIMA model proves to be better in all 12 lags in forecasting vegetable prices except for Gabi (galyang) indicating that ARIMA model is  better fit model for forecasting monthly vegetable prices.
-<<<<<<< HEAD
+On the other hand, the automatic ARIMA approach is better than automatic ETS approach in forecasting monthly vegetable prices at NVAT.
 
-=======
->>>>>>> 98734f95ffda6b52700ad845e78dba39ab6127c4
->>>>>>> 84f469ca52e323451855c3fc8dc781c3ef487433
+The forecasts from the ARIMA and ETS models underscore significant implications for both farmers and consumers in the vegetable market. While ARIMA models provide reliable forecasts for most vegetables, enabling farmers to optimize their production and marketing strategies, the ETS model for gabi (galyang) highlights the complexities of price prediction. The anticipated upward trend in vegetable prices may enhance farmers' revenues, yet it also poses challenges for consumers, particularly low-income households that depend on affordable access to vegetables. As these price dynamics evolve, it will be crucial for both parties to remain adaptable and informed, considering external factors such as supply fluctuations and market conditions, to name a few, that could further influence pricing and availability.
 
 ### Recommendations
+
+To effectively navigate the fluctuating prices of vegetables throughout the year, farmers should closely monitor market trends and adjust their pricing strategies accordingly. For instance, during high-demand periods such as September, when prices peak for crops like broccoli, cauliflower, and gabi (galyang), farmers can capitalize on these spikes by ensuring their products are available at competitive prices. Conversely, during trough periods in March for various vegetables, farmers might consider promotional pricing or bundling strategies to encourage sales despite lower demand. Consumers, on the other hand, should be proactive in purchasing vegetables during these trough periods to benefit from lower prices, particularly for cabbage and wombok. By staying informed about seasonal price trends, both farmers and consumers can make more strategic decisions that enhance profitability and savings, respectively.
+
+Researchers should consider modeling the monthly vegetable prices at NVAT using other time series models. Other factors such as variables for weather conditions, supply chain dynamics, market trends, etc. should be integrated in the model to better capture the true price dynamics. 
+
+Moreover, the use of R and the `fable` package in forecasting monthly vegetable prices at NVAT is recommended. The use of the automatic ARIMA approach is a convenient way to generate accurate, precise, and reliable models and forecasts.
+
+Farmers should leverage the forecasts results to adjust production and marketing strategies proactively, while consumers, particularly those from low-income households and also business owners, should be informed about forecasts in prices to better manage their budget and strategy in purchases. Nonetheless, researchers should also validate the forecast results with the actual prices. Moreover, the use of these forecasts in making important decisions in farming, purchasing, and distribution should be studied.
 
 # References
