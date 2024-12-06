@@ -168,11 +168,11 @@ In conclusion, vegetable prices are influenced by various factors internationall
 
 ### Research Design
 
-The research is purely quantitative in nature. Specifically, the researchers employed comparative time series forecasting [@hyndman21]. In this study, AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models were compared to determine the best model to forecast monthly vegetable prices.
+The research is purely quantitative in nature. Specifically, the researchers employed comparative time series forecasting [@hyndman21]. In this study, automatic algorithms for AutoRegressive Integrated Moving Average (ARIMA) and Exponential Smoothing (ETS) models were compared to determine the best algorithm to forecast monthly vegetable prices.
 
 ### Locale of the Study
 
-The study was conducted in Bambang, Nueva Vizcaya. Specifically, the data for this study was collected from the Nueva Vizcaya Agricultural Terminal (NVAT), which is located in Bambang. Bambang is the next town south of Bayombong --- the capital town of the province of Nueva Vizcaya. Please see @fig-bambang below.
+The study was conducted in Bambang, Nueva Vizcaya. Specifically, the data for this study was collected from the Nueva Vizcaya Agricultural Terminal (NVAT), which is located in Bambang. Bambang is the next town south of Bayombong --- the capital town of the province. Please see @fig-bambang below.
 
 ![Map of Bambang, Nueva Vizcaya (https://en.wikipedia.org/wiki/Bambang,\_Nueva_Vizcaya#/media/File:Ph_locator_nueva_vizcaya_bambang.png)](pictures/bambang.png){#fig-bambang fig-align="center"}
 
@@ -180,11 +180,11 @@ The study was conducted in Bambang, Nueva Vizcaya. Specifically, the data for th
 
 ### Source and Subject of the Study
 
-The primary source of data for the research is the NVAT. Six years and two months of available time series of vegetable prices from the NVAT were used to come up with forecasts of monthly vegetable prices in Nueva Vizcaya.
+The primary source of data for the research is the NVAT. Six years and two months of available time series of vegetable prices in Philippine peso (Php) from the NVAT were used to come up with forecasts for monthly vegetable prices in Nueva Vizcaya.
 
 ### Data Gathering Procedure
 
-The researchers inquired about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research were written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively). Subsequently, the researchers were able to collect time series of vegetable prices for six years and 2 months. Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, were maintained.
+The researchers inquired about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research were written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively).  Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, were maintained. Subsequently, the researchers were able to collect time series of vegetable prices for six years and 2 months from the NVAT facebook page.
 
 ### Data Analysis and Treatment of Data
 
@@ -219,17 +219,19 @@ vtree::grVizToPNG(workflow, filename = "pictures/workflow.png", width = 600)
 
 <br>
 
-The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values to create a tidy time series data for monthly vegetable prices. The researchers utilized the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20].
+The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values to create a tidy time series data for monthly vegetable prices. The researchers utilized the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20]. 
 
-Subsequently, the researchers visualized the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data were also visualized using the seasonal and trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations were integral in describing the data.
+Subsequently, the researchers visualized the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data were also visualized using the seasonal and trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations were integral to the workflow.
 
-Next, automatic algorithms introduced by @hyndman21 were used to estimate or fit optimal ARIMA and ETS models to the data. The researchers would implement these algorithms in R using the `fable` package [@fable].
+Next, automatic algorithms introduced by @hyndman21 were used to estimate or fit optimal ARIMA and ETS models to the data. The researchers implemented these algorithms in R using the `fable` package [@fable]. A log transformation was also used to keep the forecast positive.
 
-Moreover, time series cross-validation was used to evaluate the forecast accuracy of the automatic ARIMA algorithm and the automatic ETS algorithm [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) were computed from the generated models and then compared to determine the best method to be used in forecasting monthly vegetable prices. The method with lower point forecast accuracy measures was selected as the best method for each vegetable.
+Moreover, time series cross-validation was used to evaluate the forecast accuracy of the automatic ARIMA algorithm and the automatic ETS algorithm [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) were computed from the generated models and then compared to determine the best algorithm to be used in forecasting monthly vegetable prices. The algorithm with lower point forecast accuracy measures was selected as the best algorithm for each vegetable.
 
-Then, the best method for each vegetable was used to generate models to forecast monthly vegetable prices in Nueva Vizcaya.
+Then, the best algorithm for each vegetable was used to generate models to forecast monthly vegetable prices in Nueva Vizcaya. 
 
-Finally, a portmanteau test in the form of the Ljung-Box test was computed for the models used to forecast monthly vegetable prices. This allowed the researchers to describe the performance of these models. Computed p-values greater than .05 confirm that the residuals are similar to white noise. Otherwise, the residuals still have some remaining autocorrelation that is not accounted for in the model [@hyndman21].
+Finally, a portmanteau test in the form of the Ljung-Box test was computed for the models used to forecast monthly vegetable prices. This allowed the researchers to describe the performance of these models in forecasting. Computed p-values greater than .05 confirm that the residuals are similar to white noise. Otherwise, the residuals still have some remaining autocorrelation that is not accounted for in the model [@hyndman21].
+
+To document the analysis and writing of the research project, the researchers created a private github repository.
 
 # CHAPTER IV
 
