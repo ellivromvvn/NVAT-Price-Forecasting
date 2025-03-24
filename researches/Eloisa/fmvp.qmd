@@ -180,11 +180,11 @@ The study was conducted in Bambang, Nueva Vizcaya. Specifically, the data for th
 
 ### Source and Subject of the Study
 
-The primary source of data for the research is the NVAT. Six years and two months of available time series of vegetable prices in Philippine peso (Php) from the NVAT were used to come up with forecasts for monthly vegetable prices in Nueva Vizcaya.
+The primary source of data for the research is the NVAT. Six years and two months of available time series of vegetable prices in Philippine Peso (Php) from the NVAT were used to come up with forecasts for monthly vegetable prices in Nueva Vizcaya.
 
 ### Data Gathering Procedure
 
-The researchers inquired about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research were written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (refer to Appendix A, B, and C, respectively).  Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, were maintained. Subsequently, the researchers were able to collect time series of vegetable prices for six years and 2 months from the NVAT facebook page.
+The researchers inquired about the background and data policy of NVAT by visiting its office. Additionally, letters requesting permission to gather data for the research were written to the NVSU President, NVAT General Manager, and the Municipal Mayor of Bambang (please refer to Appendix A, B, and C, respectively). Throughout the data collection process, strict adherence to ethical considerations, including data confidentiality and approval from appropriate authorities, were maintained. Subsequently, the researchers were able to collect time series of vegetable prices for six years and 2 months from the NVAT facebook page.
 
 ### Data Analysis and Treatment of Data
 
@@ -219,15 +219,15 @@ vtree::grVizToPNG(workflow, filename = "pictures/workflow.png", width = 600)
 
 <br>
 
-The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values to create a tidy time series data for monthly vegetable prices. The researchers utilized the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20]. 
+The tidy part involves preparing the raw data in the correct format. This includes loading the raw data into R and identifying and resolving missing values to create a tidy time series data for monthly vegetable prices. The researchers utilized the `tsibble` and `tidyverse` packages for this task [@wickham19; @wang20]. In this study, vegetables with missing data were not included.
 
-Subsequently, the researchers visualized the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data were also visualized using the seasonal and trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations were integral to the workflow.
+Continuing, the researchers visualized the monthly vegetable prices in Nueva Vizcaya. The trend and seasonal components of the data were also visualized using the seasonal and trend decomposition using LOESS (STL) method developed by @cleveland90. These visualizations were integral to the workflow. It allows further examination of the data.
 
 Next, automatic algorithms introduced by @hyndman21 were used to estimate or fit optimal ARIMA and ETS models to the data. The researchers implemented these algorithms in R using the `fable` package [@fable]. A log transformation was also used to keep the forecast positive.
 
 Moreover, time series cross-validation was used to evaluate the forecast accuracy of the automatic ARIMA algorithm and the automatic ETS algorithm [@hyndman21]. Point forecast accuracy measures such as the mean absolute error (MAE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute squared error (MASE) were computed from the generated models and then compared to determine the best algorithm to be used in forecasting monthly vegetable prices. The algorithm with lower point forecast accuracy measures was selected as the best algorithm for each vegetable.
 
-Then, the best algorithm for each vegetable was used to generate models to forecast monthly vegetable prices in Nueva Vizcaya. 
+Then, the best algorithm for each vegetable was used to generate models to forecast monthly vegetable prices in Nueva Vizcaya.
 
 Finally, a portmanteau test in the form of the Ljung-Box test was computed for the models used to forecast monthly vegetable prices. This allowed the researchers to describe the performance of these models in forecasting. Computed p-values greater than .05 confirm that the residuals are similar to white noise. Otherwise, the residuals still have some remaining autocorrelation that is not accounted for in the model [@hyndman21].
 
@@ -488,7 +488,7 @@ The potato time series has a trend strength of `r tbl_stl[11, 2]`, showing that 
 
 The wombok time series has a trend strength of `r tbl_stl[12, 2]`, showing that `r tbl_stl[12, 2]*100`% of the time series is accounted for by trend not considering seasonality. On the other hand, it has a seasonal strength of `r tbl_stl[12, 3]`, showing that `r tbl_stl[12, 3]*100`% of the time series is accounted for by seasonality not considering trend. Prices peak in `r tbl_stl[12, 4]` and trough in `r tbl_stl[12, 5]`.
 
-The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage. Most often the prices peak in the third quarter, while some peak in the fourth. All of the prices trough in the first quarter. Please see Appendix D for the seasonal and trend decomposition using LOESS (STL).
+The vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage. Most often vegetable prices peak in the third quarter, while some peak in the fourth. All of the prices trough in the first quarter. Please see Appendix D for the seasonal and trend decomposition using LOESS (STL).
 
 Trend strength and seasonal strength of vegetable prices are influenced by supply and production levels, seasonal demand patterns, market conditions and consumer preferences, economic factors, environmental conditions, and logistic and transportation costs [@liu2015; @illankoon2020a; @zhang2024].
 
@@ -607,9 +607,11 @@ flextable(tbl_fit) |>
 
 <br>
 
-The automatic ARIMA method proved to be better than the automatic ETS method based on the time series cross-validation performance measures, except for gabi (galyang). The automatic ARIMA method showed higher accuracy on all performance measures for all vegetables except for gabi (galyang). The automatic ETS method only showed higher accuracy on all performance measures for gabi (galyang). Thus, the automatic ARIMA method was used to generate models to forecasts for all the vegetables except for gabi (galyang), for which automatic ETS method was used.
+The automatic ARIMA method proved to be better than the automatic ETS method based on the time series cross-validation performance measures, except for gabi (galyang). The automatic ARIMA method showed better accuracy on all performance measures for all vegetables except for gabi (galyang). The automatic ETS method only showed better accuracy on all performance measures for gabi (galyang). Nonetheless, the differences between the performance measures of the two methods are minimal. In @fig-plot_all, it is notable that the graph of gabi (galyang) is a smooth line compared to other vegetables which are crooked. This shows that its seasonality is not annual unlike the others and it is following an unusual cycle [@hyndman23]. In @tbl-stl, it has the highest trend strength. Its seasonal strength is third from the highest, that is 55%. These features and other unknown factors might have influenced the performance of both methods favoring the automatic ETS method.
 
-It is noted in @tbl-all that gabi (galyang) has a mean price of 23.07 and a standard deviation of 8.83. In @fig-plot_all, it is notable that the graph of gabi (galyang) is a smooth line compared to other vegetables which are crooked. This shows that its seasonality is not annual unlike the others and it is following an unusual cycle [@hyndman23]. In @tbl-stl, it has the highest trend strength. Its seasonal strength, is third from the highest, that is 55%. These features and other unknown factors might have influenced the performance of the automatic ARIMA algorithm favoring the automatic ETS algorithm.
+Moreover, it is also notable in @tbl-fit that for pepper (taiwan), the automatic ETS method has an RMSE of 12,020.02 while the automatic ARIMA method has 141.28. The automatic ARIMA method outperformed the automatic ETS method by a big difference. Referring to @tbl-all, the price of pepper (taiwan) is the most volatile with the biggest range. The automatic ARIMA method outperforms the automatic ETS method in modeling vegetable prices with these characteristics.
+
+Thus, the automatic ARIMA method was used to generate models to forecasts prices for all the vegetables except for gabi (galyang), for which automatic ETS method was used.
 
 ### Forecasts for Monthly Vegetable Prices.
 
@@ -1768,7 +1770,7 @@ flextable(tbl_ljb) |>
 
 <br>
 
-Results showed that all the automatic ARIMA algorithm have large p-values. This indicates that there is no significant autocorrelation in the residuals up to 12 lags. This shows that the residuals of all the ARIMA models are independently distributed. Thus, the ARIMA models are a good fit to the data. They can be used in forecasting monthly vegetable prices at NVAT. However, the ETS model for gabi (galyang) has a p-value less than .05. The ETS model failed the portmanteau test since there is still significant autocorrelation in the residuals up to 12 lags. The model can still be used to forecast monthly gabi (galyang) prices, but the prediction or confidence intervals may not be accurate due to the correlated residuals. It is better to explore other models that can capture all the autocorrelations, so to get an accurate forecast.
+Results showed that all the automatic ARIMA models have large p-values. This indicates that there is no significant autocorrelation in the residuals up to 12 lags. This shows that the residuals of all the ARIMA models are independently distributed. Thus, the ARIMA models are a good fit to the data. They can be used in forecasting monthly vegetable prices at NVAT. However, the ETS model for gabi (galyang) has a p-value less than .05. The ETS model failed the portmanteau test since there is still significant autocorrelation in the residuals up to 12 lags. The model can still be used to forecast monthly gabi (galyang) prices, but the prediction or confidence intervals may not be accurate due to the correlated residuals. It is better to explore other models that can capture all the autocorrelations, so to get an accurate forecast.
 
 # Chapter V
 
@@ -1778,9 +1780,9 @@ Results showed that all the automatic ARIMA algorithm have large p-values. This 
 
 The monthly vegetable prices at NVAT is comprised of prices for the following vegetables: broccoli, cabbage, carrot, cauliflower, celery, chayote (bunga), cucumber, gabi (galyang), pepper (sultan), pepper (taiwan), potato, and wombok. Among the time series, the vegetable with the most variability in price is pepper (taiwan). It also has the highest maximum price and the highest average price among all the vegetables. On the other hand, the vegetable that has the least variability is chayote (bunga). It also has the lowest average price. The vegetable that has the lowest minimum price is wombok. Furthermore, the vegetable with the strongest trend is gabi (galyang). Meanwhile, the vegetable that has the weakest trend is wombok. The vegetable with the strongest seasonality is cauliflower. Meanwhile, the vegetable with the weakest seasonality is cabbage. Most often the prices peak in the third quarter, while some peak in the fourth. All of the prices trough in the first quarter.
 
-On the other hand, the time series cross-validation generated 360 models for the monthly vegetable prices at NVAT. Out of these models, half are automatic ARIMA models and half are automatic ETS models; that is 15 ARIMA models and 15 ETS models for each vegetable. 
+On the other hand, the time series cross-validation generated 360 models for the monthly vegetable prices at NVAT. Out of these models, half are automatic ARIMA models and half are automatic ETS models; that is 15 ARIMA models and 15 ETS models for each vegetable.
 
-Evaluating the models, the automatic ARIMA method outperformed the automatic ETS method in all vegetables except for gabi (galyang). 
+Evaluating the models, the automatic ARIMA method outperformed the automatic ETS method in all vegetables except for gabi (galyang).
 
 Finally, the automatic ARIMA method was used to forecast monthly vegetable prices at NVAT except for gabi (galyang) where automatic ETS was used. Forecasts for monthly vegetable prices from January to April, 2024 were made. The ETS model failed the portmanteau test. The forecast for gabi (galyang) is not accurate. All the forecast for the ARIMA models are accurate based on the portmanteau test.
 
@@ -1798,9 +1800,9 @@ The forecasts from the ARIMA and ETS models underscore significant implications 
 
 To effectively navigate the fluctuating prices of vegetables throughout the year, farmers should closely monitor market trends and adjust their pricing strategies accordingly. For instance, during high-demand periods such as September, when prices peak for crops like broccoli, cauliflower, and gabi (galyang), farmers can capitalize on these spikes by ensuring their products are available at competitive prices. Conversely, during trough periods in March for various vegetables, farmers might consider promotional pricing or bundling strategies to encourage sales despite lower demand. Consumers, on the other hand, should be proactive in purchasing vegetables during these trough periods to benefit from lower prices, particularly for cabbage and wombok. By staying informed about seasonal price trends, both farmers and consumers can make more strategic decisions that enhances their profitability and savings, respectively.
 
-Researchers should consider modeling the monthly vegetable prices at NVAT using other time series models. Other factors such as variables for weather conditions, supply chain dynamics, market trends, etc. should be integrated in the model to better capture the true price dynamics. 
+Researchers should consider modeling the monthly vegetable prices at NVAT using other time series models. Other factors such as variables for weather conditions, supply chain dynamics, market trends, etc. should be integrated in the model to better capture the true price dynamics.
 
-Moreover, the use of R and the `fable` package in forecasting monthly vegetable prices at NVAT is recommended. The use of the automatic ARIMA approach is a convenient way to generate accurate, precise, and reliable models and forecasts. 
+Moreover, the use of R and the `fable` package in forecasting monthly vegetable prices at NVAT is recommended. The use of the automatic ARIMA approach is a convenient way to generate accurate, precise, and reliable models and forecasts.
 
 Farmers should leverage the forecasts results to adjust production and marketing strategies proactively, while consumers, particularly those from low-income households and also business owners, should be informed about forecasts in prices to better manage their budget and strategy in purchases. Nonetheless, researchers should also validate the forecast results with the actual prices. Moreover, the use of these forecasts in making important decisions in farming, purchasing, and distribution should be studied. The Department of Agriculture should also use these forecasts as a guide in making decisions in managing resources for the farmers.
 
