@@ -1465,7 +1465,7 @@ fc_pepper_taiwan <- fit_pepper_taiwan |>
   forecast(h = 4)
 ```
 
-@tbl-pepper_taiwan shows the forecasts for pepper (taiwan) prices for the next four months from January to April 2024. It shows the means or the point forecasts along with their corresponding 80% and 95% confidence intervals. The forecast is from an ARIMA model generated using the automatic algorithm. The model generated is shown in @tbl-ljb.
+@tbl-pepper_taiwan shows the forecasts for pepper (taiwan) prices for the next four months from January to April 2024. It shows the means or the point forecasts along with their corresponding 80% and 95% confidence intervals. The forecast is from a SARIMA model generated using the automatic algorithm. The model generated is shown in @tbl-ljb.
 
 ```{r}
 #| label: tbl-pepper_taiwan
@@ -1523,7 +1523,7 @@ tbl_ljb_pepper_taiwan <- augment(fit_pepper_taiwan) |>
   )
 ```
 
-@fig-pepper_taiwan shows the NVAT monthly pepper (taiwan) prices with four months of forecasts using ARIMA.
+@fig-pepper_taiwan shows the NVAT monthly pepper (taiwan) prices with four months of forecasts using SARIMA.
 
 ```{r}
 #| label: fig-pepper_taiwan
